@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from 'next';
-import type { Recipe, Category } from '@lib/sanity.schema';
+import type { Recipe, Category, Author } from '@lib/sanity.schema';
 
 import { useRouter } from 'next/router';
 import { sanityClient, urlFor } from '@lib/sanity';
@@ -34,13 +34,25 @@ interface RecipePageProps {
 
 const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
   const router = useRouter();
+  console.log(router);
 
+  const author = recipe.author as Undefinable<Author>;
   const category = recipe.category as Undefinable<Category>;
 
   return (
     <>
       <Head>
         <title>CookBook - {recipe.title}</title>
+        {author && <meta name='author' content={author.name} />}
+        <meta name='description' content={recipe.description} />
+        <meta property='og:title' content={recipe.title} />
+        <meta property='og:description' content={recipe.description} />
+        {recipe.image && (
+          <meta
+            property='og:image'
+            content={urlFor(recipe.image.asset).url()!}
+          />
+        )}
       </Head>
       <div className='py-4 space-y-4'>
         <div className='relative h-48 md:h-96'>

@@ -152,6 +152,15 @@ const RecipesPage: NextPage<RecipesPageProps> = ({ fallback }) => {
     <>
       <Head>
         <title>CookBook - Recepty</title>
+        <meta
+          name='description'
+          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
+        />
+        <meta property='og:title' content='CookBook - Recepty' />
+        <meta
+          property='og:description'
+          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
+        />
       </Head>
       <CategoriesLinear>
         {categories?.map((category) => (

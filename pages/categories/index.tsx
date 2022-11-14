@@ -147,6 +147,15 @@ const CategoriesPage: NextPage<CategoriesPageProps> = ({ fallback }) => {
     <>
       <Head>
         <title>CookBook - Kategórie</title>
+        <meta
+          name='description'
+          content='Recepty sme pre Vás usporiadali do jednotlivých kategorií, tak neváhajte ich všetky vyskúšať'
+        />
+        <meta property='og:title' content='CookBook - Kategórie' />
+        <meta
+          property='og:description'
+          content='Recepty sme pre Vás usporiadali do jednotlivých kategorií, tak neváhajte ich všetky vyskúšať'
+        />
       </Head>
       <div className='bg-gray-50 px-4 mt-4 rounded border border-gray-100'>
         <CategoriesGrid>

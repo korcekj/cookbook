@@ -177,6 +177,9 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, fallback }) => {
     <>
       <Head>
         <title>CookBook - {category.title}</title>
+        <meta name='description' content={category.description} />
+        <meta property='og:title' content={category.title} />
+        <meta property='og:description' content={category.description} />
       </Head>
       <CategoriesLinear>
         {categories?.map((category) => (

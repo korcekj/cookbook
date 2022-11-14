@@ -70,7 +70,16 @@ const HomePage: NextPage<HomePageProps> = ({ fallback }) => {
   return (
     <>
       <Head>
-        <title>CookBook - Domov</title>
+        <title>CookBook</title>
+        <meta
+          name='description'
+          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
+        />
+        <meta property='og:title' content='CookBook' />
+        <meta
+          property='og:description'
+          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
+        />
       </Head>
       <div>
         <div className='grid grid-cols-2 gap-4'>
