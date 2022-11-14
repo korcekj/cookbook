@@ -103,11 +103,12 @@ const IngredientItem: FC<IngredientItemProps> = ({
       )}
       onClick={() => setChecked((v) => !v)}
     >
-      {checked ? (
-        <CheckCircleIcon className='w-5 h-5 text-gray-900' />
-      ) : (
-        <CheckCircleIcon className='w-5 h-5 text-gray-300' />
-      )}
+      <CheckCircleIcon
+        className={classNames('w-5', 'h-5', {
+          'text-gray-900': checked,
+          'text-gray-300': !checked,
+        })}
+      />
       <div className='text-base font-light text-gray-900 space-x-1 overflow-x-auto'>
         <span className='font-medium'>{title}</span>
         <span>
