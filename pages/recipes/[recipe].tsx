@@ -34,7 +34,6 @@ interface RecipePageProps {
 
 const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
   const router = useRouter();
-  console.log(router);
 
   const author = recipe.author as Undefinable<Author>;
   const category = recipe.category as Undefinable<Category>;

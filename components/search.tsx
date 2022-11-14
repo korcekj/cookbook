@@ -29,7 +29,6 @@ const Search: FC<SearchProps> = ({
   const onSearch = (e: FormEvent) => {
     e.preventDefault();
     const q = inputRef.current?.value;
-    console.log(q);
 
     if (!q || !q.trim()) return;
     inputRef.current.value = '';
