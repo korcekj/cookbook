@@ -94,7 +94,20 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             {recipe.title}
           </h1>
         </div>
-        <div>
+        <div className='flex items-center space-x-2'>
+          {!!author?.image?.asset && (
+            <div className='w-10 h-10'>
+              <Image
+                className='rounded-full'
+                src={urlFor(author.image.asset).url()!}
+                alt={author.name}
+                layout='fixed'
+                width={40}
+                height={40}
+                title={author.name}
+              />
+            </div>
+          )}
           <p className='px-2 border-l border-gray-300 leading-relaxed text-base font-light text-gray-700 text-justify'>
             {recipe.description}
           </p>
