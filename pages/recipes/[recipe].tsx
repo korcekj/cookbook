@@ -142,7 +142,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
         </div>
         <Steps steps={recipe.steps} />
       </div>
-      {!!recipes && (
+      {recipes.length > 0 && (
         <div>
           <Link href={`#${category?.slug?.current}`}>
             <a
@@ -156,7 +156,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             </a>
           </Link>
           <RecipesLinear>
-            {recipes?.map((recipe) => (
+            {recipes.map((recipe) => (
               <RecipeCard key={recipe._id} recipe={recipe} />
             ))}
             <CardPlaceholder
