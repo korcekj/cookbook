@@ -31,7 +31,7 @@ const Header: FC = () => {
         <meta name='msapplication-TileColor' content='#11b981' />
         <meta name='theme-color' content='#ffffff' />
       </Head>
-      <header className='flex flex-col md:flex-row md:justify-between py-4 px-6 bg-gradient-to-r from-gray-300 to-emerald-500 rounded-b-lg'>
+      <header className='flex flex-col md:flex-row md:justify-between py-4 px-6 bg-gradient-to-r from-gray-300 to-emerald-500 rounded-b-lg print:hidden'>
         <Link href='/'>
           <a className='flex items-center space-x-5'>
             <div className='w-12'>

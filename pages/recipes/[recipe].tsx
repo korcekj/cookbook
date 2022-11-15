@@ -55,7 +55,10 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
       </Head>
       <div className='py-4 space-y-4'>
         <div className='relative h-48 md:h-96'>
-          <a className='hover:cursor-pointer' onClick={() => router.back()}>
+          <a
+            className='hover:cursor-pointer print:hidden'
+            onClick={() => router.back()}
+          >
             <span
               className='
                   absolute
@@ -113,20 +116,20 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
         </div>
         <div>
           <div className='flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0'>
-            <div className='flex items-center space-x-2 p-2 bg-emerald-900/80 text-white rounded'>
+            <div className='flex items-center space-x-2 p-2 bg-emerald-900/80 text-white rounded print:bg-white print:text-gray-900'>
               <UsersIcon className='w-4 h-4' />
               <span className='font-medium'>{recipe.portion}</span>
             </div>
-            <span className='p-2 font-medium bg-emerald-400/10 text-emerald-900 rounded'>
+            <span className='p-2 font-medium bg-emerald-400/10 text-emerald-900 rounded print:bg-white print:text-gray-900'>
               {category?.title}
             </span>
-            <div className='flex items-center space-x-2 p-2 bg-gray-400/10 text-gray-900 rounded'>
+            <div className='flex items-center space-x-2 p-2 bg-gray-400/10 text-gray-900 rounded print:bg-white print:text-gray-900'>
               <span>Čas prípravy:</span>
               <span className='font-medium'>
                 {humanizeMinutes(recipe.preparation)}
               </span>
             </div>
-            <div className='flex items-center space-x-2 p-2 bg-gray-400/10 text-gray-900 rounded'>
+            <div className='flex items-center space-x-2 p-2 bg-gray-400/10 text-gray-900 rounded print:bg-white print:text-gray-900'>
               <span>Čas varenia:</span>
               <span className='font-medium'>
                 {humanizeMinutes(recipe.cook)}
@@ -167,7 +170,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
         <Steps steps={recipe.steps} />
       </div>
       {recipes.length > 0 && (
-        <div>
+        <div className='print:hidden'>
           <Link href={`#${category?.slug?.current}`}>
             <a
               id={category?.slug?.current}

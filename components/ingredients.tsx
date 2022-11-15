@@ -33,7 +33,7 @@ const Ingredients: FC<IngredientsProps> = ({ portion = 0, ingredients }) => {
 
   return (
     <div className='space-y-4'>
-      <div className='flex items-center space-x-4'>
+      <div className='flex items-center space-x-4 print:hidden'>
         <div className='flex items-center rounded border bg-gray-100 border-gray-300'>
           <UsersIcon className='w-4 h-4 text-gray-700 mx-2' />
           <input

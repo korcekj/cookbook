@@ -71,6 +71,7 @@ const Breadcrumbs: FC = () => {
         'px-4',
         'py-3',
         'rounded-md',
+        'print:hidden',
         {
           hidden: breadcrumbs.length === 1,
         }
