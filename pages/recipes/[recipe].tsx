@@ -11,10 +11,16 @@ import {
 } from '@lib/queries';
 import { RECIPES_LIMIT, OrderKey, OrderDir } from '@lib/constants';
 import { humanizeMinutes } from '@lib/moment';
+import useBasePath from '@hooks/useBasePath';
 
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from 'next-share';
 import RecipesLinear from '@components/recipes-linear';
 import RecipeCard from '@components/recipe-card';
 import CardPlaceholder from '@components/card-placeholder';
@@ -26,6 +32,9 @@ import { ArrowLeftIcon } from '@heroicons/react/outline';
 import { PrinterIcon } from '@heroicons/react/outline';
 import { HashtagIcon } from '@heroicons/react/solid';
 import { UsersIcon } from '@heroicons/react/solid';
+import { FacebookIcon } from 'next-share';
+import { TwitterIcon } from 'next-share';
+import { WhatsappIcon } from 'next-share';
 
 type Undefinable<T> = T | undefined;
 
@@ -36,6 +45,7 @@ interface RecipePageProps {
 
 const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
   const router = useRouter();
+  const basePath = useBasePath();
 
   const author = recipe.author as Undefinable<Author>;
   const category = recipe.category as Undefinable<Category>;
@@ -61,46 +71,41 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
       </Head>
       <div className='py-4 space-y-4'>
         <div className='relative h-48 md:h-96'>
-          <a
-            className='hover:cursor-pointer print:hidden'
-            onClick={() => router.back()}
-          >
-            <span
-              className='
-                absolute
-                top-4
-                left-4
-                z-10
-                bg-gray-900/50
-                hover:bg-gray-900/70
-                text-white
-                rounded
-                p-2
-              '
+          <div className='flex absolute top-4 left-4 z-10 print:hidden'>
+            <a
+              className='text-white bg-gray-900/50 rounded p-2 hover:bg-gray-900/70 hover:cursor-pointer'
+              onClick={() => router.back()}
             >
               <ArrowLeftIcon className='w-6 h-6' />
-            </span>
-          </a>
-          <a
-            className='hover:cursor-pointer print:hidden'
-            onClick={onPrintClick}
-          >
-            <span
-              className='
-                absolute
-                top-4
-                right-4
-                z-10
-                bg-gray-900/50
-                hover:bg-gray-900/70
-                text-white
-                rounded
-                p-2
-              '
+            </a>
+          </div>
+          <div className='flex items-center space-x-2 absolute top-4 right-4 z-10 print:hidden'>
+            <FacebookShareButton
+              url={`${basePath}/recipes/${recipe.slug?.current}`}
+              quote={recipe.description}
+            >
+              <FacebookIcon size={40} round />
+            </FacebookShareButton>
+            <WhatsappShareButton
+              url={`${basePath}/recipes/${recipe.slug?.current}`}
+              title={recipe.description}
+              separator=' '
+            >
+              <WhatsappIcon size={40} round />
+            </WhatsappShareButton>
+            <TwitterShareButton
+              url={`${basePath}/recipes/${recipe.slug?.current}`}
+              title={recipe.description}
+            >
+              <TwitterIcon size={40} round />
+            </TwitterShareButton>
+            <a
+              className='text-white bg-gray-900/50 rounded-full p-2 hover:bg-gray-900/70 hover:cursor-pointer'
+              onClick={onPrintClick}
             >
               <PrinterIcon className='w-6 h-6' />
-            </span>
-          </a>
+            </a>
+          </div>
           {!!recipe.image?.asset && (
             <Image
               className='rounded'
