@@ -1,6 +1,7 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 import type { Recipe, Category, Author } from '@lib/sanity.schema';
 
+import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { sanityClient, urlFor } from '@lib/sanity';
 import {
@@ -22,6 +23,7 @@ import Steps from '@components/steps';
 
 import { ArrowCircleRightIcon } from '@heroicons/react/outline';
 import { ArrowLeftIcon } from '@heroicons/react/outline';
+import { PrinterIcon } from '@heroicons/react/outline';
 import { HashtagIcon } from '@heroicons/react/solid';
 import { UsersIcon } from '@heroicons/react/solid';
 
@@ -37,6 +39,10 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
 
   const author = recipe.author as Undefinable<Author>;
   const category = recipe.category as Undefinable<Category>;
+
+  const onPrintClick = useCallback(() => {
+    if (typeof window !== 'undefined') window.print();
+  }, []);
 
   return (
     <>
@@ -61,20 +67,38 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
           >
             <span
               className='
-                  absolute
-                  top-4
-                  left-4
-                  z-10
-                  text-xs
-                  font-medium
-                  bg-gray-900/50
-                  hover:bg-gray-900/70
-                  text-white
-                  rounded
-                  p-2
-            '
+                absolute
+                top-4
+                left-4
+                z-10
+                bg-gray-900/50
+                hover:bg-gray-900/70
+                text-white
+                rounded
+                p-2
+              '
             >
-              <ArrowLeftIcon className='w-6 h-6 text-white' />
+              <ArrowLeftIcon className='w-6 h-6' />
+            </span>
+          </a>
+          <a
+            className='hover:cursor-pointer print:hidden'
+            onClick={onPrintClick}
+          >
+            <span
+              className='
+                absolute
+                top-4
+                right-4
+                z-10
+                bg-gray-900/50
+                hover:bg-gray-900/70
+                text-white
+                rounded
+                p-2
+              '
+            >
+              <PrinterIcon className='w-6 h-6' />
             </span>
           </a>
           {!!recipe.image?.asset && (
