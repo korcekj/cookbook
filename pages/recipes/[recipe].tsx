@@ -16,25 +16,17 @@ import useBasePath from '@hooks/useBasePath';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from 'next-share';
 import RecipesLinear from '@components/recipes-linear';
 import RecipeCard from '@components/recipe-card';
+import RecipeSocials from '@components/recipe-socials';
 import CardPlaceholder from '@components/card-placeholder';
 import Ingredients from '@components/ingredients';
 import Steps from '@components/steps';
 
 import { ArrowCircleRightIcon } from '@heroicons/react/outline';
 import { ArrowLeftIcon } from '@heroicons/react/outline';
-import { PrinterIcon } from '@heroicons/react/outline';
 import { HashtagIcon } from '@heroicons/react/solid';
 import { UsersIcon } from '@heroicons/react/solid';
-import { FacebookIcon } from 'next-share';
-import { TwitterIcon } from 'next-share';
-import { WhatsappIcon } from 'next-share';
 
 type Undefinable<T> = T | undefined;
 
@@ -49,10 +41,6 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
 
   const author = recipe.author as Undefinable<Author>;
   const category = recipe.category as Undefinable<Category>;
-
-  const onPrintClick = useCallback(() => {
-    if (typeof window !== 'undefined') window.print();
-  }, []);
 
   return (
     <>
@@ -80,31 +68,10 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             </a>
           </div>
           <div className='flex items-center space-x-2 absolute top-4 right-4 z-10 print:hidden'>
-            <FacebookShareButton
+            <RecipeSocials
               url={`${basePath}/recipes/${recipe.slug?.current}`}
               quote={recipe.description}
-            >
-              <FacebookIcon size={40} round />
-            </FacebookShareButton>
-            <WhatsappShareButton
-              url={`${basePath}/recipes/${recipe.slug?.current}`}
-              title={recipe.description}
-              separator=' '
-            >
-              <WhatsappIcon size={40} round />
-            </WhatsappShareButton>
-            <TwitterShareButton
-              url={`${basePath}/recipes/${recipe.slug?.current}`}
-              title={recipe.description}
-            >
-              <TwitterIcon size={40} round />
-            </TwitterShareButton>
-            <a
-              className='text-white bg-gray-900/50 rounded-full p-2 hover:bg-gray-900/70 hover:cursor-pointer'
-              onClick={onPrintClick}
-            >
-              <PrinterIcon className='w-6 h-6' />
-            </a>
+            />
           </div>
           {!!recipe.image?.asset && (
             <Image

@@ -5,7 +5,6 @@ import useSWR, { SWRConfig, unstable_serialize } from 'swr';
 import { useRouter } from 'next/router';
 import { range } from 'lodash';
 import { sanityClient } from '@lib/sanity';
-import usePagination from '@hooks/usePagination';
 import {
   recipesQuery,
   recipesCountQuery,
@@ -19,6 +18,8 @@ import {
   OrderKey,
   OrderDir,
 } from '@lib/constants';
+import usePagination from '@hooks/usePagination';
+import useBasePath from '@hooks/useBasePath';
 
 import Head from 'next/head';
 import CardPlaceholder from '@components/card-placeholder';
@@ -131,6 +132,8 @@ const Page: NextPage<PageProps> = ({ page, pages }) => {
 };
 
 const RecipesPage: NextPage<RecipesPageProps> = ({ fallback }) => {
+  const basePath = useBasePath();
+
   const { data: categories } = useSWR<Category[]>(
     '/recipes/categories',
     categoriesFetcher,
@@ -161,6 +164,7 @@ const RecipesPage: NextPage<RecipesPageProps> = ({ fallback }) => {
           property='og:description'
           content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
         />
+        <meta property='og:image' content={`${basePath}/images/meals.svg`} />
       </Head>
       <CategoriesLinear>
         {categories?.map((category) => (

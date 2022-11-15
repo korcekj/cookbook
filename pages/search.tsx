@@ -5,7 +5,6 @@ import useSWR from 'swr';
 import { useRouter } from 'next/router';
 import { range } from 'lodash';
 import { sanityClient } from '@lib/sanity';
-import usePagination from '@hooks/usePagination';
 import { recipesSearchQuery, recipesSearchCountQuery } from '@lib/queries';
 import {
   RECIPES_LIMIT,
@@ -14,6 +13,8 @@ import {
   OrderKey,
   OrderDir,
 } from '@lib/constants';
+import usePagination from '@hooks/usePagination';
+import useBasePath from '@hooks/useBasePath';
 
 import Head from 'next/head';
 import RecipesGrid from '@components/recipes-grid';
@@ -138,6 +139,7 @@ const Page: NextPage<PageProps> = ({ page, pages }) => {
 };
 
 const SearchPage: NextPage = () => {
+  const basePath = useBasePath();
   const { query }: { query: QueryParams } = useRouter();
 
   const { data: count } = useSWR(
@@ -185,6 +187,16 @@ const SearchPage: NextPage = () => {
     <>
       <Head>
         <title>CookBook - Hľadaj</title>
+        <meta
+          name='description'
+          content='Poznáte názov receptu, ale nemáte čas si vychutnať všetky recepty tak neváhajte si recept vyhľadať'
+        />
+        <meta property='og:title' content='CookBook - Hľadaj' />
+        <meta
+          property='og:description'
+          content='Poznáte názov receptu, ale nemáte čas si vychutnať všetky recepty tak neváhajte si recept vyhľadaťeviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
+        />
+        <meta property='og:image' content={`${basePath}/images/meals.svg`} />
       </Head>
       <div className='py-4 inline-block'>
         <div className='font-medium px-4 py-2 text-gray-700 bg-gray-200 rounded'>

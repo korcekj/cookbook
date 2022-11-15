@@ -4,7 +4,6 @@ import type { Recipe, Category } from '@lib/sanity.schema';
 import useSWR, { SWRConfig, unstable_serialize } from 'swr';
 import { sanityClient } from '@lib/sanity';
 import { range } from 'lodash';
-import usePagination from '@hooks/usePagination';
 import {
   recipesPerCategoriesQuery,
   recipesPerCategoriesCountQuery,
@@ -19,6 +18,8 @@ import {
   OrderKey,
   OrderDir,
 } from '@lib/constants';
+import usePagination from '@hooks/usePagination';
+import useBasePath from '@hooks/useBasePath';
 
 import Head from 'next/head';
 import RecipesGrid from '@components/recipes-grid';
@@ -122,6 +123,8 @@ const Page: NextPage<PageProps> = ({ page, pages }) => {
 };
 
 const CategoriesPage: NextPage<CategoriesPageProps> = ({ fallback }) => {
+  const basePath = useBasePath();
+
   const { data: categories } = useSWR<Category[]>(
     '/categories/all',
     categoriesFetcher,
@@ -155,6 +158,10 @@ const CategoriesPage: NextPage<CategoriesPageProps> = ({ fallback }) => {
         <meta
           property='og:description'
           content='Recepty sme pre Vás usporiadali do jednotlivých kategorií, tak neváhajte ich všetky vyskúšať'
+        />
+        <meta
+          property='og:image'
+          content={`${basePath}/images/categories.svg`}
         />
       </Head>
       <div className='bg-gray-50 px-4 mt-4 rounded border border-gray-100'>

@@ -21,6 +21,7 @@ import {
   OrderKey,
   OrderDir,
 } from '@lib/constants';
+import useBasePath from '@hooks/useBasePath';
 
 import Head from 'next/head';
 import CardPlaceholder from '@components/card-placeholder';
@@ -150,6 +151,8 @@ const Page: NextPage<PageProps> = ({ slug, page, pages }) => {
 };
 
 const CategoryPage: NextPage<CategoryPageProps> = ({ category, fallback }) => {
+  const basePath = useBasePath();
+
   const slug = category.slug?.current as string;
 
   const { data: categories } = useSWR<Category[]>(
@@ -180,6 +183,10 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, fallback }) => {
         <meta name='description' content={category.description} />
         <meta property='og:title' content={category.title} />
         <meta property='og:description' content={category.description} />
+        <meta
+          property='og:image'
+          content={`${basePath}/images/categories.svg`}
+        />
       </Head>
       <CategoriesLinear>
         {categories?.map((category) => (

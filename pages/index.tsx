@@ -11,12 +11,14 @@ import {
   OrderKey,
   OrderDir,
 } from '@lib/constants';
+import useBasePath from '@hooks/useBasePath';
 
 import Head from 'next/head';
 import Link from 'next/link';
 import RecipesLinear from '@components/recipes-linear';
 import RecipesGrid from '@components/recipes-grid';
 import RecipeCard from '@components/recipe-card';
+import RecipeSocials from '@components/recipe-socials';
 import CategoriesLinear from '@components/categories-linear';
 import CategoryCard from '@components/category-card';
 import CardPlaceholder from '@components/card-placeholder';
@@ -67,19 +69,22 @@ const categoriesFetcher = () =>
   );
 
 const HomePage: NextPage<HomePageProps> = ({ fallback }) => {
+  const basePath = useBasePath();
+
   return (
     <>
       <Head>
         <title>CookBook</title>
         <meta
           name='description'
-          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
+          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Vás zoznam našich obľúbených a jednoduchých receptov'
         />
         <meta property='og:title' content='CookBook' />
         <meta
           property='og:description'
-          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Bás zoznam našich obľúbených a jednoduchých receptov'
+          content='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Vás zoznam našich obľúbených a jednoduchých receptov'
         />
+        <meta property='og:image' content={`${basePath}/images/meals.svg`} />
       </Head>
       <div>
         <div className='grid grid-cols-2 gap-4'>
@@ -215,7 +220,13 @@ const HomePage: NextPage<HomePageProps> = ({ fallback }) => {
                 vytlačiť. Chutné zdieľanie 📬
               </>
             }
-          ></Teaser>
+          >
+            <RecipeSocials
+              parentClassName='justify-center'
+              url={basePath}
+              quote='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Vás zoznam našich obľúbených a jednoduchých receptov'
+            />
+          </Teaser>
         </div>
       </div>
     </>
