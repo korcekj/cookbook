@@ -5,12 +5,12 @@ import classNames from 'classnames';
 
 import {
   FacebookShareButton,
-  TwitterShareButton,
+  PinterestShareButton,
   WhatsappShareButton,
 } from 'next-share';
 
 import { FacebookIcon } from 'next-share';
-import { TwitterIcon } from 'next-share';
+import { PinterestIcon } from 'next-share';
 import { WhatsappIcon } from 'next-share';
 import { PrinterIcon } from '@heroicons/react/outline';
 
@@ -44,9 +44,9 @@ const RecipeSocials: FC<RecipeSocialsProps> = ({
       <WhatsappShareButton url={url} title={quote} separator=' '>
         <WhatsappIcon size={40} round />
       </WhatsappShareButton>
-      <TwitterShareButton url={url} title={quote}>
-        <TwitterIcon size={40} round />
-      </TwitterShareButton>
+      <PinterestShareButton url={url} media={quote!}>
+        <PinterestIcon size={40} round />
+      </PinterestShareButton>
       <a
         className='text-white bg-gray-900/50 rounded-full p-2 hover:bg-gray-900/70 hover:cursor-pointer'
         onClick={onPrintClick}
