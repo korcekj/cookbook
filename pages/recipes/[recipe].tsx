@@ -68,10 +68,13 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             </a>
           </div>
           <div className='flex items-center space-x-2 absolute top-4 right-4 z-10 print:hidden'>
-            <RecipeSocials
-              url={`${basePath}/recipes/${recipe.slug?.current}`}
-              quote={recipe.description}
-            />
+            {recipe.image && (
+              <RecipeSocials
+                url={`${basePath}/recipes/${recipe.slug?.current}`}
+                image={urlFor(recipe.image.asset).url()!}
+                quote={recipe.description}
+              />
+            )}
           </div>
           {!!recipe.image?.asset && (
             <Image

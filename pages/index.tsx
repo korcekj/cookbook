@@ -224,6 +224,7 @@ const HomePage: NextPage<HomePageProps> = ({ fallback }) => {
             <RecipeSocials
               parentClassName='justify-center'
               url={basePath}
+              image={`${basePath}/images/meals.svg`}
               quote='Neviete sa rozhodnúť čo dnes na obed alebo večeru? Potom je tu pre Vás zoznam našich obľúbených a jednoduchých receptov'
             />
           </Teaser>

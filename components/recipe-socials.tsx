@@ -16,12 +16,14 @@ import { PrinterIcon } from '@heroicons/react/outline';
 
 interface RecipeSocialsProps {
   url: string;
+  image: string;
   quote?: string;
   parentClassName?: string;
 }
 
 const RecipeSocials: FC<RecipeSocialsProps> = ({
   url,
+  image,
   quote,
   parentClassName,
 }) => {
@@ -44,7 +46,7 @@ const RecipeSocials: FC<RecipeSocialsProps> = ({
       <WhatsappShareButton url={url} title={quote} separator=' '>
         <WhatsappIcon size={40} round />
       </WhatsappShareButton>
-      <PinterestShareButton url={url} media={quote!}>
+      <PinterestShareButton url={url} media={image} description={quote}>
         <PinterestIcon size={40} round />
       </PinterestShareButton>
       <a
