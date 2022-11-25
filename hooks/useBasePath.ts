@@ -5,7 +5,7 @@ const useBasePath = () => {
     const origin =
       typeof window !== 'undefined' && window.location.origin
         ? window.location.origin
-        : '';
+        : (process.env.NEXT_PUBLIC_VERCEL_URL as string);
 
     return origin;
   }, []);
