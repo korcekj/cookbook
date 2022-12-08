@@ -77,7 +77,7 @@ const Breadcrumbs: FC = () => {
         }
       )}
     >
-      <ul className='flex items-center gap-x-2 '>
+      <ul className='flex items-center gap-x-2'>
         {breadcrumbs.map((breadcrumb, i) => (
           <Breadcrumb
             key={i}
