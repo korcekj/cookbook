@@ -7,6 +7,7 @@ import { sum } from 'lodash';
 import { humanizeMinutes } from '@lib/moment';
 
 import { UsersIcon } from '@heroicons/react/solid';
+import { CakeIcon } from '@heroicons/react/solid';
 import { ClockIcon } from '@heroicons/react/outline';
 
 import Image from 'next/image';
@@ -92,8 +93,13 @@ const RecipeItem: FC<RecipeCardProps> = ({ recipe }) => {
                   py-0.5
                 '
               >
-                <UsersIcon className='w-4 h-4' />
-                <span>{recipe.portion}</span>
+                {recipe.servings?.type === 'portions' && (
+                  <UsersIcon className='w-4 h-4' />
+                )}
+                {recipe.servings?.type === 'pieces' && (
+                  <CakeIcon className='w-4 h-4' />
+                )}
+                <span>{recipe.servings?.size}</span>
               </div>
               <span
                 className='

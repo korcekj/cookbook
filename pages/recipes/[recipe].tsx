@@ -1,7 +1,6 @@
 import type { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 import type { Recipe, Category, Author } from '@lib/sanity.schema';
 
-import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { sanityClient, urlFor } from '@lib/sanity';
 import {
@@ -21,12 +20,13 @@ import RecipeCard from '@components/recipe-card';
 import RecipeSocials from '@components/recipe-socials';
 import CardPlaceholder from '@components/card-placeholder';
 import Ingredients from '@components/ingredients';
-import Steps from '@components/steps';
+import Sections from '@components/sections';
 
 import { ArrowCircleRightIcon } from '@heroicons/react/outline';
 import { ArrowLeftIcon } from '@heroicons/react/outline';
 import { HashtagIcon } from '@heroicons/react/solid';
 import { UsersIcon } from '@heroicons/react/solid';
+import { CakeIcon } from '@heroicons/react/solid';
 
 type Undefinable<T> = T | undefined;
 
@@ -58,7 +58,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
         )}
       </Head>
       <div className='py-4 space-y-4'>
-        <div className='relative h-48 md:h-96'>
+        <div className='relative h-48 md:h-96 lg:h-[28rem] xl:h-[32rem]'>
           <div className='flex absolute top-4 left-4 z-10 print:hidden'>
             <a
               className='text-white bg-gray-900/50 rounded p-2 hover:bg-gray-900/70 hover:cursor-pointer'
@@ -116,8 +116,13 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
         <div>
           <div className='flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0'>
             <div className='flex items-center space-x-2 p-2 bg-emerald-900/80 text-white rounded print:bg-white print:text-gray-900'>
-              <UsersIcon className='w-4 h-4' />
-              <span className='font-medium'>{recipe.portion}</span>
+              {recipe.servings?.type === 'portions' && (
+                <UsersIcon className='w-4 h-4' />
+              )}
+              {recipe.servings?.type === 'pieces' && (
+                <CakeIcon className='w-4 h-4' />
+              )}
+              <span className='font-medium'>{recipe.servings?.size}</span>
             </div>
             <span className='p-2 font-medium bg-emerald-400/10 text-emerald-900 rounded print:bg-white print:text-gray-900'>
               {category?.title}
@@ -144,13 +149,13 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             >
               <div className='flex items-center space-x-1'>
                 <HashtagIcon className='flex-none w-5 h-5 text-gray-500' />
-                <span>Ingrediencie</span>
+                <h2>Ingrediencie</h2>
               </div>
             </a>
           </Link>
         </div>
         <Ingredients
-          portion={recipe.portion}
+          servings={recipe.servings}
           ingredients={recipe.ingredients}
         />
         <div>
@@ -161,12 +166,12 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             >
               <div className='flex items-center space-x-1'>
                 <HashtagIcon className='flex-none w-5 h-5 text-gray-500' />
-                <span>Postup</span>
+                <h2>Postup</h2>
               </div>
             </a>
           </Link>
         </div>
-        <Steps steps={recipe.steps} />
+        <Sections sections={recipe.sections} />
       </div>
       {recipes.length > 0 && (
         <div className='print:hidden'>
@@ -177,7 +182,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             >
               <div className='flex items-center space-x-1'>
                 <HashtagIcon className='flex-none w-5 h-5 text-gray-500' />
-                <span>Tiež by Vás mohlo zaujímať</span>
+                <h2>Tiež by Vás mohlo zaujímať</h2>
               </div>
             </a>
           </Link>

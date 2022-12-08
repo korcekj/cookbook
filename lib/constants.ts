@@ -5,7 +5,7 @@ export enum OrderKey {
   SCORE = '_score',
   COOK_TIME = '(cook + preparation)',
   RECIPES_COUNT = 'recipesCount',
-  PORTION = 'portion',
+  SERVINGS = 'servings.size',
 }
 
 export enum OrderDir {
@@ -27,7 +27,7 @@ export const RECIPES_CONTROLLERS = [
     title: 'Čas prípravy',
   },
   {
-    key: OrderKey.PORTION,
+    key: OrderKey.SERVINGS,
     title: 'Počet porcií',
   },
   {

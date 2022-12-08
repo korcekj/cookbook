@@ -7,21 +7,22 @@ import classNames from 'classnames';
 
 import { CheckCircleIcon } from '@heroicons/react/outline';
 import { UsersIcon } from '@heroicons/react/solid';
+import { CakeIcon } from '@heroicons/react/solid';
 
 interface IngredientsProps {
-  portion?: number;
+  servings?: { size?: number; type?: 'portions' | 'pieces' };
   ingredients?: Ingredient[];
 }
 
 interface IngredientItemProps {
-  portion: { prev: number; next: number };
+  servingSize: { prev: number; next: number };
   title?: string;
   quantity?: number;
   unit?: string;
 }
 
-const Ingredients: FC<IngredientsProps> = ({ portion = 0, ingredients }) => {
-  const [value, setValue] = useState(portion);
+const Ingredients: FC<IngredientsProps> = ({ servings, ingredients }) => {
+  const [value, setValue] = useState(servings?.size || 0);
 
   const onValueChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +36,12 @@ const Ingredients: FC<IngredientsProps> = ({ portion = 0, ingredients }) => {
     <div className='space-y-4'>
       <div className='flex items-center space-x-4 print:hidden'>
         <div className='flex items-center rounded border bg-gray-100 border-gray-300'>
-          <UsersIcon className='w-4 h-4 text-gray-700 mx-2' />
+          {servings?.type === 'portions' && (
+            <UsersIcon className='w-4 h-4 text-gray-700 mx-2' />
+          )}
+          {servings?.type === 'pieces' && (
+            <CakeIcon className='w-4 h-4 text-gray-700 mx-2' />
+          )}
           <input
             type='number'
             className='border-none p-1 bg-gray-100 text-gray-900 rounded'
@@ -60,8 +66,8 @@ const Ingredients: FC<IngredientsProps> = ({ portion = 0, ingredients }) => {
         {ingredients?.map((ingredient) => (
           <IngredientItem
             key={ingredient.title}
-            portion={{
-              prev: portion,
+            servingSize={{
+              prev: servings?.size || 0,
               next: value,
             }}
             {...ingredient}
@@ -73,7 +79,7 @@ const Ingredients: FC<IngredientsProps> = ({ portion = 0, ingredients }) => {
 };
 
 const IngredientItem: FC<IngredientItemProps> = ({
-  portion,
+  servingSize,
   title,
   quantity = 0,
   unit,
@@ -81,8 +87,8 @@ const IngredientItem: FC<IngredientItemProps> = ({
   const [checked, setChecked] = useState(false);
 
   const value = useMemo(() => {
-    return (quantity * portion.next) / portion.prev;
-  }, [quantity, portion]);
+    return (quantity * servingSize.next) / servingSize.prev;
+  }, [quantity, servingSize]);
 
   return (
     <li
