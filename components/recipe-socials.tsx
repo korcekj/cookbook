@@ -41,16 +41,28 @@ const RecipeSocials: FC<RecipeSocialsProps> = ({
       )}
     >
       <FacebookShareButton url={url} quote={quote}>
-        <FacebookIcon size={40} round />
+        <FacebookIcon
+          className='hover:scale-105 transition-transform duration-150'
+          size={40}
+          round
+        />
       </FacebookShareButton>
       <WhatsappShareButton url={url} title={quote} separator=' '>
-        <WhatsappIcon size={40} round />
+        <WhatsappIcon
+          className='hover:scale-105 transition-transform duration-150'
+          size={40}
+          round
+        />
       </WhatsappShareButton>
       <PinterestShareButton url={url} media={image} description={quote}>
-        <PinterestIcon size={40} round />
+        <PinterestIcon
+          className='hover:scale-105 transition-transform duration-150'
+          size={40}
+          round
+        />
       </PinterestShareButton>
       <a
-        className='text-white bg-gray-900/50 rounded-full p-2 hover:bg-gray-900/70 hover:cursor-pointer'
+        className='text-white bg-gray-900/70 rounded-full p-2 hover:scale-105 transition-transform duration-150 cursor-pointer'
         onClick={onPrintClick}
       >
         <PrinterIcon className='w-6 h-6' />
