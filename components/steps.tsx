@@ -13,7 +13,7 @@ interface StepItemProps {
 }
 
 const Steps: FC<StepsProps> = ({ steps }) => {
-  return (
+  return steps ? (
     <>
       <div className='flex items-center space-x-2'>
         <MenuAlt2Icon className='flex-none w-4 h-4 text-gray-500' />
@@ -25,7 +25,7 @@ const Steps: FC<StepsProps> = ({ steps }) => {
         ))}
       </ul>
     </>
-  );
+  ) : null;
 };
 
 const StepItem: FC<StepItemProps> = ({ title, order = 1 }) => {

@@ -21,7 +21,7 @@ interface IngredientItemProps {
 }
 
 const Ingredients: FC<IngredientsProps> = ({ servingsSize, ingredients }) => {
-  return (
+  return ingredients ? (
     <>
       <div className='flex items-center space-x-2'>
         <MenuAlt1Icon className='flex-none w-4 h-4 text-gray-500' />
@@ -37,7 +37,7 @@ const Ingredients: FC<IngredientsProps> = ({ servingsSize, ingredients }) => {
         ))}
       </ul>
     </>
-  );
+  ) : null;
 };
 
 const IngredientItem: FC<IngredientItemProps> = ({
