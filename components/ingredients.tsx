@@ -1,16 +1,15 @@
 import type { FC } from 'react';
 import type { Ingredient } from '@lib/sanity.schema';
 
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { toFraction } from '@lib/utils';
 import classNames from 'classnames';
 
 import { CheckCircleIcon } from '@heroicons/react/outline';
-import { UsersIcon } from '@heroicons/react/solid';
-import { CakeIcon } from '@heroicons/react/solid';
+import { MenuAlt1Icon } from '@heroicons/react/outline';
 
 interface IngredientsProps {
-  servings?: { size?: number; type?: 'portions' | 'pieces' };
+  servingsSize: { prev: number; next: number };
   ingredients?: Ingredient[];
 }
 
@@ -21,61 +20,23 @@ interface IngredientItemProps {
   unit?: string;
 }
 
-const Ingredients: FC<IngredientsProps> = ({ servings, ingredients }) => {
-  const servingsSize = servings?.size || 0;
-  const [value, setValue] = useState(servingsSize);
-
-  const onValueChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const { value } = e.target;
-      setValue(+value);
-    },
-    []
-  );
-
+const Ingredients: FC<IngredientsProps> = ({ servingsSize, ingredients }) => {
   return (
-    <div className='space-y-4'>
-      <div className='flex items-center space-x-4 print:hidden'>
-        <div className='flex items-center rounded border bg-gray-100 border-gray-300'>
-          {servings?.type === 'portions' && (
-            <UsersIcon className='w-4 h-4 text-gray-700 mx-2' />
-          )}
-          {servings?.type === 'pieces' && (
-            <CakeIcon className='w-4 h-4 text-gray-700 mx-2' />
-          )}
-          <input
-            type='number'
-            className='border-none p-1 bg-gray-100 text-gray-900 rounded'
-            min='1'
-            max={servingsSize * 2}
-            step='1'
-            value={value}
-            onChange={onValueChange}
-          />
-        </div>
-        <input
-          type='range'
-          className='w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer'
-          min='1'
-          max={servingsSize * 2}
-          step='1'
-          value={value}
-          onChange={onValueChange}
-        ></input>
+    <>
+      <div className='flex items-center space-x-2'>
+        <MenuAlt1Icon className='flex-none w-4 h-4 text-gray-500' />
+        <h3 className='text-lg font-light text-gray-800'>Ingrediencie</h3>
       </div>
       <ul className='block space-y-2 md:space-y-0 md:grid md:gap-4 md:grid-cols-[repeat(auto-fill,minmax(280px,1fr))]'>
         {ingredients?.map((ingredient) => (
           <IngredientItem
             key={ingredient.title}
-            servingsSize={{
-              prev: servingsSize,
-              next: value,
-            }}
+            servingsSize={servingsSize}
             {...ingredient}
           />
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

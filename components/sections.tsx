@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { Section } from '@lib/sanity.schema';
 
+import { useState, useCallback } from 'react';
 import classNames from 'classnames';
 
 import Link from 'next/link';
@@ -8,8 +9,8 @@ import Ingredients from '@components/ingredients';
 import Steps from '@components/steps';
 
 import { HashtagIcon } from '@heroicons/react/solid';
-import { MenuAlt1Icon } from '@heroicons/react/outline';
-import { MenuAlt2Icon } from '@heroicons/react/outline';
+import { UsersIcon } from '@heroicons/react/solid';
+import { CakeIcon } from '@heroicons/react/solid';
 
 interface SectionsProps {
   sections?: Section[];
@@ -17,8 +18,47 @@ interface SectionsProps {
 }
 
 const Sections: FC<SectionsProps> = ({ sections, servings }) => {
+  const [servingsSize, setServingsSize] = useState({
+    prev: servings?.size || 0,
+    next: servings?.size || 0,
+  });
+
+  const onValueChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { value } = e.target;
+      setServingsSize((state) => ({ ...state, next: +value }));
+    },
+    []
+  );
+
   return (
-    <>
+    <div className='space-y-4'>
+      <div className='flex items-center space-x-4 print:hidden'>
+        <div className='flex items-center rounded bg-emerald-900/80 text-white'>
+          <div className='ml-4 mr-2'>
+            {servings?.type === 'portions' && <UsersIcon className='w-4 h-4' />}
+            {servings?.type === 'pieces' && <CakeIcon className='w-4 h-4' />}
+          </div>
+          <input
+            type='number'
+            className='border-none bg-transparent focus:focus:ring-0 text-white p-2 rounded'
+            min='1'
+            max={servingsSize.prev * 2}
+            step='1'
+            value={servingsSize.next}
+            onChange={onValueChange}
+          />
+        </div>
+        <input
+          type='range'
+          className='w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer'
+          min='1'
+          max={servingsSize.prev * 2}
+          step='1'
+          value={servingsSize.next}
+          onChange={onValueChange}
+        ></input>
+      </div>
       {!!sections
         ? sections.map(({ title, steps, ingredients }, i) => (
             <div
@@ -42,22 +82,15 @@ const Sections: FC<SectionsProps> = ({ sections, servings }) => {
                   </a>
                 </Link>
               )}
-              <div className='flex items-center space-x-2'>
-                <MenuAlt1Icon className='flex-none w-4 h-4 text-gray-500' />
-                <h3 className='text-lg font-light text-gray-800'>
-                  Ingrediencie
-                </h3>
-              </div>
-              <Ingredients servings={servings} ingredients={ingredients} />
-              <div className='flex items-center space-x-2'>
-                <MenuAlt2Icon className='flex-none w-4 h-4 text-gray-500' />
-                <h3 className='text-lg font-light text-gray-800'>Postup</h3>
-              </div>
+              <Ingredients
+                servingsSize={servingsSize}
+                ingredients={ingredients}
+              />
               <Steps steps={steps} />
             </div>
           ))
         : null}
-    </>
+    </div>
   );
 };
 

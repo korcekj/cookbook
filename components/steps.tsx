@@ -1,6 +1,8 @@
 import type { FC } from 'react';
 import type { Step } from '@lib/sanity.schema';
 
+import { MenuAlt2Icon } from '@heroicons/react/outline';
+
 interface StepsProps {
   steps?: Step[];
 }
@@ -12,11 +14,17 @@ interface StepItemProps {
 
 const Steps: FC<StepsProps> = ({ steps }) => {
   return (
-    <ul className='space-y-2 md:space-y-4'>
-      {steps?.map((step, i) => (
-        <StepItem key={step.title} order={i + 1} {...step} />
-      ))}
-    </ul>
+    <>
+      <div className='flex items-center space-x-2'>
+        <MenuAlt2Icon className='flex-none w-4 h-4 text-gray-500' />
+        <h3 className='text-lg font-light text-gray-800'>Postup</h3>
+      </div>
+      <ul className='space-y-2 md:space-y-4'>
+        {steps?.map((step, i) => (
+          <StepItem key={step.title} order={i + 1} {...step} />
+        ))}
+      </ul>
+    </>
   );
 };
 
