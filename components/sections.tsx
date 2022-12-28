@@ -36,7 +36,7 @@ const Sections: FC<SectionsProps> = ({ sections, servings }) => {
                     <div className='flex items-center space-x-1'>
                       <HashtagIcon className='w-5 h-5 text-gray-500' />
                       <h2 className='text-2xl font-semibold text-gray-900'>
-                        {title}
+                        {title.trim()}
                       </h2>
                     </div>
                   </a>

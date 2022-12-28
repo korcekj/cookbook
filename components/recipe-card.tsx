@@ -112,14 +112,14 @@ const RecipeItem: FC<RecipeCardProps> = ({ recipe }) => {
                   py-0.5
                 '
               >
-                {(recipe.category as Undefinable<Category>)?.title}
+                {(recipe.category as Undefinable<Category>)?.title?.trim()}
               </span>
             </div>
             <h2 className='line-clamp-2 text-xl font-semibold mb-2 text-gray-900'>
-              {recipe.title}
+              {recipe.title?.trim()}
             </h2>
             <p className='line-clamp-3 leading-relaxed text-base font-light mb-2 text-gray-700 text-justify'>
-              {recipe.description}
+              {recipe.description?.trim()}
             </p>
           </div>
           <Link href={`/recipes/${recipe.slug?.current}`}>

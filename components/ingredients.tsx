@@ -117,9 +117,9 @@ const IngredientItem: FC<IngredientItemProps> = ({
         })}
       />
       <div className='text-base font-light text-gray-900 space-x-1 overflow-x-auto'>
-        <span className='font-medium'>{title}</span>
+        <span className='font-medium'>{title?.trim()}</span>
         <span>
-          ({toFraction(value)} {unit})
+          ({toFraction(value)} {unit?.trim()})
         </span>
       </div>
     </li>

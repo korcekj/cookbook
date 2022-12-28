@@ -179,10 +179,13 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, fallback }) => {
   return (
     <>
       <Head>
-        <title>CookBook - {category.title}</title>
-        <meta name='description' content={category.description} />
-        <meta property='og:title' content={category.title} />
-        <meta property='og:description' content={category.description} />
+        <title>CookBook - {category.title?.trim}</title>
+        <meta name='description' content={category.description?.trim()} />
+        <meta property='og:title' content={category.title?.trim()} />
+        <meta
+          property='og:description'
+          content={category.description?.trim()}
+        />
         <meta
           property='og:image'
           content={`${basePath}/images/categories.svg`}

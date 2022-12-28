@@ -44,11 +44,11 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
   return (
     <>
       <Head>
-        <title>CookBook - {recipe.title}</title>
+        <title>CookBook - {recipe.title?.trim()}</title>
         {author && <meta name='author' content={author.name} />}
-        <meta name='description' content={recipe.description} />
-        <meta property='og:title' content={recipe.title} />
-        <meta property='og:description' content={recipe.description} />
+        <meta name='description' content={recipe.description?.trim()} />
+        <meta property='og:title' content={recipe.title?.trim()} />
+        <meta property='og:description' content={recipe.description?.trim()} />
         {recipe.image && (
           <meta
             property='og:image'
@@ -91,7 +91,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
         </div>
         <div>
           <h1 className='text-3xl font-semibold text-gray-900'>
-            {recipe.title}
+            {recipe.title?.trim()}
           </h1>
         </div>
         <div className='flex items-center space-x-2'>
@@ -109,7 +109,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             </div>
           )}
           <p className='px-2 border-l border-gray-300 leading-relaxed text-base font-light text-gray-700 text-justify'>
-            {recipe.description}
+            {recipe.description?.trim()}
           </p>
         </div>
         <div>
@@ -124,7 +124,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
               <span className='font-medium'>{recipe.servings?.size}</span>
             </div>
             <span className='p-2 font-medium bg-emerald-400/10 text-emerald-900 rounded print:bg-white print:text-gray-900'>
-              {category?.title}
+              {category?.title?.trim()}
             </span>
             <div className='flex items-center space-x-2 p-2 bg-gray-400/10 text-gray-900 rounded print:bg-white print:text-gray-900'>
               <span>Čas prípravy:</span>

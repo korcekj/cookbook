@@ -37,7 +37,7 @@ const CategoryCard: FC<CategoryCardProps> = ({ category }) => {
         <div className='flex items-center gap-x-2'>
           <TagIcon className='w-4 h-4 text-emerald-900' />
           <span className='text-lg font-semibold text-emerald-900 line-clamp-1'>
-            {category.title}
+            {category.title?.trim()}
           </span>
         </div>
         {category.recipesCount !== undefined && (

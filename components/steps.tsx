@@ -27,7 +27,9 @@ const StepItem: FC<StepItemProps> = ({ title, order = 1 }) => {
         <span className='text-gray-900'>{order}.</span>
       </div>
       <div className='flex-1 items-center justify-center bg-gray-100 rounded p-2'>
-        <p className='text-gray-900 leading-relaxed text-justify'>{title}</p>
+        <p className='text-gray-900 leading-relaxed text-justify'>
+          {title?.trim()}
+        </p>
       </div>
     </li>
   );
