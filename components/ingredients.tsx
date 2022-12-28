@@ -15,14 +15,15 @@ interface IngredientsProps {
 }
 
 interface IngredientItemProps {
-  servingSize: { prev: number; next: number };
+  servingsSize: { prev: number; next: number };
   title?: string;
   quantity?: number;
   unit?: string;
 }
 
 const Ingredients: FC<IngredientsProps> = ({ servings, ingredients }) => {
-  const [value, setValue] = useState(servings?.size || 0);
+  const servingsSize = servings?.size || 0;
+  const [value, setValue] = useState(servingsSize);
 
   const onValueChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +47,7 @@ const Ingredients: FC<IngredientsProps> = ({ servings, ingredients }) => {
             type='number'
             className='border-none p-1 bg-gray-100 text-gray-900 rounded'
             min='1'
-            max='20'
+            max={servingsSize * 2}
             step='1'
             value={value}
             onChange={onValueChange}
@@ -56,7 +57,7 @@ const Ingredients: FC<IngredientsProps> = ({ servings, ingredients }) => {
           type='range'
           className='w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer'
           min='1'
-          max='20'
+          max={servingsSize * 2}
           step='1'
           value={value}
           onChange={onValueChange}
@@ -66,8 +67,8 @@ const Ingredients: FC<IngredientsProps> = ({ servings, ingredients }) => {
         {ingredients?.map((ingredient) => (
           <IngredientItem
             key={ingredient.title}
-            servingSize={{
-              prev: servings?.size || 0,
+            servingsSize={{
+              prev: servingsSize,
               next: value,
             }}
             {...ingredient}
@@ -79,7 +80,7 @@ const Ingredients: FC<IngredientsProps> = ({ servings, ingredients }) => {
 };
 
 const IngredientItem: FC<IngredientItemProps> = ({
-  servingSize,
+  servingsSize,
   title,
   quantity = 0,
   unit,
@@ -87,8 +88,8 @@ const IngredientItem: FC<IngredientItemProps> = ({
   const [checked, setChecked] = useState(false);
 
   const value = useMemo(() => {
-    return (quantity * servingSize.next) / servingSize.prev;
-  }, [quantity, servingSize]);
+    return (quantity * servingsSize.next) / servingsSize.prev;
+  }, [quantity, servingsSize]);
 
   return (
     <li

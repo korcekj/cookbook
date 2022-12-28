@@ -19,7 +19,6 @@ import RecipesLinear from '@components/recipes-linear';
 import RecipeCard from '@components/recipe-card';
 import RecipeSocials from '@components/recipe-socials';
 import CardPlaceholder from '@components/card-placeholder';
-import Ingredients from '@components/ingredients';
 import Sections from '@components/sections';
 
 import { ArrowCircleRightIcon } from '@heroicons/react/outline';
@@ -141,37 +140,7 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
             </div>
           </div>
         </div>
-        <div>
-          <Link href='#ingredients'>
-            <a
-              id='ingredients'
-              className='inline-block text-2xl font-semibold text-gray-900'
-            >
-              <div className='flex items-center space-x-1'>
-                <HashtagIcon className='flex-none w-5 h-5 text-gray-500' />
-                <h2>Ingrediencie</h2>
-              </div>
-            </a>
-          </Link>
-        </div>
-        <Ingredients
-          servings={recipe.servings}
-          ingredients={recipe.ingredients}
-        />
-        <div>
-          <Link href='#steps'>
-            <a
-              id='steps'
-              className='inline-block text-2xl font-semibold text-gray-900'
-            >
-              <div className='flex items-center space-x-1'>
-                <HashtagIcon className='flex-none w-5 h-5 text-gray-500' />
-                <h2>Postup</h2>
-              </div>
-            </a>
-          </Link>
-        </div>
-        <Sections sections={recipe.sections} />
+        <Sections sections={recipe.sections} servings={recipe.servings} />
       </div>
       {recipes.length > 0 && (
         <div className='print:hidden'>

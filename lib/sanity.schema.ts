@@ -15,7 +15,7 @@ import type {
   SanityImageDimensions,
   SanityImagePalette,
   SanityImagePaletteSwatch,
-} from 'sanity-codegen';
+} from "sanity-codegen";
 
 export type {
   SanityReference,
@@ -42,7 +42,7 @@ export type {
  *
  */
 export interface Recipe extends SanityDocument {
-  _type: 'recipe';
+  _type: "recipe";
 
   /**
    * Title — `string`
@@ -63,7 +63,7 @@ export interface Recipe extends SanityDocument {
    *
    *
    */
-  slug?: { _type: 'slug'; current: string };
+  slug?: { _type: "slug"; current: string };
 
   /**
    * Author — `reference`
@@ -78,7 +78,7 @@ export interface Recipe extends SanityDocument {
    *
    */
   image?: {
-    _type: 'image';
+    _type: "image";
     asset: SanityReference<SanityImageAsset>;
     crop?: SanityImageCrop;
     hotspot?: SanityImageHotspot;
@@ -97,7 +97,7 @@ export interface Recipe extends SanityDocument {
    *
    */
   servings?: {
-    _type: 'servings';
+    _type: "servings";
     /**
      * Size — `number`
      *
@@ -110,7 +110,7 @@ export interface Recipe extends SanityDocument {
      *
      *
      */
-    type?: 'portions' | 'pieces';
+    type?: "portions" | "pieces";
   };
 
   /**
@@ -128,13 +128,6 @@ export interface Recipe extends SanityDocument {
   cook?: number;
 
   /**
-   * Ingredients — `array`
-   *
-   *
-   */
-  ingredients?: Array<SanityKeyed<Ingredient>>;
-
-  /**
    * Sections — `array`
    *
    *
@@ -148,7 +141,7 @@ export interface Recipe extends SanityDocument {
  *
  */
 export interface Author extends SanityDocument {
-  _type: 'author';
+  _type: "author";
 
   /**
    * Name — `string`
@@ -162,7 +155,7 @@ export interface Author extends SanityDocument {
    *
    *
    */
-  slug?: { _type: 'slug'; current: string };
+  slug?: { _type: "slug"; current: string };
 
   /**
    * Image — `image`
@@ -170,7 +163,7 @@ export interface Author extends SanityDocument {
    *
    */
   image?: {
-    _type: 'image';
+    _type: "image";
     asset: SanityReference<SanityImageAsset>;
     crop?: SanityImageCrop;
     hotspot?: SanityImageHotspot;
@@ -190,7 +183,7 @@ export interface Author extends SanityDocument {
  *
  */
 export interface Category extends SanityDocument {
-  _type: 'category';
+  _type: "category";
 
   /**
    * Title — `string`
@@ -211,7 +204,7 @@ export interface Category extends SanityDocument {
    *
    *
    */
-  slug?: { _type: 'slug'; current: string };
+  slug?: { _type: "slug"; current: string };
 }
 
 /**
@@ -220,7 +213,7 @@ export interface Category extends SanityDocument {
  *
  */
 export interface Recipient extends SanityDocument {
-  _type: 'recipient';
+  _type: "recipient";
 
   /**
    * Email — `string`
@@ -238,7 +231,7 @@ export interface Recipient extends SanityDocument {
 }
 
 export type Ingredient = {
-  _type: 'ingredient';
+  _type: "ingredient";
   /**
    * Title — `string`
    *
@@ -262,13 +255,20 @@ export type Ingredient = {
 };
 
 export type Section = {
-  _type: 'section';
+  _type: "section";
   /**
    * Title — `string`
    *
    *
    */
   title?: string;
+
+  /**
+   * Ingredients — `array`
+   *
+   *
+   */
+  ingredients?: Array<SanityKeyed<Ingredient>>;
 
   /**
    * Steps — `array`
@@ -279,7 +279,7 @@ export type Section = {
 };
 
 export type Step = {
-  _type: 'step';
+  _type: "step";
   /**
    * Title — `text`
    *
