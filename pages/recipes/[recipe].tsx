@@ -114,15 +114,6 @@ const RecipePage: NextPage<RecipePageProps> = ({ recipe, recipes }) => {
         </div>
         <div>
           <div className='flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0'>
-            <div className='flex items-center space-x-2 p-2 bg-emerald-900/80 text-white rounded print:bg-white print:text-gray-900'>
-              {recipe.servings?.type === 'portions' && (
-                <UsersIcon className='w-4 h-4' />
-              )}
-              {recipe.servings?.type === 'pieces' && (
-                <CakeIcon className='w-4 h-4' />
-              )}
-              <span className='font-medium'>{recipe.servings?.size}</span>
-            </div>
             <span className='p-2 font-medium bg-emerald-400/10 text-emerald-900 rounded print:bg-white print:text-gray-900'>
               {category?.title?.trim()}
             </span>
