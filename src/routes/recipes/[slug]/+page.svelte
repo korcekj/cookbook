@@ -41,11 +41,6 @@
 			><ChevronLeft class="w-6 h-6" /></a
 		>
 		<div class="absolute top-4 right-4 flex items-center space-x-2">
-			<MailShare
-				class="btn-sm sm:btn-md"
-				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
-				subject={meta.description}
-			/>
 			<FacebookShare
 				class="btn-sm sm:btn-md"
 				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
@@ -55,10 +50,12 @@
 				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
 				text={meta.description}
 			/>
-			<button
-				class="btn btn-sm sm:btn-md glass btn-circle print:hidden"
-				on:click={() => window.print()}
-			>
+			<MailShare
+				class="btn-sm sm:btn-md"
+				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
+				subject={meta.description}
+			/>
+			<button class="btn btn-sm sm:btn-md btn-circle print:hidden" on:click={() => window.print()}>
 				<Printer class="w-6 h-6" />
 			</button>
 		</div>
@@ -91,7 +88,7 @@
 			</div>
 		{/each}
 	</div>
-	<article class="prose my-6 max-w-full"><svelte:component this={component} /></article>
+	<article class="prose my-6 max-w-none"><svelte:component this={component} /></article>
 	<aside class="print:hidden">
 		<Section name="other-recipes" class="bg-gradient-to-r from-base-300 to-base-100">
 			<svelte:fragment slot="title-bold">Ďalšie</svelte:fragment>
