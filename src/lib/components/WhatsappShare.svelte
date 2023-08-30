@@ -18,5 +18,5 @@
 	target="_blank"
 	rel="noopener"
 >
-	<MessageCircle class="w-6 h-6" />
+	<MessageCircle class="w-6 h-6 text-white" />
 </a>

@@ -15,5 +15,5 @@
 	target="_blank"
 	rel="noopener"
 >
-	<Facebook class="w-6 h-6" />
+	<Facebook class="text-white w-6 h-6" />
 </a>
