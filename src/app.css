@@ -27,6 +27,9 @@
 		content: '';
 		@apply absolute w-px h-full bg-base-200 left-4;
 	}
+	.stepper li:last-child:before {
+		@apply bg-transparent bg-gradient-to-b from-base-200;
+	}
 	.stepper li:after {
 		content: counter(item);
 		@apply flex items-center justify-center absolute w-8 h-8 rounded-full bg-base-200;
