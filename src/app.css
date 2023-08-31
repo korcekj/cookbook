@@ -10,17 +10,17 @@
 
 @layer components {
 	.u-list {
-		@apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-0 list-none;
+		@apply flex justify-between flex-wrap gap-2 p-0 list-none;
 	}
 	.u-list li {
-		@apply flex relative;
+		@apply relative flex-1 flex items-center w-full min-w-fit py-2 px-4 bg-base-200 rounded-lg;
 	}
 	.u-list li > *:first-child {
-		@apply py-1 ml-6;
+		@apply ml-8;
 	}
 	.u-list li:before {
-		content: '';
-		@apply absolute w-2 h-2 rounded-full bg-neutral top-1/2 -translate-y-1/2;
+		content: '✔️';
+		@apply absolute ml-1 top-1/2 -translate-y-1/2;
 	}
 	.o-list {
 		counter-reset: item;
@@ -38,7 +38,7 @@
 	}
 	.o-list li:before {
 		content: '';
-		@apply absolute w-px h-full bg-base-200 left-4;
+		@apply absolute w-px h-full bg-base-200 left-4 pointer-events-none;
 	}
 	.o-list li:last-child:before {
 		@apply bg-transparent bg-gradient-to-b from-base-200;

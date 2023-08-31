@@ -1,12 +1,15 @@
 <script>
 	let checked = false;
+
+	const onClick = () => {
+		checked = !checked;
+	};
 </script>
 
-<li class:opacity-50={checked}>
-	<label>
-		<p class="leading-relaxed">
-			<slot />
-		</p>
-		<input type="checkbox" class="hidden" bind:checked />
-	</label>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<li class:opacity-50={checked} on:click={onClick}>
+	<p class="leading-relaxed">
+		<slot />
+	</p>
 </li>
