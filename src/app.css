@@ -9,28 +9,41 @@
 }
 
 @layer components {
-	.stepper {
-		counter-reset: item;
-		@apply m-0 p-0 list-none;
+	.u-list {
+		@apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-0 list-none;
 	}
-	.stepper li {
+	.u-list li {
+		@apply flex relative;
+	}
+	.u-list li > *:first-child {
+		@apply py-1 ml-6;
+	}
+	.u-list li:before {
+		content: '';
+		@apply absolute w-2 h-2 rounded-full bg-neutral top-1/2 -translate-y-1/2;
+	}
+	.o-list {
+		counter-reset: item;
+		@apply p-0 list-none;
+	}
+	.o-list li {
 		counter-increment: item;
 		@apply flex relative transition-opacity;
 	}
-	.stepper li > *:first-child {
-		@apply ml-12 pt-1 pb-8;
+	.o-list li > *:first-child {
+		@apply ml-12 pt-1 pb-8 w-full;
 	}
-	.stepper li:last-child > *:first-child {
+	.o-list li:last-child > *:first-child {
 		@apply pb-0;
 	}
-	.stepper li:before {
+	.o-list li:before {
 		content: '';
 		@apply absolute w-px h-full bg-base-200 left-4;
 	}
-	.stepper li:last-child:before {
+	.o-list li:last-child:before {
 		@apply bg-transparent bg-gradient-to-b from-base-200;
 	}
-	.stepper li:after {
+	.o-list li:after {
 		content: counter(item);
 		@apply flex items-center justify-center absolute w-8 h-8 rounded-full bg-base-200;
 	}

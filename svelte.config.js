@@ -5,6 +5,9 @@ import { mdsvex } from 'mdsvex';
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
+	layout: {
+		_: './src/mdsvex.svelte'
+	},
 	smartypants: {
 		quotes: true,
 		ellipses: true,
