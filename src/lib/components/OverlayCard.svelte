@@ -7,9 +7,9 @@
 	let className = '';
 </script>
 
-<div class={twMerge('card card-compact card-bordered border-base-200 image-full', className)}>
+<div class={twMerge('group card card-compact card-bordered border-base-200 image-full', className)}>
 	<figure>
-		<img {src} alt="Overlay" />
+		<img {src} alt="Overlay" class="group-hover:blur-[1px]" />
 	</figure>
 	<div class="card-body items-center text-center">
 		<h2 class="card-title"><slot name="title" /></h2>
