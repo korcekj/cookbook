@@ -15,7 +15,7 @@
 	}
 	.stepper li {
 		counter-increment: item;
-		@apply flex relative;
+		@apply flex relative transition-opacity;
 	}
 	.stepper li > *:first-child {
 		@apply ml-12 pt-1 pb-8;
