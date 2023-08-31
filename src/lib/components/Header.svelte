@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="navbar flex-col items-start sm:flex-row sm:items-center bg-gradient-to-r from-base-100 to-base-300 rounded-b-lg px-4 print:hidden"
+	class="navbar flex-col items-start sm:flex-row sm:items-center bg-gradient-to-r from-base-100 to-base-300 rounded-b-lg px-4"
 >
 	<div class="flex-1 p-2 sm:p-0">
 		<a href="/" class="flex items-center space-x-2">
@@ -25,7 +25,7 @@
 			>
 		</a>
 	</div>
-	<div class="flex-none">
+	<div class="flex-none print:hidden">
 		<div class="flex items-center">
 			<a href="/#search-recipe" class="btn btn-sm btn-ghost font-medium">
 				<Search class="w-4 h-4" />
