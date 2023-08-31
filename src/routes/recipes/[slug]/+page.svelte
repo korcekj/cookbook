@@ -88,7 +88,9 @@
 			</div>
 		{/each}
 	</div>
-	<article class="prose my-6 max-w-none"><svelte:component this={component} /></article>
+	<article class="prose my-6">
+		<svelte:component this={component} />
+	</article>
 	<aside class="print:hidden">
 		<Section name="other-recipes" class="bg-gradient-to-r from-base-300 to-base-100">
 			<svelte:fragment slot="title-bold">Ďalšie</svelte:fragment>
