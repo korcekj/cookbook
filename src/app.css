@@ -7,3 +7,28 @@
 		@apply scroll-smooth;
 	}
 }
+
+@layer components {
+	.stepper {
+		counter-reset: item;
+		@apply m-0 p-0 list-none;
+	}
+	.stepper li {
+		counter-increment: item;
+		@apply flex relative;
+	}
+	.stepper li > *:first-child {
+		@apply ml-12 pt-1 pb-8;
+	}
+	.stepper li:last-child > *:first-child {
+		@apply pb-0;
+	}
+	.stepper li:before {
+		content: '';
+		@apply absolute w-px h-full bg-base-200 left-4;
+	}
+	.stepper li:after {
+		content: counter(item);
+		@apply flex items-center justify-center absolute w-8 h-8 rounded-full bg-base-200;
+	}
+}
