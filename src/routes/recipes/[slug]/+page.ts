@@ -21,6 +21,6 @@ export async function load({ fetch, params: { slug } }) {
 		};
 	} catch (err) {
 		console.error(err);
-		throw error(404, `Recipe ${slug} not found`);
+		throw error(404, `Recept ${slug} nebol nájdený`);
 	}
 }
