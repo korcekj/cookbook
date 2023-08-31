@@ -7,6 +7,22 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Kanit', ...defaultTheme.fontFamily.sans]
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						'max-width': 'none',
+						h2: {
+							marginTop: '0'
+						},
+						h3: {
+							marginTop: '0'
+						},
+						h4: {
+							marginTop: '0'
+						}
+					}
+				}
 			}
 		}
 	},
