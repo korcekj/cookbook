@@ -40,7 +40,7 @@
 		<a href={prev} class="absolute top-4 left-4 btn btn-sm sm:btn-md glass btn-square print:hidden"
 			><ChevronLeft class="w-6 h-6" /></a
 		>
-		<div class="absolute top-4 right-4 flex items-center space-x-2">
+		<div class="absolute top-4 right-4 flex items-center space-x-2 print:hidden">
 			<FacebookShare
 				class="btn-sm sm:btn-md"
 				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
@@ -55,7 +55,7 @@
 				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
 				subject={meta.description}
 			/>
-			<button class="btn btn-sm sm:btn-md btn-circle print:hidden" on:click={() => window.print()}>
+			<button class="btn btn-sm sm:btn-md btn-circle" on:click={() => window.print()}>
 				<Printer class="w-6 h-6" />
 			</button>
 		</div>
