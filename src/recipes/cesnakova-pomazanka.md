@@ -9,18 +9,18 @@ servings:
   count: 8
 preparation: 10
 cooking: 0
-date: 2023-8-17
+date: 2023-12-28
 ---
 
 # { title }
 
 ## Ingrediencie
 
-- **1 ks** Bambíno
-- **3 PL** Maslo
-- **3 strúčiky** Cesnak
-- **1 štipka** Soľ
-- **1 ČL** Červená mletá paprika
+- **1 ks** / Bambíno
+- **3 PL** / Maslo
+- **3 strúčiky** / Cesnak
+- **1 štipka** / Soľ
+- **1 ČL** / Červená mletá paprika
 
 ## Postup
 

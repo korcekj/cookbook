@@ -9,7 +9,21 @@ servings:
   count: 8
 preparation: 10
 cooking: 10
-date: 2023-8-13
+date: 2022-12-28
 ---
 
 # { title }
+
+## Ingrediencie
+
+- **5 ks** / Vajcia
+- **4 PL** / Maslo
+- **1 štipka** / Mleté čierne korenie
+- **1 štipka** / Soľ
+- **3 ČL** / Plnotučná horčica
+
+## Postup
+
+1. Uvaríme si vajcia na tvrdo a následne ich olúpeme po ich vychaldnutí.
+2. Vajcia si ďalej rozpučíme na malé kúsky vydličkou, pridáme horčicu, maslo, soľ a korenie.
+3. Všetky suroviny zmiešame.
