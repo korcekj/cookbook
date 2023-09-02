@@ -36,7 +36,7 @@
 </svelte:head>
 
 <div class="container mx-auto p-6" use:scrollToHash>
-	<figure class="relative flex max-h-80 overflow-hidden rounded-box">
+	<figure class="relative flex max-h-80 xl:max-h-96 overflow-hidden rounded-box">
 		<a href={prev} class="absolute top-4 left-4 btn btn-sm sm:btn-md glass btn-square print:hidden"
 			><ChevronLeft class="w-6 h-6" /></a
 		>
@@ -59,7 +59,7 @@
 				<Printer class="w-6 h-6" />
 			</button>
 		</div>
-		<img src={meta.poster} alt={meta.title} class="aspect-video object-cover" />
+		<img src={meta.poster} alt={meta.title} class="aspect-video object-cover flex-1" />
 	</figure>
 	<div class="carousel max-w-full space-x-2 mt-6">
 		{#if meta.preparation}
