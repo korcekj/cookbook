@@ -38,6 +38,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/kanit": "^5.0.8",
+		"@vercel/analytics": "^1.0.2",
 		"dayjs": "^1.11.9",
 		"lodash": "^4.17.21",
 		"lucide-svelte": "^0.266.0",
