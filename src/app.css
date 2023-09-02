@@ -28,7 +28,7 @@
 	}
 	.o-list li {
 		counter-increment: item;
-		@apply flex relative transition-opacity;
+		@apply flex relative;
 	}
 	.o-list li > *:first-child {
 		@apply ml-12 pt-1 pb-8 w-full;
@@ -46,5 +46,9 @@
 	.o-list li:after {
 		content: counter(item);
 		@apply flex items-center justify-center absolute w-8 h-8 rounded-full bg-base-200;
+	}
+	.u-list li.checked,
+	.o-list li.checked {
+		@apply opacity-50 print:opacity-100 transition-opacity;
 	}
 }
