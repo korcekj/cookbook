@@ -16,7 +16,7 @@ date: 2022-12-28
 
 ## Ingrediencie
 
-- **5 ks** / Vajcia
+- **5 ks** / Vajce
 - **4 PL** / Maslo
 - **1 štipka** / Mleté čierne korenie
 - **1 štipka** / Soľ
