@@ -91,31 +91,34 @@
 	<article class="prose my-6">
 		<svelte:component this={component} />
 	</article>
-	<aside class="print:hidden">
-		<Section name="other-recipes" class="bg-gradient-to-r from-base-300 to-base-100">
-			<svelte:fragment slot="title-bold">Ďalšie</svelte:fragment>
-			<svelte:fragment slot="title-light">recepty</svelte:fragment>
-			<div class="carousel max-w-full rounded-box my-6 space-x-4">
-				{#each otherRecipes as recipe, i (recipe.slug)}
-					<div class="carousel-item w-[85%] max-w-xs xl:max-w-sm">
-						{#if i === otherRecipes.length - 1}
-							{@const category = recipe.categories[0]}
-							<OverlayCard src={recipe.poster} class="min-h-[20rem]">
-								<svelte:fragment slot="title">{capitalize(category)}</svelte:fragment>
-								<svelte:fragment slot="subtitle">Zobraziť všetky recepty na stránke</svelte:fragment
-								>
-								<svelte:fragment slot="actions"
-									><a href={`/categories/${slugify(category)}/1`} class="btn btn-sm btn-secondary"
-										>Všetky recepty</a
-									></svelte:fragment
-								>
-							</OverlayCard>
-						{:else}
-							<RecipeCard {recipe} />
-						{/if}
-					</div>
-				{/each}
-			</div>
-		</Section>
-	</aside>
+	{#if otherRecipes.length}
+		<aside class="print:hidden">
+			<Section name="other-recipes" class="bg-gradient-to-r from-base-300 to-base-100">
+				<svelte:fragment slot="title-bold">Ďalšie</svelte:fragment>
+				<svelte:fragment slot="title-light">recepty</svelte:fragment>
+				<div class="carousel max-w-full rounded-box my-6 space-x-4">
+					{#each otherRecipes as recipe, i (recipe.slug)}
+						<div class="carousel-item w-[85%] max-w-xs xl:max-w-sm">
+							{#if i === otherRecipes.length - 1}
+								{@const category = recipe.categories[0]}
+								<OverlayCard src={recipe.poster} class="min-h-[20rem]">
+									<svelte:fragment slot="title">{capitalize(category)}</svelte:fragment>
+									<svelte:fragment slot="subtitle"
+										>Zobraziť všetky recepty na stránke</svelte:fragment
+									>
+									<svelte:fragment slot="actions"
+										><a href={`/categories/${slugify(category)}/1`} class="btn btn-sm btn-secondary"
+											>Všetky recepty</a
+										></svelte:fragment
+									>
+								</OverlayCard>
+							{:else}
+								<RecipeCard {recipe} />
+							{/if}
+						</div>
+					{/each}
+				</div>
+			</Section>
+		</aside>
+	{/if}
 </div>
