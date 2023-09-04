@@ -31,7 +31,11 @@
 				<Search class="w-4 h-4" />
 				<span>Hľadaj</span></a
 			>
-			<Dropdown class="btn-ghost btn-sm font-medium" items={categories.map(({ title }) => title)}>
+			<Dropdown
+				class="btn-ghost btn-sm font-medium"
+				contentClass="min-w-max"
+				items={categories.map(({ title }) => title)}
+			>
 				<svelte:fragment slot="select">Kategórie</svelte:fragment>
 				<svelte:fragment slot="item" let:idx>
 					<a href={`/categories/${categories[idx].slug}/1`}>

@@ -13,6 +13,7 @@
 	export let items: Item[] = [];
 	export let selected: Item | null = null;
 	export let placeholder = '';
+	export let contentClass = '';
 	export { className as class };
 
 	let opened = false;
@@ -72,7 +73,10 @@
 	<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 	<ul
 		tabindex="0"
-		class="dropdown-content z-[100] menu p-2 shadow bg-base-100 min-w-full max-h-60 rounded-box mt-1 flex-nowrap overflow-y-auto"
+		class={twMerge(
+			'dropdown-content z-[100] menu p-2 shadow bg-base-100 min-w-full max-h-60 rounded-box mt-1 flex-nowrap overflow-y-auto',
+			contentClass
+		)}
 		on:focus={() => (opened = true)}
 		bind:this={listElement}
 	>
