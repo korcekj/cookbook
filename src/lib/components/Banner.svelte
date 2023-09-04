@@ -3,6 +3,7 @@
 
 	export let asideClass = '';
 	export let mainClass = '';
+	export let reverse = false;
 	export { className as class };
 
 	let className = '';
@@ -13,6 +14,8 @@
 		'flex flex-col md:flex-row items-stretch md:items-center p-4 md:p-6 rounded-lg',
 		className
 	)}
+	class:md:flex-row-reverse={reverse}
+	class:flex-col-reverse={reverse}
 	{...$$restProps}
 >
 	<div class={twMerge('flex-1 flex flex-col items-center space-y-2', asideClass)}>

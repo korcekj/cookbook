@@ -8,6 +8,9 @@
 	import SearchRecipe from '$lib/components/SearchRecipe.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import Banner from '$lib/components/Banner.svelte';
+	import MailShare from '$lib/components/MailShare.svelte';
+	import FacebookShare from '$lib/components/FacebookShare.svelte';
+	import WhatsappShare from '$lib/components/WhatsappShare.svelte';
 
 	export let data;
 
@@ -86,4 +89,30 @@
 			{/each}
 		</div>
 	</Section>
+	<Banner
+		reverse
+		class="bg-gradient-to-r from-primary/60 to-primary"
+		mainClass="items-center justify-center space-x-2"
+		asideClass="text-primary-content"
+	>
+		<svelte:fragment slot="title">Máte chuť recept zdieľať?</svelte:fragment>
+		<svelte:fragment slot="text"
+			>Pre zdieľanie receptu použite tlačidlá pri detaile receptu v hornej časti obrazovky. Recept
+			je možné zdieľať aj prostredníctvom sociálnych sietí, poprípade si ho nechať vytlačiť. Chutné
+			zdieľanie!</svelte:fragment
+		>
+		<svelte:fragment slot="main">
+			<FacebookShare class="btn-sm sm:btn-md" url={PUBLIC_BASE_URL} />
+			<WhatsappShare
+				class="btn-sm sm:btn-md"
+				url={PUBLIC_BASE_URL}
+				text={'CookBook | Online kuchárka'}
+			/>
+			<MailShare
+				class="btn-sm sm:btn-md"
+				url={PUBLIC_BASE_URL}
+				subject={'CookBook | Online kuchárka'}
+			/>
+		</svelte:fragment>
+	</Banner>
 </div>
