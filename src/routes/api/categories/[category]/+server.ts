@@ -1,10 +1,11 @@
 import { json } from '@sveltejs/kit';
 import { slugify } from '$lib/utils';
+import { cacheAge } from '$lib/config';
 import { getRecipes, sortRecipes } from '$lib/utils/recipes';
 
 export const prerender = false;
 
-export const GET = ({ url, params: { category } }) => {
+export const GET = ({ url, setHeaders, params: { category } }) => {
 	const limit = url.searchParams.get('limit');
 	const offset = url.searchParams.get('offset');
 	const sort = url.searchParams.get('sort');
@@ -15,6 +16,10 @@ export const GET = ({ url, params: { category } }) => {
 		// Multiple categories are joined with a plus sign
 		categories.some((c) => category.split('+').includes(slugify(c)))
 	);
+
+	setHeaders({
+		'cache-control': `public, s-maxage=${cacheAge}`
+	});
 
 	return json(
 		recipes
