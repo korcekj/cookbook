@@ -35,7 +35,7 @@ date: 2022-12-29
 1. Očistenú cuketu si nastrúhame na jemnom strúhadle.
 2. Pridáme všetky ostatné suroviny a zmiešame ich.
 3. Hotové cesto vylejeme na vymastený a múkou vysypaný plech. Veľkosť plechu 20x30 cm. V prípade väčšieho plechu odporúčam dávku zdvojnásobiť.
-4. Pečieme pri 180º na cca 15 min.
+4. Pečieme pri 180°C na cca 15 min.
 
 ## Poleva
 

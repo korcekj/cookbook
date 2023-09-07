@@ -30,7 +30,7 @@ date: 2022-12-28
 3. Postupne pridávame múku zmiešanú s práškom do pečiva.
 4. Nakoniec si z bielok vyšľaháme tuhý sneh a postupne ho zamiešame do cesta.
 5. Hotové cesto si vylejeme na plech vystlaný papierom na pečenie.
-6. Cesto pečieme pri 180º približne na 15 min, ale aby sme si boli istý či je hotové, pichneme doň špilkou.
+6. Cesto pečieme pri 180°C približne na 15 min, ale aby sme si boli istý či je hotové, pichneme doň špilkou.
 7. Upečené cesto vyklopíme na suchú utierku, dáme preč papier, zrolujeme ho a necháme ho vychladnúť.
 
 ## Krém

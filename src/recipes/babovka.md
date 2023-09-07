@@ -32,5 +32,5 @@ date: 2023-03-30
 3. Nakoniec pridáme múku zmiešanú s práškom do pečiva a vanilkovým cukrom.
 4. Zvlášť si vyšľaháme bielka do tuhej peny, ktoré nakoniec pridáme do zmesy.
 5. Do vymastenej formy si nalejeme polovicu cesta a do druhej primiešame kakao, do formy vylejeme zvyšok cesta.
-6. Bábovku dáme piecť do vyhriatej rúry pri 180º na cca 45 minút.
+6. Bábovku dáme piecť do vyhriatej rúry pri 180°C na cca 45 minút.
 7. Keď mame bábovku upečenu, necháme ju vychladnúť, a nakoniec je posypeme mletým cukrom.

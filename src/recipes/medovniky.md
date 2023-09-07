@@ -34,7 +34,7 @@ date: 2022-12-28
 3. Vypracujeme cesto a dáme ho odležať do ladničky na noc, poprípade aspoň na 3 hodiny.
 4. Odležané cesto si rozvaľkáme na hrúbku cca 5mm.
 5. Keď máme cesto rozvaľkané, začneme vykrajovať medovníčky a následne ich ukladáme na plech vystlaný papierom na pečenie.
-6. Medovníčky pečieme na 180º do zlatista, cca 10 min.
+6. Medovníčky pečieme na 180°C do zlatista, cca 10 min.
 7. Po vytiahnutí medovníkov z rúry ich ešte za horúca potrieme rozšľahaným žĺtkom.
 
 ## Bielková poleva
