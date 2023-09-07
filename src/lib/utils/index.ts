@@ -7,3 +7,14 @@ export const url = (path: string) => {
 export const slugify = (str: string) => {
 	return deburr(str).toLowerCase().replace(/ +/g, '-');
 };
+
+export const viewTransition = (navigation: any): Promise<void> | void => {
+	if (!document.startViewTransition) return;
+
+	return new Promise((resolve) => {
+		document.startViewTransition(async () => {
+			resolve();
+			await navigation.complete;
+		});
+	});
+};

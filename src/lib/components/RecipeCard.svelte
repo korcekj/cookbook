@@ -11,15 +11,16 @@
 	export { className as class };
 
 	let className = '';
+	let navigated = false;
 </script>
 
 <div class={twMerge('card card-compact card-bordered border-base-200 max-w-full', className)}>
-	<figure class="relative">
+	<figure class="relative" class:motion-safe:[view-transition-name:figure]={navigated}>
 		<span class="absolute top-4 left-4 btn btn-xs glass pointer-events-none z-[1]">
 			<Clock class="w-4 h-4" />
 			{dayjs.duration(recipe.preparation + recipe.cooking, 'minutes').humanize()}
 		</span>
-		<a href={`/recipes/${recipe.slug}`}
+		<a href={`/recipes/${recipe.slug}`} on:click={() => (navigated = true)}
 			><img
 				src={recipe.poster}
 				alt={recipe.title}
@@ -41,7 +42,11 @@
 		</div>
 		<p class="line-clamp-3">{recipe.description}</p>
 		<div class="card-actions justify-end">
-			<a class="btn btn-secondary btn-sm" href={`/recipes/${recipe.slug}`}>Detaily receptu</a>
+			<a
+				class="btn btn-secondary btn-sm"
+				href={`/recipes/${recipe.slug}`}
+				on:click={() => (navigated = true)}>Detaily receptu</a
+			>
 		</div>
 	</div>
 </div>
