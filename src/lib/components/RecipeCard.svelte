@@ -14,7 +14,7 @@
 	let navigated = false;
 </script>
 
-<div class={twMerge('card card-compact card-bordered border-base-200 max-w-full', className)}>
+<div class={twMerge('card card-compact card-bordered border-base-200 w-full', className)}>
 	<figure class="relative" class:motion-safe:[view-transition-name:figure]={navigated}>
 		<span class="absolute top-4 left-4 btn btn-xs glass pointer-events-none z-[1]">
 			<Clock class="w-4 h-4" />
