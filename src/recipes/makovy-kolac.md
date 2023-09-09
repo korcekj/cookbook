@@ -1,6 +1,6 @@
 ---
 title: Makový koláč
-description: Makový koláč
+description: Tento koláč je malým umením na tanieri, ktoré vás okúzli svojou lahodnosťou.
 poster: /recipes/makovy-kolac/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2023-09-07
 ---
 
 # { title }
+
+{ description }
 
 ## Cesto
 

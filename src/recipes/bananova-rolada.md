@@ -1,6 +1,6 @@
 ---
 title: Banánová roláda
-description: Banánová mňamka
+description: Kúzelná pochúťka, ktorá vás prenesie do sveta lahodného potešenia už pri prvom ochutnaní.
 poster: /recipes/bananova-rolada/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2022-12-28
 ---
 
 # { title }
+
+{ description }
 
 ## Piškótové cesto
 

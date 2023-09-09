@@ -1,6 +1,6 @@
 ---
 title: Syrové guľky
-description: Syrové guľky
+description: Tieto malé pochúťky v sebe skrývajú bohatstvo syra.
 poster: /recipes/syrove-gulky/poster.jpg
 categories:
   - bezmäsité jedlá
@@ -13,6 +13,8 @@ date: 2022-12-28
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

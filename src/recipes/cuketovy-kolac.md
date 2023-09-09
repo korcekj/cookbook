@@ -1,6 +1,6 @@
 ---
 title: Cuketový koláč
-description: Cuketa na iný spôsob
+description: Úžasný dezert prekvapujúci svojou neobyčajnou kombináciou chutí.
 poster: /recipes/cuketovy-kolac/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2022-12-29
 ---
 
 # { title }
+
+{ description }
 
 ## Koláč
 

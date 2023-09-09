@@ -1,6 +1,6 @@
 ---
 title: Medovníky
-description: Mäkkučké medovníčky ako od babičky
+description: Medová sladkosť a bohatá korenistá chuť spája generácie v jedinečnej kulinárskej tradícii.
 poster: /recipes/medovniky/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2022-12-28
 ---
 
 # { title }
+
+{ description }
 
 ## Cesto
 

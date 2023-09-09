@@ -1,6 +1,6 @@
 ---
 title: Nepečená roláda - Marína
-description: Farebná báseň pre oči
+description: Jednoduchá príprava a osviežujúca chuť robia tento dezert dokonalým.
 poster: /recipes/nepecena-rolada-marina/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2022-12-28
 ---
 
 # { title }
+
+{ description }
 
 ## Hnedé cesto
 

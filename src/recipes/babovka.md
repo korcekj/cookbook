@@ -1,6 +1,6 @@
 ---
 title: Bábovka
-description: Bábovka
+description: Je to jednoduchý, ale nesmierne uspokojivý recept, ktorý vás zahreje s každým sladkým kúskom.
 poster: /recipes/babovka/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2023-03-30
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

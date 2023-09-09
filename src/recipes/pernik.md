@@ -1,6 +1,6 @@
 ---
 title: Perník
-description: Perník
+description: Perník je malým kúskom histórie a sladkosti v jednom.
 poster: /recipes/pernik/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2023-09-07
 ---
 
 # { title }
+
+{ description }
 
 ## Cesto
 

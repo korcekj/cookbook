@@ -1,6 +1,6 @@
 ---
 title: Cookies
-description: Cookies
+description: Sušienky - drobnými sladkými klenotmi, ktoré tajomne tavia na jazyku.
 poster: /recipes/cookies/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2023-09-07
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

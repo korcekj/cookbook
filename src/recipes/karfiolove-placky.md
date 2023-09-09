@@ -1,6 +1,6 @@
 ---
 title: Karfiolové placky
-description: Karfiolové placky
+description: Ich jemná textúra sa snúbi s bohatou chuťou karfiolu, vytvárajúc úchvatný tanec na vašom tanieri.
 poster: /recipes/karfiolove-placky/poster.jpg
 categories:
   - bezmäsité jedlá
@@ -13,6 +13,8 @@ date: 2022-12-28
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

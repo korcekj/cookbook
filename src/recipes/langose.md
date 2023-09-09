@@ -1,6 +1,6 @@
 ---
 title: Langoše
-description: Ako od babky
+description: Táto tradičná dobrotka vás zavedie na cestu chuťových zážitkov.
 poster: /recipes/langose/poster.jpg
 categories:
   - bezmäsité jedlá
@@ -13,6 +13,8 @@ date: 2023-03-30
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

@@ -1,6 +1,6 @@
 ---
 title: Palacinky
-description: Palacinky
+description: Palacinky sú výnimočným potešením pre vaše chuťové poháriky.
 poster: /recipes/palacinky/poster.jpg
 categories:
   - bezmäsité jedlá
@@ -13,6 +13,8 @@ date: 2023-09-07
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

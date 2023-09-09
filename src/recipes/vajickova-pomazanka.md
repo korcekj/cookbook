@@ -1,6 +1,6 @@
 ---
 title: Vajíčková pomazánka
-description: Vajíčková pomazánka
+description: Táto pomazánka je dokonalým začiatkom každého dňa.
 poster: /recipes/vajickova-pomazanka/poster.jpg
 categories:
   - pomazánky
@@ -13,6 +13,8 @@ date: 2022-12-28
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

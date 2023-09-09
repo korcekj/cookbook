@@ -1,6 +1,6 @@
 ---
 title: Nepečené včelie úliky
-description: Výborná nepečená dobrota pre veľkých aj malých
+description: Tieto sladké poklady vás prenesú do sveta lahodných dobrodružstiev.
 poster: /recipes/nepecene-vcelie-uliky/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2022-12-29
 ---
 
 # { title }
+
+{ description }
 
 ## Cesto
 

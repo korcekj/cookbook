@@ -1,6 +1,6 @@
 ---
 title: Kokosové rezy
-description: Fantastická kokosová bomba
+description: Rezy sú kráľovnami dezertov, ktoré vás vtiahnu do tropického raja na každom kroku.
 poster: /recipes/kokosove-rezy/poster.jpg
 categories:
   - koláče
@@ -13,6 +13,8 @@ date: 2022-12-28
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

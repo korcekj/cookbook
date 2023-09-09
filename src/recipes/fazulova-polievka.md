@@ -1,6 +1,6 @@
 ---
 title: Fazuľová polievka
-description: Fazuľová polievka
+description: Polievka vhodná ako spoločník pre studené dni, ktorý vás objíma svojou teplou náručou.
 poster: /recipes/fazulova-polievka/poster.jpg
 categories:
   - polievky
@@ -13,6 +13,8 @@ date: 2023-09-07
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 

@@ -1,6 +1,6 @@
 ---
 title: Fazuľový prívarok
-description: Fazuľový prívarok
+description: Tento jednoduchý, no výnimočný pokrm je spoločníkom pre hladné žalúdky, ktorý vás očarí svojou sýtosťou.
 poster: /recipes/fazulovy-privarok/poster.jpg
 categories:
   - bezmäsité jedlá
@@ -13,6 +13,8 @@ date: 2023-03-30
 ---
 
 # { title }
+
+{ description }
 
 ## Ingrediencie
 
