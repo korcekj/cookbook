@@ -16,7 +16,7 @@
 	let search = '';
 	let opened = false;
 	let filteredItems: Item[] = [];
-	let listElement: HTMLUListElement | null = null;
+	let listElement: HTMLUListElement;
 
 	$: if (!opened) close();
 	$: if (selected) search = selected[itemTitle] ?? '';
@@ -40,7 +40,7 @@
 	};
 
 	const onBlur = (e: FocusEvent) => {
-		if (!listElement?.contains(e.relatedTarget as Node)) {
+		if (!listElement.contains(e.relatedTarget as Node)) {
 			selected = search ? selected : null;
 			search = selected?.[itemTitle] ?? '';
 			close();
