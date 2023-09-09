@@ -16,15 +16,15 @@ date: 2023-09-07
 
 ## Ingrediencie
 
-- **500 g** / Fazuľa
+- **300 g** / Fazuľa
 - **5 ks** / Zemiaky
 - **2 ks** / Cesnak
-- **1 ČL** / Soľ
+- **1/2 ČL** / Soľ
 - **1 ČL** / Rasca
 - **1 ČL** / Majoránka
-- **1 ČL** / Mleté čierne korenie
-- **1 PL** / Kryštálový cukor
-- **1 PL** / Ocot
+- **1/2 ČL** / Mleté čierne korenie
+- **3 PL** / Kryštálový cukor
+- **3 PL** / Ocot
 - **1 ks** / Hovädzí bujón
 - **1 PL** / Hladká múka
 - **200 ml** / Voda
