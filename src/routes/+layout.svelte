@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
-	import { viewTransition } from '$lib/utils';
-	import { onNavigate } from '$app/navigation';
 
 	import '@fontsource/kanit/200.css';
 	import '@fontsource/kanit/300.css';
@@ -13,11 +11,12 @@
 	import '../app.css';
 
 	import Header from '$lib/components/Header.svelte';
+	import ViewTransition from '$lib/components/ViewTransition.svelte';
 
-	onNavigate(viewTransition);
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
+<ViewTransition />
 <Header />
 
 <slot />
