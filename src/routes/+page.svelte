@@ -55,7 +55,7 @@
 		</div>
 	</Section>
 	<Banner
-		id="search-recipe"
+		id="search"
 		class="bg-gradient-to-r from-primary/60 to-primary mb-6"
 		asideClass="text-primary-content"
 	>
@@ -63,7 +63,7 @@
 		<svelte:fragment slot="text"
 			>V prípade, že chcete nájsť recept, ktorého názov, poprípade jeho časť poznáte, ale nemáte čas
 			si vychutnať všetky recepty tak neváhajte si recept vyhľadať. Stačí zadať kľúčové znaky alebo
-			slová do poľa "Vyhľadaj recept". Chutné hľadanie!</svelte:fragment
+			slová do poľa "Vyhľadaj recept". Chutné hľadanie 🔍</svelte:fragment
 		>
 		<svelte:fragment slot="main">
 			<SearchRecipe />
@@ -99,7 +99,7 @@
 		<svelte:fragment slot="text"
 			>Pre zdieľanie receptu použite tlačidlá pri detaile receptu v hornej časti obrazovky. Recept
 			je možné zdieľať aj prostredníctvom sociálnych sietí, poprípade si ho nechať vytlačiť. Chutné
-			zdieľanie!</svelte:fragment
+			zdieľanie 📬</svelte:fragment
 		>
 		<svelte:fragment slot="main">
 			<FacebookShare class="btn-sm sm:btn-md" url={PUBLIC_BASE_URL} />

@@ -27,7 +27,7 @@
 	</div>
 	<div class="flex-none print:hidden">
 		<div class="flex items-center">
-			<a href="/#search-recipe" class="btn btn-sm btn-ghost font-medium">
+			<a href="/#search" class="btn btn-sm btn-ghost font-medium">
 				<Search class="w-4 h-4" />
 				<span>Hľadaj</span></a
 			>
