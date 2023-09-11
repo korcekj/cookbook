@@ -3,7 +3,7 @@ title: Osie hniezda
 description: Tieto malé koláčiky sú plné lahodnej náplne a chrumkavej kôrky, tvoriac rozkošný kontrast chutí a textúr.
 poster: /recipes/osie-hniezda/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 50

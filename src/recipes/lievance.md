@@ -4,6 +4,7 @@ description: Tradičné drobné palacinky sú jednoducho potešením pre všetky
 poster: /recipes/lievance/poster.jpg
 categories:
   - bezmäsité jedlá
+  - dezerty
 servings:
   unit: portions
   count: 10

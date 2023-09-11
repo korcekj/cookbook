@@ -4,6 +4,7 @@ description: Zemiakový šalát je jednoduchým, ale neodolateľným pokrmom pre
 poster: /recipes/zemiakovy-salat/poster.jpg
 categories:
   - bezmäsité jedlá
+  - šaláty
 servings:
   unit: portions
   count: 6

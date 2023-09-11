@@ -3,7 +3,7 @@ title: Medovníky
 description: Medová sladkosť a bohatá korenistá chuť spája generácie v jedinečnej kulinárskej tradícii.
 poster: /recipes/medovniky/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 80

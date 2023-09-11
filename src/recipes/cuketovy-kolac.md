@@ -3,7 +3,7 @@ title: Cuketový koláč
 description: Úžasný dezert prekvapujúci svojou neobyčajnou kombináciou chutí.
 poster: /recipes/cuketovy-kolac/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 20

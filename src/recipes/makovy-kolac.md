@@ -3,7 +3,7 @@ title: Makový koláč
 description: Tento koláč je malým umením na tanieri, ktoré vás okúzli svojou lahodnosťou.
 poster: /recipes/makovy-kolac/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 50

@@ -4,6 +4,7 @@ description: Jednoduchá, ale elegantná kombinácia cestovín, zeleniny a šťa
 poster: /recipes/cestovinovy-salat/poster.jpg
 categories:
   - bezmäsité jedlá
+  - šaláty
 servings:
   unit: portions
   count: 6

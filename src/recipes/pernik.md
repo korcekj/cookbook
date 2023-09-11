@@ -3,7 +3,7 @@ title: Perník
 description: Perník je malým kúskom histórie a sladkosti v jednom.
 poster: /recipes/pernik/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 50

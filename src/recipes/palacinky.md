@@ -4,6 +4,7 @@ description: Palacinky sú výnimočným potešením pre vaše chuťové pohári
 poster: /recipes/palacinky/poster.jpg
 categories:
   - bezmäsité jedlá
+  - dezerty
 servings:
   unit: portions
   count: 12

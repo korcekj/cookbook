@@ -3,7 +3,7 @@ title: Bábovka
 description: Je to jednoduchý, ale nesmierne uspokojivý recept, ktorý vás zahreje s každým sladkým kúskom.
 poster: /recipes/babovka/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 10

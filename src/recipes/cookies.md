@@ -3,7 +3,7 @@ title: Cookies
 description: Sušienky - drobnými sladkými klenotmi, ktoré tajomne tavia na jazyku.
 poster: /recipes/cookies/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 60

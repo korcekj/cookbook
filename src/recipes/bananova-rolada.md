@@ -3,7 +3,7 @@ title: Banánová roláda
 description: Kúzelná pochúťka, ktorá vás prenesie do sveta lahodného potešenia už pri prvom ochutnaní.
 poster: /recipes/bananova-rolada/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 20

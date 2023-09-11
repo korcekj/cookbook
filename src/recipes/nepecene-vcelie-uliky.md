@@ -3,7 +3,7 @@ title: Nepečené včelie úliky
 description: Tieto sladké poklady vás prenesú do sveta lahodných dobrodružstiev.
 poster: /recipes/nepecene-vcelie-uliky/poster.jpg
 categories:
-  - koláče
+  - dezerty
 servings:
   unit: pieces
   count: 40
