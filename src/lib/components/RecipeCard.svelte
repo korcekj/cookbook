@@ -2,6 +2,7 @@
 	import type { Recipe } from '$lib/types';
 
 	import dayjs from '$lib/utils/date';
+	import { slugify } from '$lib/utils';
 	import { twMerge } from 'tailwind-merge';
 
 	import RecipeServings from './RecipeServings.svelte';
@@ -36,7 +37,9 @@
 			</div>
 			{#each recipe.categories as category}
 				<div class="carousel-item">
-					<div class="badge badge-ghost">{category}</div>
+					<a href={`/categories/${slugify(category)}/1`}
+						><div class="badge badge-ghost hover:badge-outline">{category}</div></a
+					>
 				</div>
 			{/each}
 		</div>
