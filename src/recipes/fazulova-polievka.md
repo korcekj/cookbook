@@ -35,7 +35,7 @@ date: 2023-09-07
 ## Postup
 
 1. Fazuľu namočíme aspoň na 12 hodín pred varením.
-2. Po odmočení uvedieme do varu a pridáme soľ, korenie, majoránku, rascu a pretlačený cesnak.
+2. Po odmočení vodu vymeníme, uvedieme do varu a pridáme soľ, korenie, majoránku, rascu a pretlačený cesnak.
 3. Keď zovrie, tak pridáme hovädzí bujón.
 4. Varíme do polomäkka.
 5. Zamiaky si nakrájame na menšie kocky a pridáme ich ku fazuli.
