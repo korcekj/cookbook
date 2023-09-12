@@ -29,3 +29,9 @@ export type RecipeFile = {
 export type RecipeSort = 'date' | 'duration' | 'title' | 'servings';
 
 export type CategorySort = 'title' | 'recipes';
+
+export interface Sitemap {
+	pages: string[];
+	recipes: Recipe[];
+	categories: Category[];
+}
