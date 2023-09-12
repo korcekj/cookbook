@@ -15,6 +15,7 @@
 	href={`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(url)}`}
 	target="_self"
 	rel="noopener"
+	aria-label="Share via email"
 >
 	<Mail class="w-6 h-6" />
 </a>

@@ -14,6 +14,7 @@
 	href={`https://facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`}
 	target="_blank"
 	rel="noopener"
+	aria-label="Share on Facebook"
 >
 	<Facebook class="text-white w-6 h-6" />
 </a>
