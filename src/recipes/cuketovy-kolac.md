@@ -16,11 +16,11 @@ date: 2022-12-29
 
 { description }
 
-## Koláč
+## Cesto
 
 ### Ingrediencie
 
-- **350 g** / Nastrúhaná cuketa
+- **350 g** / Cuketa
 - **200 g** / Mletý cukor
 - **250 g** / Polohrubá múka
 - **2 ks** / Vajce
