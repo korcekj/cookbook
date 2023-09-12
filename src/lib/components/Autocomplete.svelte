@@ -7,7 +7,9 @@
 	import { goto } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import { createEventDispatcher } from 'svelte';
+	import { autofocus } from '$lib/utils/actions';
 
+	export let focus = false;
 	export let items: Item[] = [];
 	export let itemTitle: keyof Item;
 	export let itemValue: keyof Item;
@@ -16,7 +18,7 @@
 	let search = '';
 	let opened = false;
 	let filteredItems: Item[] = [];
-	let listElement: HTMLUListElement;
+	let listElement: HTMLUListElement | null = null;
 
 	$: if (!opened) close();
 	$: if (selected) search = selected[itemTitle] ?? '';
@@ -40,7 +42,7 @@
 	};
 
 	const onBlur = (e: FocusEvent) => {
-		if (!listElement.contains(e.relatedTarget as Node)) {
+		if (!listElement?.contains(e.relatedTarget as Node)) {
 			selected = search ? selected : null;
 			search = selected?.[itemTitle] ?? '';
 			close();
@@ -79,6 +81,7 @@
 					on:click={() => {
 						if (!opened) opened = true;
 					}}
+					use:autofocus={focus}
 					{...$$restProps}
 				/>
 				{#if loading}

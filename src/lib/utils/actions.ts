@@ -16,3 +16,24 @@ export const scrollToHash = (_: HTMLElement) => {
 		}
 	};
 };
+
+export const autofocus = (node: HTMLInputElement, value: boolean) => {
+	let timeout: number;
+
+	const focus = () => {
+		timeout = setTimeout(() => {
+			node.focus();
+		}, 100);
+	};
+
+	if (value) focus();
+
+	return {
+		update(value: boolean) {
+			if (value) focus();
+		},
+		destroy() {
+			clearTimeout(timeout);
+		}
+	};
+};
