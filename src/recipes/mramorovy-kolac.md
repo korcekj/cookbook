@@ -1,7 +1,7 @@
 ---
 title: Mramorový koláč
 description: Jedinečný dezert, ktorý kombinuje svetlé a tmavé vrstvy do sladkej harmónie
-poster: /recipes/mramorovy-kolac/poster.jpg
+poster: /recipes/mramorovy-kolac/poster.webp
 categories:
   - dezerty
 servings:

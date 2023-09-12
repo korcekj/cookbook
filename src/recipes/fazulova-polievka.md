@@ -1,7 +1,7 @@
 ---
 title: Fazuľová polievka
 description: Polievka vhodná ako spoločník pre studené dni, ktorý vás objíma svojou teplou náručou.
-poster: /recipes/fazulova-polievka/poster.jpg
+poster: /recipes/fazulova-polievka/poster.webp
 categories:
   - polievky
 servings:

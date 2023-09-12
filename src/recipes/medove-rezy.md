@@ -1,7 +1,7 @@
 ---
 title: Medové rezy
 description: Medové rezy sú malými sladkými klenotmi pre vaše chuťové poháriky.
-poster: /recipes/medove-rezy/poster.jpg
+poster: /recipes/medove-rezy/poster.webp
 categories:
   - dezerty
 servings:

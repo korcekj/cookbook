@@ -1,7 +1,7 @@
 ---
 title: Krémové parmezánové rizoto
 description: Krémové parmezánové rizoto je kulinárskym umením, ktoré rozvíri vaše chuťové buňky.
-poster: /recipes/kremove-parmezanove-rizoto/poster.jpg
+poster: /recipes/kremove-parmezanove-rizoto/poster.webp
 categories:
   - bezmäsité jedlá
 servings:

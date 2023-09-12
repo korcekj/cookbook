@@ -1,7 +1,7 @@
 ---
 title: Lievance
 description: Tradičné drobné palacinky sú jednoducho potešením pre všetky vekové skupiny.
-poster: /recipes/lievance/poster.jpg
+poster: /recipes/lievance/poster.webp
 categories:
   - bezmäsité jedlá
   - dezerty

@@ -1,7 +1,7 @@
 ---
 title: Langoše
 description: Táto tradičná dobrotka vás zavedie na cestu chuťových zážitkov.
-poster: /recipes/langose/poster.jpg
+poster: /recipes/langose/poster.webp
 categories:
   - bezmäsité jedlá
 servings:

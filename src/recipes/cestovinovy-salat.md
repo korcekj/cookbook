@@ -1,7 +1,7 @@
 ---
 title: Cestovinový šalát
 description: Jednoduchá, ale elegantná kombinácia cestovín, zeleniny a šťavnatého dresingu, ktorá vás okúzli svojou jedinečnou chuťou a osviežujúcim vplyvom.
-poster: /recipes/cestovinovy-salat/poster.jpg
+poster: /recipes/cestovinovy-salat/poster.webp
 categories:
   - bezmäsité jedlá
   - šaláty

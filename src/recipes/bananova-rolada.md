@@ -1,7 +1,7 @@
 ---
 title: Banánová roláda
 description: Kúzelná pochúťka, ktorá vás prenesie do sveta lahodného potešenia už pri prvom ochutnaní.
-poster: /recipes/bananova-rolada/poster.jpg
+poster: /recipes/bananova-rolada/poster.webp
 categories:
   - dezerty
 servings:

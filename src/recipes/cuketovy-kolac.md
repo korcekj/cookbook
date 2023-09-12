@@ -1,7 +1,7 @@
 ---
 title: Cuketový koláč
 description: Úžasný dezert prekvapujúci svojou neobyčajnou kombináciou chutí.
-poster: /recipes/cuketovy-kolac/poster.jpg
+poster: /recipes/cuketovy-kolac/poster.webp
 categories:
   - dezerty
 servings:

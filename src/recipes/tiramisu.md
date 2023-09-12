@@ -1,7 +1,7 @@
 ---
 title: Tiramisu
 description: Tento dezert je spojením kávy, mascarpone a krému, vytvárajúc neodolateľný zážitok pre vaše chuťové poháriky.
-poster: /recipes/tiramisu/poster.jpg
+poster: /recipes/tiramisu/poster.webp
 categories:
   - dezerty
 servings:

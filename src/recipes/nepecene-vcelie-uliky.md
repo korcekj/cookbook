@@ -1,7 +1,7 @@
 ---
 title: Nepečené včelie úliky
 description: Tieto sladké poklady vás prenesú do sveta lahodných dobrodružstiev.
-poster: /recipes/nepecene-vcelie-uliky/poster.jpg
+poster: /recipes/nepecene-vcelie-uliky/poster.webp
 categories:
   - dezerty
 servings:

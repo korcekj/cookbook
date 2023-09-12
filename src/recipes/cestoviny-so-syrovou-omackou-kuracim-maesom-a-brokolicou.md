@@ -1,7 +1,7 @@
 ---
 title: Cestoviny so syrovou omáčkou, kuracím mäsom a brokolicou
 description: Chutné, bohaté, a jedinečné jedlo. Gastronomická symfónia na vašom tanieri.
-poster: /recipes/cestoviny-so-syrovou-omackou-kuracim-maesom-a-brokolicou/poster.jpg
+poster: /recipes/cestoviny-so-syrovou-omackou-kuracim-maesom-a-brokolicou/poster.webp
 categories:
   - cestoviny
 servings:

@@ -1,7 +1,7 @@
 ---
 title: Krémová hrášková polievka
 description: Jej jemnosť sa lúšti spolu s čerstvým hráškom, tvoriac osviežujúcu harmóniu na vašom jazyku.
-poster: /recipes/kremova-hraskova-polievka/poster.jpg
+poster: /recipes/kremova-hraskova-polievka/poster.webp
 categories:
   - polievky
 servings:
