@@ -1,0 +1,32 @@
+{
+	"theme_color": "#70983F",
+	"background_color": "#70983F",
+	"display": "browser",
+	"scope": "/",
+	"start_url": "/",
+	"name": "CookBook | Online kuch\u00e1rka",
+	"short_name": "CookBook",
+	"description": "Neviete sa rozhodn\u00fa\u0165 \u010do dnes na obed alebo ve\u010deru? Potom je tu pre V\u00e1s zoznam na\u0161ich ob\u013e\u00faben\u00fdch a jednoduch\u00fdch receptov",
+	"icons": [
+		{
+			"src": "/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/icon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "/icon-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
