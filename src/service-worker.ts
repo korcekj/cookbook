@@ -66,7 +66,13 @@ sw.addEventListener('fetch', (event) => {
 		} catch {
 			// do the same thing twice twice and hope for a different result
 			cacheMatch = await cache.match(event.request);
-			return cacheMatch ?? new Response('Something went wrong', { status: 408 });
+			return (
+				cacheMatch ??
+				new Response(JSON.stringify({ message: 'Something went wrong' }), {
+					status: 408,
+					headers: { 'Content-Type': 'text/html' }
+				})
+			);
 		}
 	}
 
