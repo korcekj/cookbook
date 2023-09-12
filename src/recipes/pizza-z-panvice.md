@@ -4,6 +4,7 @@ description: Táto krehká a slaná lahôdka vás prekvapí svojou jedinečnou c
 poster: /recipes/pizza-z-panvice/poster.jpg
 categories:
   - bezmäsité jedlá
+  - pizza
 servings:
   unit: portions
   count: 1
