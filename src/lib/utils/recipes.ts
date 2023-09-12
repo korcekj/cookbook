@@ -1,6 +1,7 @@
 import type { RecipeFile, RecipeSort, Recipe, Category, CategorySort } from '$lib/types';
 
 import dayjs from '$lib/utils/date';
+import { slugify } from '$lib/utils';
 
 export const getRecipes = () => {
 	const recipes = import.meta.glob<RecipeFile>('/src/recipes/*.md', { eager: true });
@@ -12,6 +13,19 @@ export const getRecipes = () => {
 				...file.metadata
 			} satisfies Recipe)
 	);
+};
+
+export const getCategories = () => {
+	const recipes = getRecipes();
+
+	return recipes.reduce((acc, { categories }) => {
+		categories.forEach((category) => {
+			const index = acc.findIndex(({ title }) => title === category);
+			if (index === -1) acc.push({ title: category, slug: slugify(category), recipes: 1 });
+			else acc[index].recipes++;
+		});
+		return acc;
+	}, [] as Category[]);
 };
 
 export const sortRecipes = (sort: string) => {

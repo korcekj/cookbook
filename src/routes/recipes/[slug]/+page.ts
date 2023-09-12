@@ -2,6 +2,7 @@ import type { RecipeFile, Recipe } from '$lib/types';
 
 import { slugify } from '$lib/utils';
 import { error } from '@sveltejs/kit';
+import { getRecipes } from '$lib/utils/recipes';
 
 export async function load({ fetch, params: { slug } }) {
 	try {
@@ -24,3 +25,8 @@ export async function load({ fetch, params: { slug } }) {
 		throw error(404, `Recept ${slug} nebol nájdený`);
 	}
 }
+
+export const entries = async () => {
+	const recipes = getRecipes();
+	return recipes.map(({ slug }) => ({ slug }));
+};
