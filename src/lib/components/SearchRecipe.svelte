@@ -14,7 +14,7 @@
 		focus = location.hash === '#search';
 		timeout = setTimeout(() => {
 			focus = false;
-		}, 100);
+		}, 0);
 	};
 
 	onMount(async () => {
