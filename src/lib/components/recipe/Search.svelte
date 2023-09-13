@@ -3,7 +3,7 @@
 
 	import { onMount, onDestroy } from 'svelte';
 
-	import Autocomplete from './Autocomplete.svelte';
+	import Autocomplete from '../Autocomplete.svelte';
 	import { Search } from 'lucide-svelte';
 
 	let focus = false;

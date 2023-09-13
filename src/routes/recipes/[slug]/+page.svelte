@@ -7,9 +7,9 @@
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
 	import Section from '$lib/components/Section.svelte';
-	import RecipeCard from '$lib/components/RecipeCard.svelte';
-	import OverlayCard from '$lib/components/OverlayCard.svelte';
-	import RecipeServings from '$lib/components/RecipeServings.svelte';
+	import RecipeCard from '$lib/components/recipe/Card.svelte';
+	import OverlayCard from '$lib/components/recipe/OverlayCard.svelte';
+	import RecipeServings from '$lib/components/recipe/Servings.svelte';
 	import MailShare from '$lib/components/MailShare.svelte';
 	import FacebookShare from '$lib/components/FacebookShare.svelte';
 	import WhatsappShare from '$lib/components/WhatsappShare.svelte';

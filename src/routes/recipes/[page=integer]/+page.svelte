@@ -3,9 +3,9 @@
 	import { recipeSorts } from '$lib/utils/recipes';
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
-	import RecipeCard from '$lib/components/RecipeCard.svelte';
 	import Dropdown from '$lib/components/Dropdown.svelte';
-	import SearchRecipe from '$lib/components/SearchRecipe.svelte';
+	import RecipeCard from '$lib/components/recipe/Card.svelte';
+	import SearchRecipe from '$lib/components/recipe/Search.svelte';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
 
 	export let data;

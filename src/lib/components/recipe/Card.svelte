@@ -5,7 +5,7 @@
 	import { slugify } from '$lib/utils';
 	import { twMerge } from 'tailwind-merge';
 
-	import RecipeServings from './RecipeServings.svelte';
+	import RecipeServings from './Servings.svelte';
 	import { Clock } from 'lucide-svelte';
 
 	export let recipe: Recipe;

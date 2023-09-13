@@ -3,9 +3,9 @@
 	import { scrollToHash } from '$lib/utils/actions.js';
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
-	import RecipeCard from '$lib/components/RecipeCard.svelte';
-	import OverlayCard from '$lib/components/OverlayCard.svelte';
-	import SearchRecipe from '$lib/components/SearchRecipe.svelte';
+	import RecipeCard from '$lib/components/recipe/Card.svelte';
+	import OverlayCard from '$lib/components/recipe/OverlayCard.svelte';
+	import SearchRecipe from '$lib/components/recipe/Search.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import Banner from '$lib/components/Banner.svelte';
 	import MailShare from '$lib/components/MailShare.svelte';
