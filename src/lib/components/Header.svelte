@@ -11,9 +11,11 @@
 
 	onMount(async () => {
 		try {
-			categories = await fetch('/api/categories?sort=-recipes').then<Category[]>((res) =>
-				res.json()
-			);
+			const response = await fetch('/api/categories?sort=-recipes');
+			if (!response.ok)
+				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
+
+			categories = await response.json();
 		} catch (err) {
 			console.error(err);
 		}

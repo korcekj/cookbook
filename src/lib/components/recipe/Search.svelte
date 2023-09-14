@@ -20,7 +20,12 @@
 	onMount(async () => {
 		try {
 			onHashChange();
-			recipes = await fetch('/api/recipes?sort=title').then<Recipe[]>((res) => res.json());
+
+			const response = await fetch('/api/recipes?sort=title');
+			if (!response.ok)
+				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
+
+			recipes = await response.json();
 		} catch (err) {
 			console.error(err);
 		}
