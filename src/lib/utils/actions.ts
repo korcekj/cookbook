@@ -1,5 +1,3 @@
-import { browser } from '$app/environment';
-
 export const scrollToHash = (_: HTMLElement) => {
 	let timeout: number;
 
@@ -20,8 +18,12 @@ export const scrollToHash = (_: HTMLElement) => {
 };
 
 export const autofocus = (node: HTMLInputElement, value: boolean) => {
+	let timeout: number;
+
 	const focus = () => {
-		if (browser) node.focus();
+		setTimeout(() => {
+			node.focus();
+		}, 100);
 	};
 
 	if (value) focus();
@@ -29,6 +31,9 @@ export const autofocus = (node: HTMLInputElement, value: boolean) => {
 	return {
 		update(value: boolean) {
 			if (value) focus();
+		},
+		destroy() {
+			clearTimeout(timeout);
 		}
 	};
 };
