@@ -18,8 +18,12 @@
 	};
 
 	onMount(async () => {
-		recipes = await fetch('/api/recipes?sort=title').then<Recipe[]>((res) => res.json());
-		onHashChange();
+		try {
+			onHashChange();
+			recipes = await fetch('/api/recipes?sort=title').then<Recipe[]>((res) => res.json());
+		} catch (err) {
+			console.error(err);
+		}
 	});
 
 	onDestroy(() => {

@@ -10,7 +10,13 @@
 	let categories: Category[] = [];
 
 	onMount(async () => {
-		categories = await fetch('/api/categories?sort=-recipes').then<Category[]>((res) => res.json());
+		try {
+			categories = await fetch('/api/categories?sort=-recipes').then<Category[]>((res) =>
+				res.json()
+			);
+		} catch (err) {
+			console.error(err);
+		}
 	});
 </script>
 
