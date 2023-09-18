@@ -26,7 +26,7 @@
 
 <div class={twMerge('card card-compact card-bordered border-base-200 w-full', className)}>
 	<figure class="relative" class:motion-safe:[view-transition-name:figure]={navigated}>
-		<span class="absolute top-4 left-4 btn btn-xs pointer-events-none z-[1]">
+		<span class="absolute top-4 left-4 btn btn-xs no-animation pointer-events-none z-[1]">
 			<Clock class="w-4 h-4" />
 			{dayjs.duration(recipe.preparation + recipe.cooking, 'minutes').humanize()}
 		</span>
