@@ -9,7 +9,7 @@ export const prerender = true;
 export const GET = async () => {
 	const recipes = getRecipes();
 	const categories = getCategories();
-	const pages = ['recipes/1', 'categories/1'];
+	const pages = ['recipes/1'];
 
 	return new Response(sitemap({ pages, recipes, categories }), {
 		headers: {
