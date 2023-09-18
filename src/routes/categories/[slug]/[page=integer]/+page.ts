@@ -2,11 +2,11 @@ import type { Recipe } from '$lib/types';
 
 import { redirect, error } from '@sveltejs/kit';
 import { isRecipeSort } from '$lib/utils/recipes';
+import { recipesPerPage as limit } from '$lib/config';
 
 export const prerender = false;
 
 export async function load({ fetch, url: { search, searchParams }, params: { slug, page } }) {
-	const limit = 12;
 	const offset = (Number(page) - 1) * limit;
 
 	let sort = '-date';
