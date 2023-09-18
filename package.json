@@ -14,7 +14,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^3.0.3",
-		"@sveltejs/kit": "^1.24.1",
+		"@sveltejs/kit": "^1.25.0",
 		"@tailwindcss/typography": "^0.5.9",
 		"@types/lodash": "^4.14.197",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -38,10 +38,12 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/kanit": "^5.0.8",
+		"@upstash/ratelimit": "^0.4.4",
+		"@upstash/redis": "^1.22.0",
 		"@vercel/analytics": "^1.0.2",
 		"dayjs": "^1.11.9",
 		"lodash": "^4.17.21",
-		"lucide-svelte": "^0.266.0",
+		"lucide-svelte": "^0.279.0",
 		"tailwind-merge": "^1.14.0"
 	}
 }
