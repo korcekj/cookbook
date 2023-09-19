@@ -17,7 +17,7 @@
 <CompleteButton
 	{slug}
 	class="w-full pt-6"
-	btnClass="btn-block btn-primary"
+	btnClass="btn-primary flex-1"
 	badgeClass="btn-square btn-accent"
 >
 	<svelte:fragment
