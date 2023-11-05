@@ -16,7 +16,7 @@
 
 <CompleteButton
 	{slug}
-	class="w-full pt-6"
+	class="pt-6 print:hidden"
 	btnClass="btn-primary flex-1"
 	badgeClass="btn-square btn-accent"
 >
