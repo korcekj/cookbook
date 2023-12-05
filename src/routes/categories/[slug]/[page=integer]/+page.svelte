@@ -46,10 +46,10 @@
 	</div>
 	<div class="join grid grid-cols-2">
 		<a href={prev} class="join-item btn" class:btn-disabled={!prev}
-			><ChevronLeft class="w-4 h-4" />Predchádzajúca strana</a
+			><ChevronLeft class="w-4 h-4 hidden sm:block" />Predchádzajúca strana</a
 		>
 		<a href={next} class="join-item btn" class:btn-disabled={!next}
-			>Ďalšia strana <ChevronRight class="w-4 h-4" /></a
+			>Ďalšia strana <ChevronRight class="w-4 h-4 hidden sm:block" /></a
 		>
 	</div>
 </div>
