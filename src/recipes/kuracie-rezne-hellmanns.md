@@ -23,7 +23,7 @@ date: 2023-09-11
 - **1 štipka** / Soľ
 - **1 štipka** / Čierne mleté korenie
 - **4 PL** / Hellmann's tatarská omáčka
-- **2 ks** / Cesnak
+- **2 strúčiky** / Cesnak
 - Strúhanka
 
 ## Postup

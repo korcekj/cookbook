@@ -22,7 +22,7 @@ date: 2023-03-30
 - **3 ks** / Zemiaky
 - **3 ks** / Bobkový list
 - **5 ks** / Korenie celé
-- **2 ks** / Cesnak
+- **2 strúčiky** / Cesnak
 - **1 ČL** / Soľ
 - **1 ČL** / Mleté čierne korenie
 - **1 PL** / Kryštálový cukor

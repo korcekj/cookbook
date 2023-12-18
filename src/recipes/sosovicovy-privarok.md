@@ -20,7 +20,7 @@ date: 2023-09-11
 
 - **500 g** / Zelená šošovica
 - **3 ks** / Bobkový list
-- **3 ks** / Cesnak
+- **3 strúčiky** / Cesnak
 - **1/2 ČL** / Rasca
 - **1 štipka** / Mleté čierne korenie
 - **1 štipka** / Soľ

@@ -20,7 +20,7 @@ date: 2023-09-07
 
 - **300 g** / Fazuľa
 - **5 ks** / Zemiaky
-- **2 ks** / Cesnak
+- **2 strúčiky** / Cesnak
 - **1/2 ČL** / Soľ
 - **1 ČL** / Rasca
 - **1 ČL** / Majoránka

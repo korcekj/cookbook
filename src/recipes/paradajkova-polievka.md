@@ -20,7 +20,7 @@ date: 2023-09-12
 
 - **3 PL** / Olej
 - **1 ks** / Cibuľa
-- **2 ks** / Cesnak
+- **2 strúčiky** / Cesnak
 - **2 konzervy** / Lúpané paradajky
 - **1 ks** / Bobkový list
 - **2 ČL** / Sušené oregáno

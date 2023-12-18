@@ -20,7 +20,7 @@ date: 2023-09-12
 
 - **1 kg** / Zemiaky
 - **120 g** / Hladká múka
-- **3 ks** / Cesnak
+- **3 strúčiky** / Cesnak
 - **1 ks** / Cibuľa
 - **1 štipka** / Soľ
 - **1 štipka** / Mleté čierne korenie
