@@ -60,7 +60,7 @@ date: 2023-09-12
 
 - **250 g** / Slivkový lekvár
 - **100 g** / Čokoláda na varenie
-- **30 g** / Hera
+- **30 g** / Cera
 
 ### Postup
 
