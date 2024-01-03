@@ -14,7 +14,7 @@
 
 	export let data;
 
-	$: ({ latestRecipes, fastestRecipes } = data);
+	$: ({ latestRecipes, favouriteRecipes, fastestRecipes } = data);
 </script>
 
 <svelte:head>
@@ -69,6 +69,44 @@
 			<SearchRecipe />
 		</svelte:fragment>
 	</Banner>
+	<Section name="favourite-recipes" class="bg-gradient-to-r from-base-300 to-base-100">
+		<svelte:fragment slot="title-bold">Najobľúbenejšie</svelte:fragment>
+		<svelte:fragment slot="title-light">recepty</svelte:fragment>
+		<div class="carousel max-w-full rounded-box my-6 space-x-4">
+			{#each favouriteRecipes as recipe, i (recipe.slug)}
+				<div class="carousel-item w-[85%] max-w-xs xl:max-w-sm">
+					{#if i === favouriteRecipes.length - 1}
+						<OverlayCard src={recipe.poster} class="min-h-[20rem]">
+							<svelte:fragment slot="title">Najobľúbenejšie recepty</svelte:fragment>
+							<svelte:fragment slot="subtitle">Zobraziť všetky recepty na stránke</svelte:fragment>
+							<svelte:fragment slot="actions"
+								><a href="/recipes/1?sort=-completed" class="btn btn-sm btn-secondary"
+									>Všetky recepty</a
+								></svelte:fragment
+							>
+						</OverlayCard>
+					{:else}
+						<RecipeCard {recipe} />
+					{/if}
+				</div>
+			{/each}
+		</div>
+	</Section>
+	<Banner
+		reverse
+		class="bg-gradient-to-r from-primary/60 to-primary mb-6"
+		asideClass="text-primary-content"
+	>
+		<svelte:fragment slot="title">Neviete čo pod zub?</svelte:fragment>
+		<svelte:fragment slot="text"
+			>Ste hladný alebo potrebujete navariť chutný obed či večeru, no neviete, čo presne by to malo
+			byť? Ste na správnej adrese. Stačí si zvoliť z dostupnej ponuky receptov podľa vhodnej
+			príležitosti, ako sú napríklad "raňajky" alebo "obed" a máte to. Chutný výber 🎲</svelte:fragment
+		>
+		<svelte:fragment slot="main">
+			<!-- Select recipe randomly -->
+		</svelte:fragment>
+	</Banner>
 	<Section name="fastest-recipes" class="bg-gradient-to-r from-base-300 to-base-100">
 		<svelte:fragment slot="title-bold">Najrýchlejšie</svelte:fragment>
 		<svelte:fragment slot="title-light">recepty</svelte:fragment>
@@ -90,7 +128,6 @@
 		</div>
 	</Section>
 	<Banner
-		reverse
 		class="bg-gradient-to-r from-primary/60 to-primary"
 		mainClass="items-center justify-center space-x-2"
 		asideClass="text-primary-content"
