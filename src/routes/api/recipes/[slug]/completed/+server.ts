@@ -21,11 +21,15 @@ export const POST = async ({ params: { slug }, getClientAddress, setHeaders }) =
 		);
 	}
 
-	const completed = await redis.hincrby(`recipe:${slug}`, 'completed', 1);
+	const completed = await redis.zincrby(`recipes`, 1, slug);
 	return json({ completed });
 };
 
 export const GET = async ({ params: { slug } }) => {
-	const completed = await redis.hget<number>(`recipe:${slug}`, 'completed');
+	const [_1, [_2, completed]] = await redis.zscan('recipes', 0, {
+		match: slug,
+		count: 1
+	});
+
 	return json({ completed: completed ?? 0 });
 };
