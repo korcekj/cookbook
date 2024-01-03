@@ -45,10 +45,10 @@
 				items={categories.map(({ title }) => title)}
 			>
 				<svelte:fragment slot="select">Kategórie</svelte:fragment>
-				<svelte:fragment slot="item" let:idx>
-					<a href={`/categories/${categories[idx].slug}/1`}>
-						{capitalize(categories[idx].title)}
-						<span class="badge badge-sm badge-neutral">{categories[idx].recipes}</span>
+				<svelte:fragment slot="item" let:index>
+					<a href={`/categories/${categories[index].slug}/1`}>
+						{capitalize(categories[index].title)}
+						<span class="badge badge-sm badge-neutral">{categories[index].recipes}</span>
 					</a>
 				</svelte:fragment>
 			</Dropdown>

@@ -80,7 +80,7 @@
 		on:focus={() => (opened = true)}
 		bind:this={listElement}
 	>
-		{#each items as item, idx}
+		{#each items as item, index}
 			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 			<li
 				class="rounded-lg"
@@ -92,7 +92,7 @@
 					}
 				}}
 			>
-				<slot name="item" {item} {idx} active={selected === item}
+				<slot name="item" {item} {index} active={selected === item}
 					><div tabindex="0" role="button" class:active={selected === item}>{item}</div></slot
 				>
 			</li>
