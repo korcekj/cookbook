@@ -2,23 +2,20 @@ import type { RecipeFile, Recipe } from '$lib/types';
 
 import { slugify } from '$lib/utils';
 import { error } from '@sveltejs/kit';
-import { getRecipes } from '$lib/utils/recipes';
 import { cardsPerCarousel as limit } from '$lib/config';
 
 export async function load({ fetch, params: { slug } }) {
 	try {
-		const recipe = (await import(`../../../recipes/${slug}.md`)) as RecipeFile;
-		const categories = recipe.metadata.categories.join('+');
+		const { default: component } = (await import(`../../../recipes/${slug}.md`)) as RecipeFile;
+		const recipe = await fetch(`/api/recipes/${slug}`).then<Recipe>((r) => r.json());
+		const categories = recipe.categories.join('+');
 		const recipes = fetch(`/api/categories/${slugify(categories)}?sort=-date&limit=${limit}`).then<
 			Recipe[]
 		>((r) => r.json());
 
 		return {
-			meta: {
-				slug,
-				...recipe.metadata
-			} satisfies Recipe,
-			component: recipe.default,
+			meta: recipe,
+			component,
 			recipes
 		};
 	} catch (err) {
@@ -26,8 +23,3 @@ export async function load({ fetch, params: { slug } }) {
 		throw error(404, `Recept ${slug} nebol nájdený`);
 	}
 }
-
-export const entries = async () => {
-	const recipes = getRecipes();
-	return recipes.map(({ slug }) => ({ slug }));
-};
