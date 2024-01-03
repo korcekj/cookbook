@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { redis, ratelimit } from '$lib/server/redis';
+import { getCompleted, incrementCompleted, ratelimit } from '$lib/server/redis';
 
 export const prerender = false;
 
@@ -21,15 +21,11 @@ export const POST = async ({ params: { slug }, getClientAddress, setHeaders }) =
 		);
 	}
 
-	const completed = await redis.zincrby(`recipes`, 1, slug);
+	const completed = await incrementCompleted(slug);
 	return json({ completed });
 };
 
 export const GET = async ({ params: { slug } }) => {
-	const [_1, [_2, completed]] = await redis.zscan('recipes', 0, {
-		match: slug,
-		count: 1
-	});
-
-	return json({ completed: completed ?? 0 });
+	const completed = await getCompleted(slug);
+	return json({ completed });
 };

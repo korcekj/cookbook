@@ -3,8 +3,8 @@ import { building } from '$app/environment';
 import { Ratelimit } from '@upstash/ratelimit';
 import { UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN } from '$env/static/private';
 
-let redis: Redis;
-let ratelimit: Ratelimit;
+export let redis: Redis;
+export let ratelimit: Ratelimit;
 
 if (!building) {
 	redis = new Redis({
@@ -20,4 +20,21 @@ if (!building) {
 	});
 }
 
-export { redis, ratelimit };
+export const getCompleted = async (slug: string) => {
+	const [_1, [_2, completed]] = await redis.zscan('recipes', 0, {
+		match: slug,
+		count: 1
+	});
+
+	return completed ? Number(completed) : 0;
+};
+
+export const getAllCompleted = () => {
+	return redis.zrange<(string | number)[]>('recipes', 0, -1, {
+		withScores: true
+	});
+};
+
+export const incrementCompleted = (slug: string) => {
+	return redis.zincrby(`recipes`, 1, slug);
+};
