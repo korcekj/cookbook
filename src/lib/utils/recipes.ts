@@ -10,6 +10,7 @@ export const getRecipes = () => {
 		([path, file]) =>
 			({
 				slug: path.split('/').pop()?.split('.')[0]!,
+				completed: 0,
 				...file.metadata
 			} satisfies Recipe)
 	);
@@ -42,6 +43,8 @@ export const sortRecipes = (sort: string) => {
 				return (desc ? -1 : 1) * a.title.localeCompare(b.title);
 			case 'servings':
 				return (desc ? -1 : 1) * (a.servings.count - b.servings.count);
+			case 'completed':
+				return (desc ? -1 : 1) * (a.completed - b.completed);
 			default:
 				return 0;
 		}
@@ -67,7 +70,8 @@ export const sortCategories = (sort: string) => {
 export const recipeSorts = {
 	'-date': 'Najnovšie',
 	duration: 'Najrýchlejšie',
-	'-servings': 'Najviac porcií'
+	'-servings': 'Najviac porcií',
+	'-completed': 'Najobľúbenejšie'
 } as Record<string, string>;
 
 export const isRecipeSort = (sort: string): sort is RecipeSort => sort in recipeSorts;
