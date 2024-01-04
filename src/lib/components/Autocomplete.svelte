@@ -16,11 +16,11 @@
 	export let selected: Item | null = null;
 
 	let search = '';
-	let opened = false;
+	let open = false;
 	let filteredItems: Item[] = [];
 	let listElement: HTMLUListElement | null = null;
 
-	$: if (!opened) close();
+	$: if (!open) close();
 	$: if (selected) search = selected[itemTitle] ?? '';
 
 	$: loading = items.length === 0;
@@ -37,7 +37,7 @@
 	const close = () => {
 		if (!browser) return;
 
-		opened = false;
+		open = false;
 		(document.activeElement as HTMLElement | null)?.blur();
 	};
 
@@ -79,7 +79,7 @@
 					on:input={onSearch}
 					on:blur={onBlur}
 					on:click={() => {
-						if (!opened) opened = true;
+						if (!open) open = true;
 					}}
 					use:autofocus={focus}
 					{...$$restProps}
@@ -100,7 +100,7 @@
 		<ul
 			tabindex="0"
 			class="dropdown-content z-[100] menu p-2 shadow bg-base-100 rounded-box mt-1 min-w-full max-h-80 flex-nowrap overflow-y-auto"
-			on:focus={() => (opened = true)}
+			on:focus={() => (open = true)}
 			bind:this={listElement}
 		>
 			{#if filteredItems.length}

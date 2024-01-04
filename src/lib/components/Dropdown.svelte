@@ -16,11 +16,11 @@
 	export let contentClass = '';
 	export { className as class };
 
-	let opened = false;
+	let open = false;
 	let className = '';
 	let listElement: HTMLUListElement | null = null;
 
-	$: if (!opened) close();
+	$: if (!open) close();
 	$: loading = items.length === 0;
 
 	$: dispatch('select', selected);
@@ -32,7 +32,7 @@
 	const close = () => {
 		if (!browser) return;
 
-		opened = false;
+		open = false;
 		(document.activeElement as HTMLElement | null)?.blur();
 	};
 
@@ -63,13 +63,13 @@
 		class={twMerge('btn btn-block justify-between', className)}
 		class:btn-disabled={loading}
 		on:blur={onBlur}
-		on:click={() => (opened = !opened)}
+		on:click={() => (open = !open)}
 	>
 		{#if loading}<span class="loading loading-spinner loading-xs" />{/if}
 		<slot name="select" {selected}>
 			{selected ?? placeholder}
 		</slot>
-		{#if opened}
+		{#if open}
 			<ChevronUp class="w-4 h-4" />
 		{:else}
 			<ChevronDown class="w-4 h-4" />
@@ -83,7 +83,7 @@
 			'dropdown-content z-[100] menu p-2 shadow bg-base-100 min-w-full max-h-60 rounded-box mt-1 flex-nowrap overflow-y-auto',
 			contentClass
 		)}
-		on:focus={() => (opened = true)}
+		on:focus={() => (open = true)}
 		bind:this={listElement}
 	>
 		{#each items as item, index}
