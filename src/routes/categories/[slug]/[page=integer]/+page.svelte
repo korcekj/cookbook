@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { url } from '$lib/utils';
-	import { recipeSorts } from '$lib/utils/recipes';
+	import { recipeSort } from '$lib/utils/recipes';
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
 	import RecipeCard from '$lib/components/recipe/Card.svelte';
@@ -30,12 +30,12 @@
 <div class="container mx-auto p-6">
 	<div class="flex flex-col md:flex-row gap-6">
 		<SearchRecipe />
-		<Dropdown items={Object.keys(recipeSorts)} selected={sort}>
+		<Dropdown items={Object.keys(recipeSort)} selected={sort}>
 			<svelte:fragment slot="select" let:selected
-				>{selected ? recipeSorts[selected] : 'Zoradiť podľa'}</svelte:fragment
+				>{selected ? recipeSort[selected] : 'Zoradiť podľa'}</svelte:fragment
 			>
 			<svelte:fragment slot="item" let:item let:active>
-				<a href={`1?sort=${item}`} class:active>{recipeSorts[item]}</a>
+				<a href={`1?sort=${item}`} class:active>{recipeSort[item]}</a>
 			</svelte:fragment>
 		</Dropdown>
 	</div>
