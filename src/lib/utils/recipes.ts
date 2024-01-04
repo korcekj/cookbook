@@ -67,11 +67,27 @@ export const sortCategories = (sort: string) => {
 	};
 };
 
-export const recipeSorts = {
+export const recipeSort = {
 	'-date': 'Najnovšie',
 	duration: 'Najrýchlejšie',
 	'-servings': 'Najviac porcií',
 	'-completed': 'Najobľúbenejšie'
 } as Record<string, string>;
 
-export const isRecipeSort = (sort: string): sort is RecipeSort => sort in recipeSorts;
+export const isRecipeSort = (sort: string): sort is RecipeSort => sort in recipeSort;
+
+export const occasionCategories = {
+	raňajky: ['pomazánky'],
+	obed: [
+		'bezmäsité jedlá',
+		'šaláty',
+		'cestoviny',
+		'polievky',
+		'mäsité jedlá',
+		'jedlá z hydiny',
+		'pizza',
+		'jedlá z bravčoviny'
+	],
+	večera: ['pomazánky', 'bezmäsité jedlá', 'cestoviny', 'šaláty', 'pizza'],
+	oslava: ['dezerty', 'šaláty']
+};
