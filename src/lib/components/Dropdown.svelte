@@ -99,7 +99,7 @@
 				}}
 			>
 				<slot name="item" {item} {index} active={selected === item}
-					><div tabindex="0" role="button" class:active={selected === item}>{item}</div></slot
+					><button class:active={selected === item}>{item}</button></slot
 				>
 			</li>
 		{/each}

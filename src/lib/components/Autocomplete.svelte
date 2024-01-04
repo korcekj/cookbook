@@ -116,7 +116,7 @@
 							}
 						}}
 					>
-						<slot name="item" {item}><div tabindex="0" role="button">{item[itemTitle]}</div></slot>
+						<slot name="item" {item}><button>{item[itemTitle]}</button></slot>
 					</li>
 				{/each}
 			{:else}
