@@ -20,7 +20,7 @@
 	let prev = '/';
 
 	$: ({ meta, component, recipes } = data);
-	$: otherRecipes = recipes.filter(({ title }) => title !== meta.title);
+	$: otherRecipes = recipes.filter(({ slug }) => slug !== meta.slug);
 
 	afterNavigate(({ from }) => {
 		if (from) prev = from.url.pathname + from.url.search;
