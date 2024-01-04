@@ -48,7 +48,13 @@
 	};
 </script>
 
-<div class="dropdown dropdown-end w-full">
+<div
+	class={twMerge(
+		'dropdown dropdown-end w-full',
+		className.split(' ').filter((v) => ['join-item'].includes(v))
+	)}
+>
+	<!-- <div class="dropdown dropdown-end w-full"> -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
 	<label
