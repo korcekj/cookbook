@@ -40,8 +40,7 @@
 			if (!response.ok)
 				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
 
-			recipes = await response.json();
-			recipes = recipes.filter(({ slug }) => slug !== recipe.slug);
+			recipes = ((await response.json()) as Recipe[]).filter(({ slug }) => slug !== recipe.slug);
 		} catch (err) {
 			console.error(err);
 		}
@@ -85,10 +84,14 @@
 				<RecipeCard recipe={$recipe} />
 				{#if recipes.length}
 					<div class="flex flex-col sm:flex-row">
-						<div class="divider sm:divider-horizontal" />
-						<div class="carousel max-w-full rounded-box sm:mt-6 space-x-4">
+						<div class="divider sm:divider-horizontal">
+							<button class="btn btn-square btn-sm" on:click={onRandom}
+								><Dices class="w-4 h-4" /></button
+							>
+						</div>
+						<div class="carousel w-full rounded-box sm:mt-6 space-x-4">
 							{#each recipes as recipe (recipe.slug)}
-								<div class="carousel-item w-[85%] max-w-xs xl:max-w-sm">
+								<div class="carousel-item w-[85%]">
 									<RecipeCard {recipe} />
 								</div>
 							{/each}
