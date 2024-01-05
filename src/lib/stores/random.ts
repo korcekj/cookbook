@@ -19,6 +19,7 @@ export const createRandomStore = <T>(defaultItems: T[] = []) => {
 			if (!get(selected).has(select)) break;
 		}
 
+		if (get(items)[select] === get(item)) select = ++select % get(items).length;
 		item.set(get(items)[select]);
 		selected.update((v) => new Set([...v, select]));
 	};
