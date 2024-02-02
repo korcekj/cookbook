@@ -18,7 +18,7 @@ date: 2023-09-12
 
 ## Ingrediencie
 
-- **4 ks** / Vajcia
+- **4 ks** / Vajce
 - **120 g** / Kryštálový cukor
 - **500 g** / Mascarpone
 - **2 balenia** / Piškóty dlhé
