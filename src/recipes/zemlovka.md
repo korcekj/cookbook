@@ -37,5 +37,5 @@ date: 2024-02-02
 4. Jablká si nastrúhame najemno.
 5. Zapekaciu misu vymastíme maslom a vysypeme strúhankou.
 6. Na dno zľahka utlačíme polovicu hmoty a na rožky navrstvíme jablká, posypeme škorivovým cukrom a navstvíme druhú polovicu hmoty.
-7. Žemlkovku pečieme pri 180°C približne 25 min.
+7. Žemlovku pečieme pri 180°C približne 25 min.
 8. Nakoniec na vrch dáme vyšlahaný sneh z bielkov a kryštálového cukru, zapečieme.
