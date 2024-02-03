@@ -7,20 +7,23 @@
 	export let btnClass = '';
 	export let badgeClass = '';
 
-	let className = '';
 	let completed = 0;
+	let className = '';
+	let increment = true;
 
 	$: onSubmit = async () => {
 		try {
-			completed += 1;
-			const response = await fetch(`/api/recipes/${slug}/completed`, {
+			completed = increment ? completed + 1 : completed - 1;
+			const response = await fetch(`/api/recipes/${slug}/completed?increment=${increment}`, {
 				method: 'POST'
 			});
 			if (!response.ok)
 				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
+
+			increment = !increment;
 		} catch (err) {
-			completed -= 1;
 			console.error(err);
+			completed = increment ? completed - 1 : completed + 1;
 		}
 	};
 

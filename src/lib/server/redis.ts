@@ -14,7 +14,7 @@ if (!building) {
 
 	ratelimit = new Ratelimit({
 		redis,
-		limiter: Ratelimit.slidingWindow(1, '5 s'),
+		limiter: Ratelimit.slidingWindow(2, '5 s'),
 		prefix: 'ratelimit:recipes',
 		analytics: true
 	});
@@ -35,6 +35,6 @@ export const getAllCompleted = () => {
 	});
 };
 
-export const incrementCompleted = (slug: string) => {
-	return redis.zincrby(`recipes`, 1, slug);
+export const incrementCompleted = (slug: string, by = 1) => {
+	return redis.zincrby(`recipes`, by, slug);
 };

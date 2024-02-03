@@ -3,8 +3,10 @@ import { getCompleted, incrementCompleted, ratelimit } from '$lib/server/redis';
 
 export const prerender = false;
 
-export const POST = async ({ params: { slug }, getClientAddress, setHeaders }) => {
+export const POST = async ({ params: { slug }, url, getClientAddress, setHeaders }) => {
 	const ip = getClientAddress();
+	const increment = url.searchParams.get('increment');
+
 	const { success, reset, remaining, limit } = await ratelimit.limit(ip);
 	if (!success) {
 		const seconds = Math.floor((reset - new Date().getTime()) / 1000);
@@ -21,7 +23,8 @@ export const POST = async ({ params: { slug }, getClientAddress, setHeaders }) =
 		);
 	}
 
-	const completed = await incrementCompleted(slug);
+	const completed = await incrementCompleted(slug, increment === 'true' ? 1 : -1);
+
 	return json({ completed });
 };
 
