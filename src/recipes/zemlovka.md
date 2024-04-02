@@ -32,7 +32,7 @@ date: 2024-02-02
 ## Postup
 
 1. Rožky nakrájame na menšie kúsky a preložíme do väčšej misy.
-2. Následne si vyšlaháme žĺtka s cukrom do peny.
+2. Následne si vyšlaháme žĺtka s vanilkovým a práškovým cukrom do peny.
 3. Nakrájané rožky najprv prelejeme mliekom a potom vyšlahanými vajíčkami, premiešame.
 4. Jablká si nastrúhame najemno.
 5. Zapekaciu misu vymastíme maslom a vysypeme strúhankou.
