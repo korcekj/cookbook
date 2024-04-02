@@ -20,6 +20,7 @@ date: 2024-04-02
 ## Ingrediencie
 
 - **250 ml** / Mlieko
+- **200 g** / Hladká múka
 - **50 g** / Kryštálový cukor
 - **1 ks** / Prášok do pečiva
 - **1 ks** / Vanilkový cukor
