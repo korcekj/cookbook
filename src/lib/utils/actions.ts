@@ -21,7 +21,7 @@ export const autofocus = (node: HTMLInputElement, value: boolean) => {
 	let timeout: number;
 
 	const focus = () => {
-		setTimeout(() => {
+		timeout = setTimeout(() => {
 			node.focus();
 		}, 100);
 	};
