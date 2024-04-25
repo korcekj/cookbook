@@ -1,7 +1,7 @@
 ---
 title: Paradajková polievka
 description: Paradajková polievka je malým útulkom pre vaše chute a zároveň osviežujúcou pochúťkou.
-poster: /recipes/paradajkova-polievka/poster.webp
+poster: /images/paradajkova-polievka/poster.webp
 categories:
   - polievky
 servings:

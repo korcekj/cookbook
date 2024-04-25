@@ -1,7 +1,7 @@
 ---
 title: Kuracie rezne Hellmann's
 description: Kuracie rezne Hellmann's sú lahodným požitkom, ktorý si môžete užiť kedykoľvek.
-poster: /recipes/kuracie-rezne-hellmanns/poster.webp
+poster: /images/kuracie-rezne-hellmanns/poster.webp
 categories:
   - mäsité jedlá
   - jedlá z hydiny

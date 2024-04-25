@@ -1,7 +1,7 @@
 ---
 title: Znojemské mäso
 description: Znojemské mäso je malým kulinárskym pokladom, ktorý vás prenesie na južnú Moravu.
-poster: /recipes/znojemske-maso/poster.webp
+poster: /images/znojemske-maso/poster.webp
 categories:
   - mäsité jedlá
   - jedlá z bravčoviny

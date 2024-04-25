@@ -1,7 +1,7 @@
 ---
 title: Čokoládové guľky z medovníčkov
 description: Medová sladkosť a bohatá korenistá chuť spája generácie v jedinečnej kulinárskej tradícii.
-poster: /recipes/cokoladove-gulky-z-medovnickov/poster.webp
+poster: /images/cokoladove-gulky-z-medovnickov/poster.webp
 categories:
   - dezerty
 servings:

@@ -1,7 +1,7 @@
 ---
 title: Bábovka
 description: Je to jednoduchý, ale nesmierne uspokojivý recept, ktorý vás zahreje s každým sladkým kúskom.
-poster: /recipes/babovka/poster.webp
+poster: /images/babovka/poster.webp
 categories:
   - dezerty
 servings:

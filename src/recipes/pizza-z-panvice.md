@@ -1,7 +1,7 @@
 ---
 title: Pizza z panvice
 description: Táto krehká a slaná lahôdka vás prekvapí svojou jedinečnou chutou, pripravenou priamo na vašej panvici.
-poster: /recipes/pizza-z-panvice/poster.webp
+poster: /images/pizza-z-panvice/poster.webp
 categories:
   - bezmäsité jedlá
   - pizza

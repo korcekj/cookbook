@@ -1,7 +1,7 @@
 ---
 title: Vajíčková pomazánka
 description: Táto pomazánka je dokonalým začiatkom každého dňa.
-poster: /recipes/vajickova-pomazanka/poster.webp
+poster: /images/vajickova-pomazanka/poster.webp
 categories:
   - pomazánky
 servings:

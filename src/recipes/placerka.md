@@ -1,7 +1,7 @@
 ---
 title: Placerka
 description: Placerka je jednoduchou, ale neodolateľnou pochúťkou, ktorá vás dokáže kedykoľvek potešiť.
-poster: /recipes/placerka/poster.webp
+poster: /images/placerka/poster.webp
 categories:
   - bezmäsité jedlá
 servings:

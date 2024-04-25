@@ -1,7 +1,7 @@
 ---
 title: Kubánska torta
 description: Jej lahodná chuť a farebný vzhľad vás prenesú priamo na palmovú pláž.
-poster: /recipes/kubanska-torta/poster.webp
+poster: /images/kubanska-torta/poster.webp
 categories:
   - dezerty
 servings:

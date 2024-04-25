@@ -1,7 +1,7 @@
 ---
 title: Palacinky
 description: Palacinky sú výnimočným potešením pre vaše chuťové poháriky.
-poster: /recipes/palacinky/poster.webp
+poster: /images/palacinky/poster.webp
 categories:
   - bezmäsité jedlá
   - dezerty

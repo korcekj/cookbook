@@ -1,7 +1,7 @@
 ---
 title: Kokosové rezy
 description: Rezy sú kráľovnami dezertov, ktoré vás vtiahnu do tropického raja na každom kroku.
-poster: /recipes/kokosove-rezy/poster.webp
+poster: /images/kokosove-rezy/poster.webp
 categories:
   - dezerty
 servings:

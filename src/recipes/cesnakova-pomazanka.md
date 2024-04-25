@@ -1,7 +1,7 @@
 ---
 title: Cesnaková pomazánka
 description: Toto jednoduché, ale osviežujúce jedlo je skvelým spoločníkom na chlebíčky alebo pečivo.
-poster: /recipes/cesnakova-pomazanka/poster.webp
+poster: /images/cesnakova-pomazanka/poster.webp
 categories:
   - pomazánky
 servings:

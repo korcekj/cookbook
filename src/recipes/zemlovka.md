@@ -1,7 +1,7 @@
 ---
 title: Žemlovka
 description: Žemlovka je nostalgická pochúťka, ktorá vám prináša chuť domova vo veľkolepým štýle.
-poster: /recipes/zemlovka/poster.webp
+poster: /images/zemlovka/poster.webp
 categories:
   - bezmäsité jedlá
 servings:

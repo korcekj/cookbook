@@ -1,7 +1,7 @@
 ---
 title: Nepečená roláda - Marína
 description: Jednoduchá príprava a osviežujúca chuť robia tento dezert dokonalým.
-poster: /recipes/nepecena-rolada-marina/poster.webp
+poster: /images/nepecena-rolada-marina/poster.webp
 categories:
   - dezerty
 servings:

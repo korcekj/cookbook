@@ -1,7 +1,7 @@
 ---
 title: Kapustnica
 description: Kapustnica je teplučkým objatím v každej lyžici, ktorá vás prenesie do rodinného krbu.
-poster: /recipes/kapustnica/poster.webp
+poster: /images/kapustnica/poster.webp
 categories:
   - polievky
 servings:

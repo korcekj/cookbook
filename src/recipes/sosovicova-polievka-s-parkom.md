@@ -1,7 +1,7 @@
 ---
 title: Šošovicová polievka s párkom
 description: Šošovicový polievka je spojením zdravia a jednoduchej lahôdky.
-poster: /recipes/sosovicova-polievka-s-parkom/poster.webp
+poster: /images/sosovicova-polievka-s-parkom/poster.webp
 categories:
   - polievky
 servings:

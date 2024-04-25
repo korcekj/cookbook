@@ -1,7 +1,7 @@
 ---
 title: Šošovicový prívarok
 description: Šošovicový prívarok je spojením zdravia a jednoduchej lahôdky.
-poster: /recipes/sosovicovy-privarok/poster.webp
+poster: /images/sosovicovy-privarok/poster.webp
 categories:
   - bezmäsité jedlá
 servings:

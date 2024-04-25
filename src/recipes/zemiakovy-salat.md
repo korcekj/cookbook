@@ -1,7 +1,7 @@
 ---
 title: Zemiakový šalát
 description: Zemiakový šalát je jednoduchým, ale neodolateľným pokrmom pre všetky príležitosti.
-poster: /recipes/zemiakovy-salat/poster.webp
+poster: /images/zemiakovy-salat/poster.webp
 categories:
   - bezmäsité jedlá
   - šaláty

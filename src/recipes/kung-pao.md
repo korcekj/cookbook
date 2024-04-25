@@ -1,7 +1,7 @@
 ---
 title: Kuracie Kung Pao
 description: Kuracie Kung Pao je exotickým dobrodružstvom pre vaše chuťové bunky.
-poster: /recipes/kung-pao/poster.webp
+poster: /images/kung-pao/poster.webp
 categories:
   - mäsité jedlá
   - jedlá z hydiny

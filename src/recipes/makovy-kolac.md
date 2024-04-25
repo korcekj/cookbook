@@ -1,7 +1,7 @@
 ---
 title: Makový koláč
 description: Tento koláč je malým umením na tanieri, ktoré vás okúzli svojou lahodnosťou.
-poster: /recipes/makovy-kolac/poster.webp
+poster: /images/makovy-kolac/poster.webp
 categories:
   - dezerty
 servings:

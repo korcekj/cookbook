@@ -1,7 +1,7 @@
 ---
 title: Perník
 description: Perník je malým kúskom histórie a sladkosti v jednom.
-poster: /recipes/pernik/poster.webp
+poster: /images/pernik/poster.webp
 categories:
   - dezerty
 servings:

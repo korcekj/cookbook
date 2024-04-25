@@ -1,7 +1,7 @@
 ---
 title: Medovníky
 description: Medová sladkosť a bohatá korenistá chuť spája generácie v jedinečnej kulinárskej tradícii.
-poster: /recipes/medovniky/poster.webp
+poster: /images/medovniky/poster.webp
 categories:
   - dezerty
 servings:

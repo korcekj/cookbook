@@ -1,7 +1,7 @@
 ---
 title: Pizza slimáky
 description: Ich plná chuť paradajkovej omáčky a syra vytvára dokonalý tanec na vašom tanieri.
-poster: /recipes/pizza-slimaky/poster.webp
+poster: /images/pizza-slimaky/poster.webp
 categories:
   - bezmäsité jedlá
   - pizza

@@ -1,7 +1,7 @@
 ---
 title: Orechová torta
 description: Orechová torta je delikatesou pre vaše chuťové poháriky.
-poster: /recipes/orechova-torta/poster.webp
+poster: /images/orechova-torta/poster.webp
 categories:
   - dezerty
 servings:

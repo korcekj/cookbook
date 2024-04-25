@@ -1,7 +1,7 @@
 ---
 title: Segedínsky guláš
 description: Segedínsky guláš je skvostom pre vaše chuťové poháriky, ktorý vás prenáša priamo do maďarského kulinárskeho dedičstva.
-poster: /recipes/segedinsky-gulas/poster.webp
+poster: /images/segedinsky-gulas/poster.webp
 categories:
   - mäsité jedlá
   - jedlá z bravčoviny

@@ -1,7 +1,7 @@
 ---
 title: Cesnaková pomazánka s oštiepkom
 description: Cesnaková pomazánka je výraznou chuťovou exploziou, ktorá vás okúzli svojou intenzívnou cesnakovou arómou a krémovou konzistenciou.
-poster: /recipes/cesnakova-pomazanka-s-ostiepkom/poster.webp
+poster: /images/cesnakova-pomazanka-s-ostiepkom/poster.webp
 categories:
   - pomazánky
 servings:

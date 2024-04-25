@@ -1,7 +1,7 @@
 ---
 title: Cestoviny 4 druhy syra
 description: Bohatstvo štyroch rozmanitých syrov v jedinečnej kombinácii.
-poster: /recipes/cestoviny-4-druhy-syra/poster.webp
+poster: /images/cestoviny-4-druhy-syra/poster.webp
 categories:
   - cestoviny
 servings:
