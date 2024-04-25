@@ -54,7 +54,6 @@
 		className.split(' ').filter((v) => ['join-item'].includes(v))
 	)}
 >
-	<!-- <div class="dropdown dropdown-end w-full"> -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
 	<label
@@ -80,7 +79,7 @@
 	<ul
 		tabindex="0"
 		class={twMerge(
-			'dropdown-content z-[100] menu p-2 shadow bg-base-100 min-w-full max-h-60 rounded-box mt-1 flex-nowrap overflow-y-auto',
+			'dropdown-content z-[100] menu p-2 shadow bg-base-100 min-w-full max-h-60 rounded-box mt-2 flex-nowrap overflow-y-auto',
 			contentClass
 		)}
 		on:focus={() => (open = true)}
