@@ -2,7 +2,7 @@ import type { RecipeFile, Recipe } from '$lib/types';
 
 import { slugify } from '$lib/utils';
 import { error } from '@sveltejs/kit';
-import { cardsPerCarousel as limit } from '$lib/config';
+import { CARDS_PER_CAROUSEL as limit } from '$lib/constants';
 
 export async function load({ fetch, params: { slug } }) {
 	try {

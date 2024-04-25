@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { cacheAge } from '$lib/config';
+import { CACHE_AGE } from '$lib/constants';
 import { getCategories, sortCategories } from '$lib/utils/recipes';
 
 export const prerender = false;
@@ -13,7 +13,7 @@ export const GET = ({ url, setHeaders }) => {
 	const categories = getCategories();
 
 	setHeaders({
-		'cache-control': `public, s-maxage=${cacheAge}`
+		'cache-control': `public, s-maxage=${CACHE_AGE}`
 	});
 
 	return json(

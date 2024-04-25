@@ -2,7 +2,7 @@ import type { Recipe } from '$lib/types';
 
 import { redirect, error } from '@sveltejs/kit';
 import { isRecipeSort } from '$lib/utils/recipes';
-import { recipesPerPage as limit } from '$lib/config';
+import { RECIPES_PER_PAGE as limit } from '$lib/constants';
 
 export const prerender = false;
 

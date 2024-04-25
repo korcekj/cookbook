@@ -1,6 +1,6 @@
 import type { Sitemap } from '$lib/types';
 
-import { cacheAge } from '$lib/config';
+import { CACHE_AGE } from '$lib/constants';
 import { PUBLIC_BASE_URL } from '$env/static/public';
 import { getRecipes, getCategories } from '$lib/utils/recipes';
 
@@ -14,7 +14,7 @@ export const GET = async () => {
 	return new Response(sitemap({ pages, recipes, categories }), {
 		headers: {
 			'Content-Type': 'application/xml',
-			'cache-control': `public, s-maxage=${cacheAge}`
+			'cache-control': `public, s-maxage=${CACHE_AGE}`
 		}
 	});
 };
