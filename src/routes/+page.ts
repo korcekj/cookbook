@@ -1,16 +1,13 @@
 import type { Recipe } from '$lib/types';
 
-import { recipesPerPage, cardsPerCarousel } from '$lib/config';
+import { RECIPES_PER_PAGE, CARDS_PER_CAROUSEL } from '$lib/constants';
 
 export async function load({ fetch }) {
-	const latestRecipes = fetch(`/api/recipes?sort=-date&limit=${cardsPerCarousel}`).then<Recipe[]>(
+	const latestRecipes = fetch(`/api/recipes?sort=-date&limit=${CARDS_PER_CAROUSEL}`).then<Recipe[]>(
 		(r) => r.json()
 	);
-	const favouriteRecipes = fetch(`/api/recipes?sort=-completed&limit=${cardsPerCarousel}`).then<
+	const fastestRecipes = fetch(`/api/recipes?sort=duration&limit=${RECIPES_PER_PAGE}`).then<
 		Recipe[]
 	>((r) => r.json());
-	const fastestRecipes = fetch(`/api/recipes?sort=duration&limit=${recipesPerPage}`).then<Recipe[]>(
-		(r) => r.json()
-	);
-	return { latestRecipes, favouriteRecipes, fastestRecipes };
+	return { latestRecipes, fastestRecipes };
 }

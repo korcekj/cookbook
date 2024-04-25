@@ -19,15 +19,14 @@ export interface Recipe {
 	preparation: number;
 	cooking: number;
 	date: string;
-	completed: number;
 }
 
 export type RecipeFile = {
-	metadata: Omit<Recipe, 'slug' | 'completed'>;
+	metadata: Omit<Recipe, 'slug'>;
 	default: ConstructorOfATypedSvelteComponent;
 };
 
-export type RecipeSort = 'date' | 'duration' | 'title' | 'servings' | 'completed';
+export type RecipeSort = 'date' | 'duration' | 'title' | 'servings';
 
 export type CategorySort = 'title' | 'recipes';
 

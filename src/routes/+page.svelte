@@ -4,7 +4,6 @@
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
 	import RecipeCard from '$lib/components/recipe/Card.svelte';
-	import SearchRecipe from '$lib/components/recipe/Search.svelte';
 	import OverlayCard from '$lib/components/recipe/OverlayCard.svelte';
 	import RandomRecipe from '$lib/components/recipe/RandomSelect.svelte';
 	import Section from '$lib/components/Section.svelte';
@@ -15,7 +14,7 @@
 
 	export let data;
 
-	$: ({ latestRecipes, favouriteRecipes, fastestRecipes } = data);
+	$: ({ latestRecipes, fastestRecipes } = data);
 </script>
 
 <svelte:head>
@@ -56,45 +55,6 @@
 		</div>
 	</Section>
 	<Banner
-		id="search"
-		class="bg-gradient-to-r from-primary/60 to-primary mb-6"
-		asideClass="text-primary-content"
-	>
-		<svelte:fragment slot="title">Hľadáte recept?</svelte:fragment>
-		<svelte:fragment slot="text"
-			>V prípade, že chcete nájsť recept, ktorého názov, poprípade jeho časť poznáte, ale nemáte čas
-			si vychutnať všetky recepty tak neváhajte si recept vyhľadať. Stačí zadať kľúčové znaky alebo
-			slová do poľa "Vyhľadaj recept". Chutné hľadanie 🔍</svelte:fragment
-		>
-		<svelte:fragment slot="main">
-			<SearchRecipe />
-		</svelte:fragment>
-	</Banner>
-	<Section name="favourite-recipes" class="bg-gradient-to-r from-base-300 to-base-100">
-		<svelte:fragment slot="title-bold">Najobľúbenejšie</svelte:fragment>
-		<svelte:fragment slot="title-light">recepty</svelte:fragment>
-		<div class="carousel max-w-full rounded-box my-6 space-x-4">
-			{#each favouriteRecipes as recipe, i (recipe.slug)}
-				<div class="carousel-item w-[85%] max-w-xs xl:max-w-sm">
-					{#if i === favouriteRecipes.length - 1}
-						<OverlayCard src={recipe.poster} class="min-h-[20rem]">
-							<svelte:fragment slot="title">Najobľúbenejšie recepty</svelte:fragment>
-							<svelte:fragment slot="subtitle">Zobraziť všetky recepty na stránke</svelte:fragment>
-							<svelte:fragment slot="actions"
-								><a href="/recipes/1?sort=-completed" class="btn btn-sm btn-secondary"
-									>Všetky recepty</a
-								></svelte:fragment
-							>
-						</OverlayCard>
-					{:else}
-						<RecipeCard {recipe} />
-					{/if}
-				</div>
-			{/each}
-		</div>
-	</Section>
-	<Banner
-		reverse
 		class="bg-gradient-to-r from-primary/60 to-primary mb-6"
 		asideClass="text-primary-content"
 	>
@@ -130,6 +90,7 @@
 		</div>
 	</Section>
 	<Banner
+		reverse
 		class="bg-gradient-to-r from-primary/60 to-primary"
 		mainClass="items-center justify-center space-x-2"
 		asideClass="text-primary-content"
