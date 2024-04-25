@@ -29,7 +29,7 @@
 
 <div class="container mx-auto p-6">
 	<div class="flex flex-col md:flex-row gap-6">
-		<SearchRecipe />
+		<SearchRecipe class="input-bordered" />
 		<Dropdown items={Object.keys(recipeSort)} selected={sort}>
 			<svelte:fragment slot="select" let:selected
 				>{selected ? recipeSort[selected] : 'Zoradiť podľa'}</svelte:fragment

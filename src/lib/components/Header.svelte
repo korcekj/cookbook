@@ -5,7 +5,7 @@
 	import capitalize from 'lodash/capitalize';
 
 	import Dropdown from './Dropdown.svelte';
-	import { Search } from 'lucide-svelte';
+	import SearchRecipe from './recipe/Search.svelte';
 
 	let categories: Category[] = [];
 
@@ -23,24 +23,18 @@
 </script>
 
 <div
-	class="navbar flex-col items-start sm:flex-row sm:items-center bg-gradient-to-r from-base-100 to-base-300 rounded-b-lg px-4"
+	class="navbar flex-col items-start md:flex-row md:items-center bg-gradient-to-r from-base-100 to-base-300 rounded-b-lg py-4 px-6 md:px-4 gap-4"
 >
-	<div class="flex-1 p-2 sm:p-0">
+	<div class="flex items-center justify-between w-full">
 		<a href="/" class="flex items-center space-x-2">
 			<img class="w-10 aspect-square" src="/favicon.png" alt="Logo" />
 			<span class="text-3xl text-primary dark:text-neutral-content font-light"
 				>Cook<span class="font-bold">Book</span></span
 			>
 		</a>
-	</div>
-	<div class="flex-none print:hidden">
-		<div class="flex items-center">
-			<a href="/#search" class="btn btn-sm btn-ghost font-medium">
-				<Search class="w-4 h-4" />
-				<span>Hľadaj</span></a
-			>
+		<div class="print:hidden">
 			<Dropdown
-				class="btn-ghost btn-sm font-medium"
+				class="btn-sm sm:btn-md font-medium"
 				contentClass="min-w-max"
 				items={categories.map(({ title }) => title)}
 			>
@@ -53,5 +47,8 @@
 				</svelte:fragment>
 			</Dropdown>
 		</div>
+	</div>
+	<div class="w-full md:max-w-xs lg:max-w-sm print:hidden">
+		<SearchRecipe />
 	</div>
 </div>
