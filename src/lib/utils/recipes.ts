@@ -1,6 +1,8 @@
 import type { RecipeFile, RecipeSort, Recipe, Category, CategorySort } from '$lib/types';
 
+import deburr from 'lodash/deburr';
 import dayjs from '$lib/utils/date';
+import FlexSearch from 'flexsearch';
 import { slugify } from '$lib/utils';
 
 export const getRecipes = () => {
@@ -10,7 +12,6 @@ export const getRecipes = () => {
 		([path, file]) =>
 			({
 				slug: path.split('/').pop()?.split('.')[0]!,
-				completed: 0,
 				...file.metadata
 			} satisfies Recipe)
 	);
@@ -43,8 +44,6 @@ export const sortRecipes = (sort: string) => {
 				return (desc ? -1 : 1) * a.title.localeCompare(b.title);
 			case 'servings':
 				return (desc ? -1 : 1) * (a.servings.count - b.servings.count);
-			case 'completed':
-				return (desc ? -1 : 1) * (a.completed - b.completed);
 			default:
 				return 0;
 		}
@@ -67,11 +66,27 @@ export const sortCategories = (sort: string) => {
 	};
 };
 
+export const searchRecipes = (recipes: Recipe[]) => {
+	const recipesIndex = new FlexSearch.Index({
+		tokenize: 'forward',
+		encode: (str) => deburr(str).toLowerCase().split(/\W+/)
+	});
+
+	recipes.forEach((recipe, i) => {
+		const item = `${recipe.title} ${recipe.description}`;
+		recipesIndex.add(i, item);
+	});
+
+	return (search: string) => {
+		const term = deburr(search);
+		return recipesIndex.search(term).map((index) => recipes[index as number]);
+	};
+};
+
 export const recipeSort = {
 	'-date': 'Najnovšie',
 	duration: 'Najrýchlejšie',
-	'-servings': 'Najviac porcií',
-	'-completed': 'Najobľúbenejšie'
+	'-servings': 'Najviac porcií'
 } as Record<string, string>;
 
 export const isRecipeSort = (sort: string): sort is RecipeSort => sort in recipeSort;
