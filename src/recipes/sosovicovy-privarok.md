@@ -21,7 +21,7 @@ date: 2023-09-11
 - **500 g** / Zelená šošovica
 - **3 ks** / Bobkový list
 - **3 strúčiky** / Cesnak
-- **1/2 ČL** / Rasca
+- **<sup>1</sup>&frasl;<sub>2</sub> ČL** / Rasca
 - **1 štipka** / Mleté čierne korenie
 - **1 štipka** / Soľ
 - **50 ml** / Smotana na varenie

@@ -22,8 +22,8 @@ date: 2023-09-12
 - **500 g** / Bravčová krkovička alebo stehno
 - **2 hrste** / Kyslá kapusta
 - **1 ks** / Cibuľa
-- **1/2 ČL** / Rasca celá
-- **3/4 PL** / Červená mletá paprika
+- **<sup>1</sup>&frasl;<sub>2</sub> ČL** / Rasca celá
+- **<sup>3</sup>&frasl;<sub>4</sub> PL** / Červená mletá paprika
 - **1 štipka** / Mleté čili
 - **1 štipka** / Soľ
 - **1 štipka** / Mleté čierne korenie

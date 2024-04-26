@@ -18,7 +18,7 @@ date: 2022-12-28
 
 ## Ingrediencie
 
-- **1/2 ks** / Údený oštiepok
+- **<sup>1</sup>&frasl;<sub>2</sub> ks** / Údený oštiepok
 - **210 ml** / Hellman’s tatárka
 - **3 strúčiky** / Cesnak
 - **1 PL** / Plnotučná horčica

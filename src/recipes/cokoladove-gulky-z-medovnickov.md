@@ -21,7 +21,7 @@ date: 2024-01-30
 - **125 g** / Medovníky
 - **100 g** / Mliečna čokoláda
 - **1 ČL** / Kakao
-- **1/2 ČL** / Mletá škorica
+- **<sup>1</sup>&frasl;<sub>2</sub> ČL** / Mletá škorica
 - **35 ml** / Rum
 - **40 ml** / Mlieko
 

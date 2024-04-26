@@ -23,7 +23,7 @@ date: 2022-12-28
 - **5 ks** / Vajce
 - **5 PL** / Mletý cukor
 - **5 PL** / Polohrubá múka
-- **1/2 ks** / Prášok do pečiva
+- **<sup>1</sup>&frasl;<sub>2</sub> ks** / Prášok do pečiva
 
 ### Postup
 

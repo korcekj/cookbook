@@ -23,7 +23,7 @@ date: 2023-12-18
 - **2 ks** / Mrkva
 - **3 ks** / Zemiak
 - **2 strúčiky** / Cesnak
-- **1/2 ČL** / Sušená majoránka
+- **<sup>1</sup>&frasl;<sub>2</sub> ČL** / Sušená majoránka
 - **200 ml** / Paradajkové pyré
 - **1 l** / Kurací vývar
 - **3 ks** / Spišské párky

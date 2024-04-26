@@ -26,7 +26,7 @@ date: 2023-09-12
 - **150 g** / Mleté vlašské orechy
 - **250 g** / Polohrubej múky
 - **1 ks** / Vanilínový cukor
-- **1/2 ks** / Prášok do pečiva
+- **<sup>1</sup>&frasl;<sub>2</sub> ks** / Prášok do pečiva
 
 ### Postup
 
@@ -65,7 +65,7 @@ date: 2023-09-12
 - **100 g** / Biela čokoláda
 - **125 g** / Maslo
 - **100 g** / Kryštálový cukor
-- **1/2 PL** / Rum
+- **<sup>1</sup>&frasl;<sub>2</sub> PL** / Rum
 - Vanilková aróma
 - Lekvár (ríbezľový)
 

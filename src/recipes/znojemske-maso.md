@@ -25,7 +25,7 @@ date: 2023-11-05
 - **1 ks** / Cibuľa
 - **8 ks** / Sterilizovaná uhorka
 - **1 PL** / Bravčová masť
-- **1/2 ČL** / Solamyl
+- **<sup>1</sup>&frasl;<sub>2</sub> ČL** / Solamyl
 - Štava zo sterilizovaných uhoriek
 
 ## Postup

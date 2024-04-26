@@ -22,7 +22,7 @@ date: 2022-12-28
 - **1 ks** / Tavený syr v črievku
 - **200 g** / Strúhaný parmezán
 - **200 g** / Struhaná mozzarela
-- **1/2 ks** / Syr niva
+- **<sup>1</sup>&frasl;<sub>2</sub> ks** / Syr niva
 - **200 ml** / Smotana na varenie
 - **3 g** / Mletý muškátový orech
 

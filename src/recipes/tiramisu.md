@@ -22,7 +22,7 @@ date: 2023-09-12
 - **120 g** / Kryštálový cukor
 - **500 g** / Mascarpone
 - **2 balenia** / Piškóty dlhé
-- **5/2 ČL** / Instantná káva
+- **2 <sup>1</sup>&frasl;<sub>2</sub> ČL** / Instantná káva
 - Rumová esencia
 
 ## Postup
