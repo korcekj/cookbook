@@ -2,6 +2,7 @@
 	import type { Recipe } from '$lib/types';
 
 	import debounce from 'lodash/debounce';
+	import { goto } from '$app/navigation';
 	import { twMerge } from 'tailwind-merge';
 	import { onMount, onDestroy } from 'svelte';
 	import { DEBOUNCE_MS } from '$lib/constants';
@@ -105,7 +106,10 @@
 						class="rounded-lg"
 						on:click={close}
 						on:keydown={(e) => {
-							if (e.key === 'Enter') close();
+							if (e.key === 'Enter') {
+								if (e.target instanceof HTMLAnchorElement && e.target.href) goto(e.target.href);
+								close();
+							}
 						}}
 					>
 						<a href={`/recipes/${item.slug}`} class="flex items-center space-x-2">
