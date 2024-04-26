@@ -22,13 +22,15 @@
 	let listElement: HTMLUListElement | null = null;
 
 	$: if (!open) close();
-	$: if (search) recipes = search(q);
+	$: {
+		q;
+		debouncedSearch();
+	}
 
 	const close = () => {
+		q = '';
 		open = false;
-		timeout = setTimeout(() => {
-			q = '';
-		}, DEBOUNCE_MS);
+		debouncedSearch.cancel();
 	};
 
 	const onBlur = (e: FocusEvent) => {
@@ -37,8 +39,8 @@
 		}
 	};
 
-	const onSearch = debounce((e: Event) => {
-		q = (e.target as HTMLInputElement).value ?? '';
+	const debouncedSearch = debounce(() => {
+		if (search) recipes = search(q);
 	}, DEBOUNCE_MS);
 
 	onMount(async () => {
@@ -47,8 +49,7 @@
 			if (!response.ok)
 				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
 
-			const data = await response.json();
-			search = searchRecipes(data);
+			search = searchRecipes(await response.json());
 		} catch (err) {
 			console.error(err);
 		} finally {
@@ -58,6 +59,7 @@
 
 	onDestroy(() => {
 		clearTimeout(timeout);
+		debouncedSearch.cancel();
 	});
 </script>
 
@@ -74,12 +76,11 @@
 					type="text"
 					class={twMerge('input flex-1 join-item', className)}
 					disabled={loading}
-					value={q}
-					on:input={onSearch}
 					on:blur={onBlur}
 					on:click={() => {
 						if (!open) open = true;
 					}}
+					bind:value={q}
 				/>
 				{#if loading}
 					<label for="autocomplete" class="btn btn-square join-item"
