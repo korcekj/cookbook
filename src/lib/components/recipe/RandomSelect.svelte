@@ -12,17 +12,15 @@
 	import { Dices, Cookie } from 'lucide-svelte';
 
 	let recipes: Recipe[] = [];
-	let categories: string[] = [];
 	let occasion: string | null = null;
 
-	$: if (categories.length) fetchCategoryRecipes();
-	$: if (occasion) categories = occasionCategories[occasion as keyof typeof occasionCategories];
+	$: if (occasion) fetchRecipes();
 
 	const recipe = createRandomStore<Recipe>();
 
-	const fetchCategoryRecipes = async () => {
+	const fetchRecipes = async () => {
 		try {
-			const response = await fetch(`/api/categories/${slugify(categories.join('+'))}`);
+			const response = await fetch(`/api/occasions/${occasion}/recipes`);
 			if (!response.ok)
 				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
 
