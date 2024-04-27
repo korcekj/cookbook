@@ -20,11 +20,11 @@ export const getRecipes = () => {
 export const getCategories = () => {
 	const recipes = getRecipes();
 
-	return recipes.reduce((acc, { categories }) => {
-		categories.forEach((category) => {
+	return recipes.reduce((acc, recipe) => {
+		recipe.categories.forEach((category) => {
 			const index = acc.findIndex(({ title }) => title === category);
-			if (index === -1) acc.push({ title: category, slug: slugify(category), recipes: 1 });
-			else acc[index].recipes++;
+			if (index === -1) acc.push({ title: category, slug: slugify(category), recipes: [recipe] });
+			else acc[index].recipes.push(recipe);
 		});
 		return acc;
 	}, [] as Category[]);
@@ -34,8 +34,31 @@ export const getCategoryRecipes = (category: string) => {
 	const recipes = getRecipes();
 	return recipes.filter(({ categories }) =>
 		// Multiple categories are joined with a plus sign
-		categories.some((c) => category.split('+').includes(slugify(c)))
+		categories.some((c) => slugify(category).split('+').includes(slugify(c)))
 	);
+};
+
+export const getOccasionRecipes = (occasion: string) => {
+	let recipes: Recipe[] = [];
+
+	if (isOccasion(occasion)) {
+		const categories = occasionCategory[occasion];
+		recipes = getCategoryRecipes(categories.join('+'));
+	}
+
+	return recipes;
+};
+
+export const getOccasionCategories = (occasion: string) => {
+	let categories: Category[] = [];
+
+	if (isOccasion(occasion)) {
+		const occasionCategories = occasionCategory[occasion];
+		const recipeCategories = getCategories();
+		categories = recipeCategories.filter((c) => occasionCategories.includes(c.title));
+	}
+
+	return categories;
 };
 
 export const sortRecipes = (sort: string) => {
@@ -67,7 +90,7 @@ export const sortCategories = (sort: string) => {
 			case 'title':
 				return (desc ? -1 : 1) * a.title.localeCompare(b.title);
 			case 'recipes':
-				return (desc ? -1 : 1) * (a.recipes - b.recipes);
+				return (desc ? -1 : 1) * (a.recipes.length - b.recipes.length);
 			default:
 				return 0;
 		}
@@ -80,8 +103,8 @@ export const searchRecipes = (recipes: Recipe[]) => {
 		encode: (str) => deburr(str).toLowerCase().split(/\W+/)
 	});
 
-	recipes.forEach((recipe, i) => {
-		const item = `${recipe.title} ${recipe.description}`;
+	recipes.forEach(({ title, description }, i) => {
+		const item = `${title} ${description}`;
 		recipesIndex.add(i, item);
 	});
 
@@ -91,15 +114,18 @@ export const searchRecipes = (recipes: Recipe[]) => {
 	};
 };
 
+export const isRecipeSort = (sort: string): sort is RecipeSort => recipeSort.hasOwnProperty(sort);
+
+export const isOccasion = (occasion: string): occasion is keyof typeof occasionCategory =>
+	occasionCategory.hasOwnProperty(occasion);
+
 export const recipeSort = {
 	'-date': 'Najnovšie',
 	duration: 'Najrýchlejšie',
 	'-servings': 'Najviac porcií'
 } as Record<string, string>;
 
-export const isRecipeSort = (sort: string): sort is RecipeSort => sort in recipeSort;
-
-export const occasionCategories = {
+export const occasionCategory = {
 	raňajky: ['pomazánky'],
 	obed: [
 		'bezmäsité jedlá',

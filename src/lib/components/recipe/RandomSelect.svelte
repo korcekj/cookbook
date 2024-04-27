@@ -4,7 +4,7 @@
 	import { slugify } from '$lib/utils';
 	import capitalize from 'lodash/capitalize';
 	import { createRandomStore } from '$lib/stores/random';
-	import { occasionCategories } from '$lib/utils/recipes';
+	import { occasionCategory } from '$lib/utils/recipes';
 
 	import Modal from '../Modal.svelte';
 	import RecipeCard from './Card.svelte';
@@ -59,15 +59,15 @@
 		class="btn-primary join-item"
 		placeholder="Príležitosť"
 		bind:selected={occasion}
-		items={Object.keys(occasionCategories)}
+		items={Object.keys(occasionCategory)}
 	>
 		<svelte:fragment slot="item" let:item let:active>
 			<button class:active>{capitalize(item)}</button>
 		</svelte:fragment>
 	</Dropdown>
-	<button disabled={!occasion} class="btn btn-square join-item" on:click={onRandom}
-		><Dices class="w-5 h-5" /></button
-	>
+	<button disabled={!occasion} class="btn btn-square join-item" on:click={onRandom}>
+		<Dices class="w-5 h-5" />
+	</button>
 </div>
 
 <Modal id="modal-recipe" class={recipes.length ? 'max-w-2xl' : 'max-w-md'} open={!!$recipe}>

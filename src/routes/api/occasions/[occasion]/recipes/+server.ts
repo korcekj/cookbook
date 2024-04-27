@@ -1,6 +1,6 @@
+import { json } from '@sveltejs/kit';
 import { CACHE_AGE } from '$lib/constants';
-import { json, error } from '@sveltejs/kit';
-import { getCategoryRecipes, occasionCategories, sortRecipes } from '$lib/utils/recipes';
+import { getOccasionRecipes, sortRecipes } from '$lib/utils/recipes';
 
 export const prerender = false;
 
@@ -14,11 +14,7 @@ export const GET = async ({ params: { occasion }, url, setHeaders }) => {
 		'cache-control': `public, s-maxage=${CACHE_AGE}`
 	});
 
-	if (!occasionCategories.hasOwnProperty(occasion))
-		throw error(404, `Príležitosť ${occasion} nebola nájdená`);
-
-	const categories = occasionCategories[occasion as keyof typeof occasionCategories];
-	const recipes = getCategoryRecipes(categories.join('+'));
+	const recipes = getOccasionRecipes(occasion);
 
 	return json(
 		recipes
