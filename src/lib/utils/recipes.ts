@@ -30,6 +30,14 @@ export const getCategories = () => {
 	}, [] as Category[]);
 };
 
+export const getCategoryRecipes = (category: string) => {
+	const recipes = getRecipes();
+	return recipes.filter(({ categories }) =>
+		// Multiple categories are joined with a plus sign
+		categories.some((c) => category.split('+').includes(slugify(c)))
+	);
+};
+
 export const sortRecipes = (sort: string) => {
 	const desc = sort[0] === '-';
 	if (desc) sort = sort.slice(1);

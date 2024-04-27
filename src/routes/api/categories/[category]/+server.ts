@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { slugify } from '$lib/utils';
 import { CACHE_AGE } from '$lib/constants';
-import { getRecipes, sortRecipes } from '$lib/utils/recipes';
+import { getCategoryRecipes, sortRecipes } from '$lib/utils/recipes';
 
 export const prerender = false;
 
@@ -11,11 +10,7 @@ export const GET = ({ url, setHeaders, params: { category } }) => {
 	const sort = url.searchParams.get('sort');
 	const sorter = sort ? sortRecipes(sort) : undefined;
 
-	let recipes = getRecipes();
-	recipes = recipes.filter(({ categories }) =>
-		// Multiple categories are joined with a plus sign
-		categories.some((c) => category.split('+').includes(slugify(c)))
-	);
+	const recipes = getCategoryRecipes(category);
 
 	setHeaders({
 		'cache-control': `public, s-maxage=${CACHE_AGE}`
