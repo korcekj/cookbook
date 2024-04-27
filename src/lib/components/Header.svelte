@@ -42,7 +42,7 @@
 				<svelte:fragment slot="item" let:index>
 					<a href={`/categories/${categories[index].slug}/1`}>
 						{capitalize(categories[index].title)}
-						<span class="badge badge-sm badge-neutral">{categories[index].recipes}</span>
+						<span class="badge badge-sm badge-neutral">{categories[index].recipes.length}</span>
 					</a>
 				</svelte:fragment>
 			</Dropdown>
