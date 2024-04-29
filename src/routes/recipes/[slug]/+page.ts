@@ -9,9 +9,9 @@ export async function load({ fetch, params: { slug } }) {
 		const { default: component } = (await import(`../../../recipes/${slug}.md`)) as RecipeFile;
 		const recipe = await fetch(`/api/recipes/${slug}`).then<Recipe>((r) => r.json());
 		const categories = recipe.categories.join(',');
-		const recipes = fetch(`/api/categories/${slugify(categories)}?sort=-date&limit=${limit}`).then<
-			Recipe[]
-		>((r) => r.json());
+		const recipes = fetch(`/api/categories/${categories}?sort=-date&limit=${limit}`).then<Recipe[]>(
+			(r) => r.json()
+		);
 
 		return {
 			meta: recipe,

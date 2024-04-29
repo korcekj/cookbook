@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Recipe } from '$lib/types';
 
-	import { slugify } from '$lib/utils';
 	import capitalize from 'lodash/capitalize';
 	import { createRandomStore } from '$lib/stores/random';
 	import { occasionCategory } from '$lib/utils/recipes';
@@ -33,7 +32,7 @@
 	const fetchCommonRecipes = async (recipe: Recipe) => {
 		try {
 			const response = await fetch(
-				`/api/categories/${slugify(recipe.categories.join(','))}?sort=-date&limit=3`
+				`/api/categories/${recipe.categories.join(',')}?sort=-date&limit=3`
 			);
 			if (!response.ok)
 				throw new Error(`${response.url} ${response.status} (${response.statusText})`);

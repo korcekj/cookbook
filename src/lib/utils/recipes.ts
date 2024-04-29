@@ -4,6 +4,7 @@ import deburr from 'lodash/deburr';
 import dayjs from '$lib/utils/date';
 import FlexSearch from 'flexsearch';
 import { slugify } from '$lib/utils';
+import uniqueBy from 'lodash/uniqBy';
 
 export const getRecipes = () => {
 	const recipes = import.meta.glob<RecipeFile>('/src/recipes/*.md', { eager: true });
@@ -32,14 +33,15 @@ export const getCategories = () => {
 
 export const getCategoryRecipes = (category: string) => {
 	const categories = getCategories();
-
-	return slugify(category)
+	const recipes = slugify(category)
 		.split(',')
 		.reduce((acc, name) => {
-			const c = categories.find(({ slug }) => slug === name);
-			if (c) return acc.concat(c.recipes);
+			const found = categories.find(({ slug }) => slug === name);
+			if (found) return acc.concat(found.recipes);
 			return acc;
 		}, [] as Recipe[]);
+
+	return uniqueBy(recipes, 'slug');
 };
 
 export const getOccasionRecipes = (occasion: string) => {
