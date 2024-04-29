@@ -31,11 +31,15 @@ export const getCategories = () => {
 };
 
 export const getCategoryRecipes = (category: string) => {
-	const recipes = getRecipes();
-	return recipes.filter(({ categories }) =>
-		// Multiple categories are joined with a plus sign
-		categories.some((c) => slugify(category).split('+').includes(slugify(c)))
-	);
+	const categories = getCategories();
+
+	return slugify(category)
+		.split(',')
+		.reduce((acc, name) => {
+			const c = categories.find(({ slug }) => slug === name);
+			if (c) return acc.concat(c.recipes);
+			return acc;
+		}, [] as Recipe[]);
 };
 
 export const getOccasionRecipes = (occasion: string) => {
@@ -43,7 +47,7 @@ export const getOccasionRecipes = (occasion: string) => {
 
 	if (isOccasion(occasion)) {
 		const categories = occasionCategory[occasion];
-		recipes = getCategoryRecipes(categories.join('+'));
+		recipes = getCategoryRecipes(categories.join(','));
 	}
 
 	return recipes;

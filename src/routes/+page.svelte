@@ -36,7 +36,7 @@
 		<svelte:fragment slot="title-bold">Najnovšie</svelte:fragment>
 		<svelte:fragment slot="title-light">recepty</svelte:fragment>
 		<div class="carousel max-w-full rounded-box my-6 space-x-4">
-			{#each latestRecipes as recipe, i (recipe.slug)}
+			{#each latestRecipes as recipe, i}
 				<div class="carousel-item w-[85%] max-w-xs xl:max-w-sm">
 					{#if i === latestRecipes.length - 1}
 						<OverlayCard src={recipe.poster} class="min-h-[20rem]">
@@ -73,7 +73,7 @@
 		<svelte:fragment slot="title-bold">Najrýchlejšie</svelte:fragment>
 		<svelte:fragment slot="title-light">recepty</svelte:fragment>
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-6">
-			{#each fastestRecipes as recipe, i (recipe.slug)}
+			{#each fastestRecipes as recipe, i}
 				{#if i === fastestRecipes.length - 1}
 					<OverlayCard src={recipe.poster} class="min-h-[20rem]">
 						<svelte:fragment slot="title">Najrýchlejšie recepty</svelte:fragment>

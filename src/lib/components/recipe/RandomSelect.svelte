@@ -33,7 +33,7 @@
 	const fetchCommonRecipes = async (recipe: Recipe) => {
 		try {
 			const response = await fetch(
-				`/api/categories/${slugify(recipe.categories.join('+'))}?sort=-date&limit=3`
+				`/api/categories/${slugify(recipe.categories.join(','))}?sort=-date&limit=3`
 			);
 			if (!response.ok)
 				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
@@ -88,7 +88,7 @@
 							>
 						</div>
 						<div class="carousel w-full rounded-box sm:mt-6 space-x-4">
-							{#each recipes as recipe (recipe.slug)}
+							{#each recipes as recipe}
 								<div class="carousel-item w-[85%]">
 									<RecipeCard {recipe} />
 								</div>
