@@ -61,7 +61,7 @@
 				<Printer class="w-6 h-6" />
 			</button>
 		</div>
-		<img src={meta.poster} alt={meta.title} class="aspect-video object-cover flex-1" />
+		<img src={meta.poster} alt={meta.title} class="object-cover flex-1" />
 	</figure>
 	<div class="carousel max-w-full space-x-2 mt-6">
 		{#if meta.preparation}
