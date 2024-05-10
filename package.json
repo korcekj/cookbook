@@ -36,9 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/kanit": "^5.0.8",
-		"@upstash/ratelimit": "^0.4.4",
-		"@upstash/redis": "^1.22.0",
+		"@fontsource-variable/rubik": "^5.0.22",
 		"dayjs": "^1.11.9",
 		"flexsearch": "^0.7.43",
 		"lodash": "^4.17.21",

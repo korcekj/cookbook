@@ -6,7 +6,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Kanit', ...defaultTheme.fontFamily.sans]
+				sans: ['Rubik Variable', ...defaultTheme.fontFamily.sans]
 			},
 			typography: {
 				DEFAULT: {
