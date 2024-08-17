@@ -1,6 +1,6 @@
 ---
 title: Cookies
-description: Sušienky - drobnými sladkými klenotmi, ktoré tajomne tavia na jazyku.
+description: Sušienky - drobné sladké klenoty, ktoré sa tajomne tavia na jazyku.
 poster: /images/cookies/poster.webp
 categories:
   - dezerty
