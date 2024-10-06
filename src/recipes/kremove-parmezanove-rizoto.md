@@ -20,7 +20,7 @@ date: 2023-09-12
 
 - **500 g** / Ryža Arborio
 - **1 l** / Hovädzí vývar
-- **70 ml** / Maslo
+- **70 g** / Maslo
 - **100 g** / Parmezán
 - **1 ks** / Cibuľa
 - **300 ml** / Biele suché víno

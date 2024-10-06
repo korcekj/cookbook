@@ -18,14 +18,13 @@ date: 2022-12-28
 
 ## Ingrediencie
 
-- **<sup>1</sup>&frasl;<sub>2</sub> ks** / Údený oštiepok
+- **1 ks** / Údený oštiepok
 - **210 ml** / Hellman’s tatárka
 - **3 strúčiky** / Cesnak
-- **1 PL** / Plnotučná horčica
 
 ## Postup
 
-1. Nastrúhame si polovicu oštiepku.
-2. Do misky dáme tatárku, očistený cesnak ktorý si rozpučíme, horčicu a na koniec oštiepok.
-3. Nakoniec všetko zmiešame a hotovú pomazánku dáme odležať do chladničky aspoň na jednu hodinu.
+1. Nastrúhame si celý oštiepok.
+2. Do misky dáme tatárku, očistený cesnak ktorý si rozpučíme a na koniec nastrúhaný oštiepok.
+3. Všetko zmiešame a hotovú pomazánku dáme odležať do chladničky aspoň na jednu hodinu.
 4. Odstátu pomazánku môžeme podávať.
