@@ -30,28 +30,7 @@ date: 2022-12-29
 
 ### Postup
 
-1. Oddelíme si žĺtka od bielok.
-2. Žĺtka si vymiešame s cukrom do peny.
-3. Postupne pridávame múku zmiešanú s práškom do pečiva.
-4. Nakoniec si z bielok vyšľaháme tuhý sneh a postupne ho zamiešame do cesta.
-5. Hotové cesto si vylejeme na plech vystlaný papierom na pečenie.
-6. Cesto pečieme pri 180°C približne na 15 min, ale aby sme si boli istý či je hotové, pichneme doň špilkou.
-7. Upečené cesto vyklopíme na suchú utierku, dáme preč papier, zrolujeme ho a necháme ho vychladnúť.
-
-## Krém
-
-### Ingrediencie
-
-- **1 ks** / Vajce
-- **2 PL** / Kryštálový cukor
-- **3 PL** / Mleté orechy
-- **1 PL** / Kakao
-- **120 g** / Hera
-
-### Postup
-
-1. Piškóty rozdrvíme valčekom na cesto alebo mixérom.
-2. Pridáme ostatné suroviny a vypracujeme hladké cesto.
+1.
 
 ## Úliky
 
