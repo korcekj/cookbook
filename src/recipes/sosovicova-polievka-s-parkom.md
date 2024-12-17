@@ -21,12 +21,12 @@ date: 2023-12-18
 - **5 hrstí** / Zelená šošovica
 - **1 ks** / Cibuľa
 - **2 ks** / Mrkva
-- **3 ks** / Zemiak
+- **5 ks** / Zemiak
 - **2 strúčiky** / Cesnak
 - **<sup>1</sup>&frasl;<sub>2</sub> ČL** / Sušená majoránka
-- **200 ml** / Paradajkové pyré
-- **1 l** / Kurací vývar
-- **3 ks** / Spišské párky
+- **400 ml** / Paradajkové pyré
+- **<sup>3</sup>&frasl;<sub>4</sub> l** / Kurací vývar
+- **4 ks** / Spišské párky
 - **1 štipka** / Soľ
 - **1 štipka** / Mleté čierne korenie
 - Olivový olej
