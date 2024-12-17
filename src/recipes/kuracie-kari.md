@@ -23,7 +23,7 @@ date: 2024-12-17
 - **1 ks** / Cibuľa
 - **2 ks** / Mrkva
 - **2 strúčiky** / Cesnak
-- **2 ks** / Sladká paprika
+- **2 ks** / Paprika
 - **1 ks** / Pór
 - **1 PL** / Kari korenie
 - **1 PL** / Sójová omáčka
