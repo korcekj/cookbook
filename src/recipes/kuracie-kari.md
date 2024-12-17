@@ -43,7 +43,7 @@ date: 2024-12-17
 4. Pridáme mrkvu, papriku, kari korenie a sójovú omáčku.
 5. Všetko spolu premiešame a podlejeme vývarom, varíme na strednom plameni cca 15 minút.
 6. Vo vode si rozmiešame kukuričný škrob a za stáleho miešania ho prilievame do zmesi.
-7. Zmes rozdriedime vodou ak bude príliš hustá.
+7. Zmes rozriedime vodou ak bude príliš hustá.
 8. Podľa potreby dochutíme soľou a čiernym korením.
-9. Na záver pridáme nakrájaný pór a arašidy.
+9. Na záver pridáme arašidy a nakrájaný pór.
 10. Podávame s ryžou alebo ryžovými rezancami.
