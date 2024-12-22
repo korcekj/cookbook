@@ -30,14 +30,20 @@ date: 2022-12-29
 
 ### Postup
 
-1.
+1. Piškóty si rozdrvíme valčekom alebo pomelieme na jemno v mixéri.
+2. K pomletým piškótam pridáme ostatné suroviny a vypracujeme cesto.
 
 ## Úliky
 
+### Ingrediencie
+
+- Maslo
+- Mletý cukor
+
 ### Postup
 
-1. Formičku na úliky si vymastíme maslom a vysypeme mletým cukrom. Formičky ju treba vysypať cukrom po každom použití.
-2. Z vypracovaného cesta si odoberáme menšie kúsky ktoré vkladáme do formičky.
-3. Do cesta si urobíme vareškou dieru na plnku. Ja som ich plnila domácim vaječným likérom.
+1. Formičku na úliky si vymastíme maslom a vysypeme mletým cukrom, formičky je treba vysypať cukrom po každom použití.
+2. Z vypracovaného cesta si odoberáme menšie kúsky v tvare guličky, ktoré vkladáme do formičky.
+3. Do cesta si urobíme vareškou dieru na plnku a naplníme vaječným likérom.
 4. Nakoniec na spodok pritlačíme okrúhlu piškótu a vyklopíme hotový úlik z formičky.
 5. Úliky môžeme podávať posypané mletým cukrom alebo namočené v čokoláde, ozdobené rôznymi farebnými posýpkami.
