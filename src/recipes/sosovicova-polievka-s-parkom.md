@@ -25,7 +25,7 @@ date: 2023-12-18
 - **2 strúčiky** / Cesnak
 - **<sup>1</sup>&frasl;<sub>2</sub> ČL** / Sušená majoránka
 - **400 ml** / Paradajkové pyré
-- **<sup>3</sup>&frasl;<sub>4</sub> l** / Kurací vývar
+- **1 l** / Kurací vývar
 - **4 ks** / Spišské párky
 - **1 štipka** / Soľ
 - **1 štipka** / Mleté čierne korenie
