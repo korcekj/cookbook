@@ -27,9 +27,9 @@ date: 2023-03-30
 
 ## Postup
 
-1. Mlieko si zohrejeme, pridáme doň cukor a droždie. Necháme ho chvíľu odstáť kým sa nám pripraví kvások.
+1. Mlieko si zohrejeme, pridáme doň cukor a droždie. Necháme chvíľu odstáť kým sa nám pripraví kvások.
 2. V miske si zmiešame múku so soľou a žĺtkom.
 3. Prilejeme ku nej kvások a vypracujeme hladké cesto.
 4. Necháme kysnúť na teplom mieste 60 minút.
-5. Vykysnuté cesto si rozdelíme na menšie časti a z každej vypracujeme langoš ktorý dáme snažiť a zohriaty olej.
+5. Vykysnuté cesto si rozdelíme na menšie časti a z každej vypracujeme langoš, ktorý dáme smažiť do zohriateho oleja.
 6. Hotový langoš potrieme cesnakom a podávam s kečupom, tatárkou a syrom.
