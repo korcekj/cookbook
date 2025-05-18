@@ -21,7 +21,7 @@ date: 2023-03-30
 - **1 ks** / Droždie
 - **500 g** / Hladká múka
 - **400 ml** / Mlieko
-- **1 ks** / Vajce
+- **1 ks** / Žĺtko
 - **1 štipka** / Soľ
 - **1 štipka** / Kryštálový cukor
 

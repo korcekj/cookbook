@@ -23,7 +23,7 @@ date: 2023-09-09
 - **2 ČL** / Kari korenie
 - **4 ČL** / Sójová omáčka
 - **1 štipka** / Mleté čili
-- **1 ks** / Vajce
+- **1 ks** / Žĺtko
 - **1 PL** / Worcestrová omáčka
 - **1 ČL** / Solamyl
 

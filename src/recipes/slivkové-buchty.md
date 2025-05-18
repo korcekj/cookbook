@@ -24,7 +24,7 @@ date: 2024-08-17
 - **42 g** / Droždie
 - **40 g** / Kryštálový cukor
 - **360 g** / Hladká múka
-- **3 ks** / Vajce
+- **3 ks** / Žĺtko
 - **40 g** / Maslo
 - **300 g** / Slivkový lekvár
 - **1 štipka** / Soľ

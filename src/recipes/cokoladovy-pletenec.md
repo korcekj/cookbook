@@ -22,7 +22,7 @@ date: 2024-08-17
 - **105 g** / Kryštálový cukor
 - **1 štipka** / Soľ
 - **15 g** / Kakao
-- **1 ks** / Vajce
+- **1 ks** / Žĺtko
 - **300 ml** / Mlieko
 - **60 g** / Maslo
 - **20 g** / Droždie
