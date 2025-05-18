@@ -4,7 +4,7 @@ description: Kurací perkelt je tradičné slovenské jedlo, ktoré spája jemno
 poster: /images/kuraci-perkelt/poster.webp
 categories:
   - mäsité jedlá
-  - jedlá z hodiny
+  - jedlá z hydiny
 servings:
   unit: portions
   count: 4
