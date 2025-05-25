@@ -30,5 +30,5 @@ date: 2022-12-28
 1. Zmiešame si vajcia, múku, smotanu a majonézu.
 2. Cesto dôkladne miešame, kým nám nevznikne jednotná hmota.
 3. Cesto nalejeme na rozohriatu panvicu, kde sme pridali olej.
-4. Na cesto si naukladáme suroviny, ako napríklad šunka, syr, kukurica...
-5. Pizzu prikryjeme a smažíme na miernom ohni cca 12min.
+4. Na cesto si naukladáme suroviny, ako napríklad šunka, syr a kukurica.
+5. Pizzu prikryjeme a smažíme na miernom ohni približne 12 minút.
