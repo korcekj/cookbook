@@ -141,8 +141,9 @@ export const occasionCategory = {
 		'mäsité jedlá',
 		'jedlá z hydiny',
 		'pizza',
-		'jedlá z bravčoviny'
+		'jedlá z bravčoviny',
+		'omáčky'
 	],
-	večera: ['pomazánky', 'bezmäsité jedlá', 'cestoviny', 'šaláty', 'pizza'],
+	večera: ['pomazánky', 'bezmäsité jedlá', 'cestoviny', 'šaláty', 'pizza', 'omáčky'],
 	oslava: ['dezerty', 'šaláty']
 };

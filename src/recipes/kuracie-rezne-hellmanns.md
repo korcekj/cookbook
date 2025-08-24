@@ -29,7 +29,7 @@ date: 2023-09-11
 ## Postup
 
 1. Kuracie prsia nakrájame na plátky, ktoré jemne naklepeme.
-2. Osolíme, okoreníme a vložíme na nádoby.
+2. Osolíme, okoreníme a vložíme do nádoby.
 3. Pridáme pretlačený cesnak a Hellmann's tatarskú omáčku.
 4. Jemne premiešame, aby sa všetky kúsky mäsa obalili omáčkou.
 5. Necháme odležať v chladničke aspoň 60 minút.
