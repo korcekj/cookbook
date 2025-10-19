@@ -59,7 +59,11 @@
 				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
 				subject={meta.description}
 			/>
-			<button class="btn btn-sm sm:btn-md btn-circle" on:click={() => window.print()}>
+			<button
+				title="Tlačiť recept"
+				class="btn btn-sm sm:btn-md btn-circle"
+				on:click={() => window.print()}
+			>
 				<Printer class="w-6 h-6" />
 			</button>
 		</div>

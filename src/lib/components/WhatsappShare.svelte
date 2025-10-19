@@ -17,6 +17,7 @@
 	)}${encodeURIComponent(url)}`}
 	target="_blank"
 	rel="noopener"
+	title="Zdieľať cez WhatsApp"
 	aria-label="Share on WhatsApp"
 >
 	<MessageCircle class="w-6 h-6 text-white" />
