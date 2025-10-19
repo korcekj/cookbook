@@ -13,6 +13,7 @@
 	import MailShare from '$lib/components/MailShare.svelte';
 	import FacebookShare from '$lib/components/FacebookShare.svelte';
 	import WhatsappShare from '$lib/components/WhatsappShare.svelte';
+	import NoSleep from '$lib/components/NoSleep.svelte';
 	import { Printer, ChevronLeft, Timer, ChefHat } from 'lucide-svelte';
 
 	export let data;
@@ -43,6 +44,7 @@
 			><ChevronLeft class="w-6 h-6" /></a
 		>
 		<div class="absolute top-4 right-4 flex items-center space-x-2 print:hidden">
+			<NoSleep class="btn-sm sm:btn-md" />
 			<FacebookShare
 				class="btn-sm sm:btn-md"
 				url={url(`${PUBLIC_BASE_URL}/recipes/${meta.slug}`)}
