@@ -1,10 +1,19 @@
-import type { RecipeFile, RecipeSort, Recipe, Category, CategorySort } from '$lib/types';
+import type {
+	RecipeFile,
+	RecipeSort,
+	Recipe,
+	Category,
+	CategorySort,
+	Highlight,
+	RecipeSearch,
+	RecipeSearchKey
+} from '$lib/types';
+import type { FuseResultMatch, RangeTuple } from 'fuse.js';
 
-import deburr from 'lodash/deburr';
+import Fuse from 'fuse.js';
 import dayjs from '$lib/utils/date';
-import FlexSearch from 'flexsearch';
-import { slugify } from '$lib/utils';
 import uniqueBy from 'lodash/uniqBy';
+import { slugify, normalize } from '$lib/utils';
 
 export const getRecipes = () => {
 	const recipes = import.meta.glob<RecipeFile>('/src/recipes/*.md', { eager: true });
@@ -104,20 +113,118 @@ export const sortCategories = (sort: string) => {
 };
 
 export const searchRecipes = (recipes: Recipe[]) => {
-	const recipesIndex = new FlexSearch.Index({
-		tokenize: 'forward',
-		encode: (str) => deburr(str).toLowerCase().split(/\W+/)
-	});
-
-	recipes.forEach(({ title, description }, i) => {
-		const item = `${title} ${description}`;
-		recipesIndex.add(i, item);
+	const recipesIndex = new Fuse(recipes, {
+		includeMatches: true,
+		includeScore: true,
+		ignoreDiacritics: true,
+		ignoreLocation: true,
+		threshold: 0.35,
+		keys: [
+			{ name: 'title', weight: 0.8 },
+			{ name: 'description', weight: 0.2 }
+		]
 	});
 
 	return (search: string) => {
-		const term = deburr(search);
-		return recipesIndex.search(term).map((index) => recipes[index as number]);
+		const term = normalize(search).trim();
+		if (!term) return [];
+
+		return recipesIndex.search(term).map(
+			({ item, matches, score }): RecipeSearch => ({
+				item,
+				score: score ?? 0,
+				highlight: {
+					title: getHighlight('title', item.title, term, matches)
+				}
+			})
+		);
 	};
+};
+
+const getHighlight = (
+	key: RecipeSearchKey,
+	value: string,
+	search: string,
+	matches: ReadonlyArray<FuseResultMatch> = []
+): Highlight[] => {
+	const exactRanges = getExactRanges(value, search);
+	const fuseRanges = matches.find((match) => match.key === key)?.indices;
+	const ranges = mergeRanges(exactRanges.length ? exactRanges : fuseRanges);
+
+	if (!ranges.length) return [{ text: value, match: false }];
+
+	const segments: Highlight[] = [];
+	let cursor = 0;
+
+	for (const [start, end] of ranges) {
+		if (cursor < start) {
+			segments.push({
+				text: value.slice(cursor, start),
+				match: false
+			});
+		}
+
+		segments.push({
+			text: value.slice(start, end + 1),
+			match: true
+		});
+		cursor = end + 1;
+	}
+
+	if (cursor < value.length) {
+		segments.push({
+			text: value.slice(cursor),
+			match: false
+		});
+	}
+
+	return segments.filter(({ text }) => text.length > 0);
+};
+
+const getExactRanges = (value: string, search: string): RangeTuple[] => {
+	const normalizedValue = normalize(value);
+	const normalizedSearch = normalize(search).trim();
+	const ranges = findRanges(normalizedValue, normalizedSearch);
+
+	if (ranges.length) return ranges;
+
+	return normalizedSearch.split(/\s+/).flatMap((term) => findRanges(normalizedValue, term));
+};
+
+const findRanges = (value: string, search: string): RangeTuple[] => {
+	if (!search) return [];
+
+	const ranges: RangeTuple[] = [];
+	let index = value.indexOf(search);
+
+	while (index !== -1) {
+		ranges.push([index, index + search.length - 1]);
+		index = value.indexOf(search, index + search.length);
+	}
+
+	return ranges;
+};
+
+const mergeRanges = (ranges: ReadonlyArray<RangeTuple> = []) => {
+	if (!ranges.length) return [];
+
+	const sortedRanges = ranges
+		.map(([start, end]) => [start, end] as [number, number])
+		.sort(([startA], [startB]) => startA - startB);
+	const merged = [sortedRanges[0]];
+
+	for (const [start, end] of sortedRanges.slice(1)) {
+		const previous = merged[merged.length - 1];
+
+		if (start <= previous[1] + 1) {
+			previous[1] = Math.max(previous[1], end);
+			continue;
+		}
+
+		merged.push([start, end]);
+	}
+
+	return merged;
 };
 
 export const isRecipeSort = (sort: string): sort is RecipeSort =>

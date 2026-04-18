@@ -14,7 +14,7 @@ export const GET = async ({ url, setHeaders }) => {
 		'cache-control': `public, s-maxage=${CACHE_AGE}`
 	});
 
-	const results = search(q);
+	const results = search(q).map(({ item }) => item);
 
 	return json(results);
 };

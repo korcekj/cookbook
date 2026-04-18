@@ -21,10 +21,25 @@ export interface Recipe {
 	date: string;
 }
 
+export interface Highlight {
+	text: string;
+	match: boolean;
+}
+
+export interface RecipeSearch {
+	item: Recipe;
+	score: number;
+	highlight: {
+		title: Highlight[];
+	};
+}
+
 export type RecipeFile = {
 	metadata: Omit<Recipe, 'slug'>;
 	default: ConstructorOfATypedSvelteComponent;
 };
+
+export type RecipeSearchKey = 'title' | 'description';
 
 export type RecipeSort = 'date' | 'duration' | 'title' | 'servings';
 

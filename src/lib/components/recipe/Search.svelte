@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Recipe } from '$lib/types';
+	import type { RecipeSearch } from '$lib/types';
 
 	import debounce from 'lodash/debounce';
 	import { goto } from '$app/navigation';
@@ -16,8 +16,8 @@
 	let open = false;
 	let loading = true;
 	let className = '';
-	let recipes: Recipe[] = [];
-	let search: (q: string) => Recipe[];
+	let recipes: RecipeSearch[] = [];
+	let search: (q: string) => RecipeSearch[];
 
 	let listElement: HTMLUListElement | null = null;
 
@@ -98,7 +98,7 @@
 			bind:this={listElement}
 		>
 			{#if recipes.length}
-				{#each recipes as item}
+				{#each recipes as result}
 					<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 					<li
 						class="rounded-lg"
@@ -110,15 +110,21 @@
 							}
 						}}
 					>
-						<a href={`/recipes/${item.slug}`} class="flex items-center space-x-2">
+						<a href={`/recipes/${result.item.slug}`} class="flex items-center space-x-2">
 							<img
 								class="w-10 h-10 aspect-square object-cover rounded"
-								src={item.poster}
-								alt={item.title}
+								src={result.item.poster}
+								alt={result.item.title}
 							/>
 							<div class="flex flex-col">
-								<span class="font-medium line-clamp-1">{item.title}</span>
-								<span class="font-light line-clamp-1">{item.description}</span>
+								<span class="font-medium line-clamp-1">
+									{#each result.highlight.title as segment}
+										<span class:font-semibold={segment.match} class:text-primary={segment.match}
+											>{segment.text}</span
+										>
+									{/each}
+								</span>
+								<span class="font-light line-clamp-1">{result.item.description}</span>
 							</div>
 						</a>
 					</li>
