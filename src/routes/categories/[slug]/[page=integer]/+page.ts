@@ -10,7 +10,7 @@ export async function load({ fetch, url: { search, searchParams }, params: { slu
 	const offset = (Number(page) - 1) * limit;
 
 	let sort = '-date';
-	if (isRecipeSort(searchParams.get('sort') ?? '')) sort = searchParams.get('sort')!;
+	if (isRecipeSort(searchParams.get('sort') ?? '')) sort = searchParams.get('sort') ?? sort;
 
 	// limit + 1 to check if there is a next page
 	const recipes = await fetch(

@@ -1,6 +1,5 @@
 import type { RecipeFile, Recipe } from '$lib/types';
 
-import { slugify } from '$lib/utils';
 import { error } from '@sveltejs/kit';
 import { CARDS_PER_CAROUSEL as limit } from '$lib/constants';
 

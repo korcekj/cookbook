@@ -10,7 +10,12 @@
 	let isLoading = false;
 	let supportsWakeLock = false;
 
-	let noSleep: any = null;
+	type NoSleepInstance = {
+		enable: () => void | Promise<void>;
+		disable: () => void;
+	};
+
+	let noSleep: NoSleepInstance | null = null;
 	let wakeLock: WakeLockSentinel | null = null;
 
 	async function toggle() {

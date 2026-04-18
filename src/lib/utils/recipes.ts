@@ -12,7 +12,7 @@ export const getRecipes = () => {
 	return Object.entries(recipes).map(
 		([path, file]) =>
 			({
-				slug: path.split('/').pop()?.split('.')[0]!,
+				slug: path.split('/').pop()?.split('.')[0] ?? '',
 				...file.metadata
 			} satisfies Recipe)
 	);
@@ -120,10 +120,11 @@ export const searchRecipes = (recipes: Recipe[]) => {
 	};
 };
 
-export const isRecipeSort = (sort: string): sort is RecipeSort => recipeSort.hasOwnProperty(sort);
+export const isRecipeSort = (sort: string): sort is RecipeSort =>
+	Object.prototype.hasOwnProperty.call(recipeSort, sort);
 
 export const isOccasion = (occasion: string): occasion is keyof typeof occasionCategory =>
-	occasionCategory.hasOwnProperty(occasion);
+	Object.prototype.hasOwnProperty.call(occasionCategory, occasion);
 
 export const recipeSort = {
 	'-date': 'Najnovšie',
