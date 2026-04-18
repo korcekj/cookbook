@@ -8,7 +8,7 @@ categories:
 servings:
   unit: portions
   count: 4
-preparation: 30 
+preparation: 30
 cooking: 100
 date: 2025-12-21
 ---

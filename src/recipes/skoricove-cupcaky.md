@@ -7,7 +7,7 @@ categories:
 servings:
   unit: pieces
   count: 18
-preparation: 30 
+preparation: 30
 cooking: 60
 date: 2025-12-21
 ---

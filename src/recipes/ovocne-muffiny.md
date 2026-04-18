@@ -33,4 +33,4 @@ date: 2025-10-08
 2. Následne pridáme zmiešanú múku s kypriacim práškom a mlieko. Poriadne vymiešame.
 3. S takto pripraveným cestom naplníme formičky na muffiny.
 4. Začneme naúplnením dna cestom, ovocím a potom znovu cestom. Na vrch možno znovu uložiť ovocie.
-6. Pečieme v rúre vyhriatej na 180°C asi 15 minút.
+5. Pečieme v rúre vyhriatej na 180°C asi 15 minút.
