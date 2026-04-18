@@ -16,6 +16,7 @@
 	};
 
 	let noSleep: NoSleepInstance | null = null;
+	/* eslint-disable-next-line no-undef */
 	let wakeLock: WakeLockSentinel | null = null;
 
 	async function toggle() {

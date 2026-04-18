@@ -1,4 +1,4 @@
-export const scrollToHash = () => {
+export const scrollToHash = (_: HTMLElement) => {
 	let timeout: number;
 
 	const scroll = (hash?: string) => {

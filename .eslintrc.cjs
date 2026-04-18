@@ -18,17 +18,26 @@ module.exports = {
 		es2017: true,
 		node: true
 	},
+	rules: {
+		'no-unused-vars': 'off',
+		'@typescript-eslint/no-unused-vars': [
+			'warn',
+			{
+				argsIgnorePattern: '^_',
+				varsIgnorePattern: '^_',
+				caughtErrorsIgnorePattern: '^_',
+				destructuredArrayIgnorePattern: '^_',
+				ignoreRestSiblings: true
+			}
+		]
+	},
 	overrides: [
 		{
-			files: ['*.svelte'],
+			files: ['**/*.svelte'],
 			parser: 'svelte-eslint-parser',
 			parserOptions: {
 				parser: '@typescript-eslint/parser'
 			}
-		},
-		{
-			files: ['*.js'],
-			extends: ['plugin:@typescript-eslint/disable']
 		}
 	]
 };

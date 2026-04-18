@@ -1,8 +1,8 @@
 <svelte:options immutable />
 
 <script lang="ts">
+	/* eslint-disable-next-line no-undef */
 	type Item = $$Generic<string>;
-
 	import { goto } from '$app/navigation';
 	import { twMerge } from 'tailwind-merge';
 	import { browser } from '$app/environment';
