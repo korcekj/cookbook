@@ -1,0 +1,13 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: typecheck
+      run: npm run check
+
+    - name: lint
+      run: npm run lint
+
+commit-msg:
+  jobs:
+    - name: lint-commit-msg
+      run: ./node_modules/.bin/commitlint --edit {1}

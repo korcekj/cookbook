@@ -1,5 +1,5 @@
 export const scrollToHash = (_: HTMLElement) => {
-	let timeout: number;
+	let timeout: ReturnType<typeof setTimeout>;
 
 	const scroll = (hash?: string) => {
 		timeout = setTimeout(() => {
@@ -18,7 +18,7 @@ export const scrollToHash = (_: HTMLElement) => {
 };
 
 export const autofocus = (node: HTMLInputElement, value: boolean) => {
-	let timeout: number;
+	let timeout: ReturnType<typeof setTimeout>;
 
 	const focus = () => {
 		timeout = setTimeout(() => {
