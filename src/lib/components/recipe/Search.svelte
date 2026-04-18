@@ -16,7 +16,6 @@
 	let open = false;
 	let loading = true;
 	let className = '';
-	let timeout: number;
 	let recipes: Recipe[] = [];
 	let search: (q: string) => Recipe[];
 
@@ -59,7 +58,6 @@
 	});
 
 	onDestroy(() => {
-		clearTimeout(timeout);
 		debouncedSearch.cancel();
 	});
 </script>
