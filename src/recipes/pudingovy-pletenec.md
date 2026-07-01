@@ -9,7 +9,7 @@ servings:
   count: 2
 preparation: 30
 cooking: 25
-date: 2026-11-06
+date: 2026-06-11
 ---
 
 # { title }
