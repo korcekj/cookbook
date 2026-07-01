@@ -33,4 +33,5 @@ date: 2022-12-28
 1. Na masle a troche oleja si osmažíme cibuľku, pridáme na malé kocky nakrájané zemiaky, hrášok a osmažíme cca 5 min.
 2. Keď máme všetko osmažené, zalejeme to vodou.
 3. Keď voda zovrie pridáme bujón a varíme, kým zemiaky a hrášok nebudú mäkké.
-4. Znovu dáme prevrieť a nakoniec zahustíme smotanou, a dochutíme vegetou.
+4. Polievku rozmixujeme na jemný krém.
+5. Znovu dáme prevrieť a nakoniec zahustíme smotanou, a dochutíme vegetou.
