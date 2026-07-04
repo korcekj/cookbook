@@ -18,10 +18,10 @@ date: 2024-12-09
 
 ## Ingrediencie
 
-- **300 g** / Penne cestoviny
+- **500 g** / Penne cestoviny
 - **1 ks** / Cibuľa
 - **3 ks** / Cesnak
-- **400 g** / Krájané paradajky
+- **800 g** / Krájané paradajky
 - **2 balenia** / Mozzarela
 - **200 g** / Strúhaný parmezán
 - **1 štipka** / Soľ
