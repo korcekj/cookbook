@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Recipe } from '$lib/types';
 
+	import { get } from 'svelte/store';
 	import capitalize from 'lodash/capitalize';
 	import { createRandomStore } from '$lib/stores/random';
 	import { occasionCategory } from '$lib/utils/recipes';
@@ -10,12 +11,14 @@
 	import Dropdown from '../Dropdown.svelte';
 	import { Dices, Cookie } from '@lucide/svelte';
 
+	let modalOpen = false;
 	let recipes: Recipe[] = [];
 	let occasion: string | null = null;
 
 	$: if (occasion) fetchRecipes();
 
 	const recipe = createRandomStore<Recipe>();
+	const commonRecipes = new Map<string, Recipe[]>();
 
 	const fetchRecipes = async () => {
 		try {
@@ -29,22 +32,31 @@
 		}
 	};
 
-	const fetchCommonRecipes = async (recipe: Recipe) => {
-		try {
-			const response = await fetch(
-				`/api/categories/${recipe.categories.join(',')}?sort=-date&limit=3`
-			);
-			if (!response.ok)
-				throw new Error(`${response.url} ${response.status} (${response.statusText})`);
+	const fetchCommonRecipes = async (selectedRecipe: Recipe) => {
+		recipes = [];
+		const categories = selectedRecipe.categories.join(',');
+		let categoryRecipes = commonRecipes.get(categories);
 
-			recipes = ((await response.json()) as Recipe[]).filter(({ slug }) => slug !== recipe.slug);
+		try {
+			if (!categoryRecipes) {
+				const response = await fetch(`/api/categories/${categories}?sort=-date&limit=3`);
+				if (!response.ok)
+					throw new Error(`${response.url} ${response.status} (${response.statusText})`);
+
+				categoryRecipes = (await response.json()) as Recipe[];
+				commonRecipes.set(categories, categoryRecipes);
+			}
+
+			if (get(recipe)?.slug === selectedRecipe.slug) {
+				recipes = categoryRecipes.filter(({ slug }) => slug !== selectedRecipe.slug);
+			}
 		} catch (err) {
 			console.error(err);
 		}
 	};
 
 	const onRandom = () => {
-		recipe.random();
+		modalOpen = Boolean(recipe.random());
 	};
 
 	recipe.subscribe((v) => {
@@ -69,7 +81,7 @@
 	</button>
 </div>
 
-<Modal id="modal-recipe" class={recipes.length ? 'max-w-2xl' : 'max-w-md'} open={!!$recipe}>
+<Modal id="modal-recipe" class="max-w-2xl" bind:open={modalOpen}>
 	<svelte:fragment slot="title"
 		><div class="flex items-center gap-x-2">
 			<Cookie class="w-6 h-6" /> Mmm.. to je mňamka!
@@ -79,13 +91,13 @@
 		{#if $recipe}
 			<div class="grid grid-cols-1 sm:grid-cols-2 py-4" class:sm:grid-cols-1={!recipes.length}>
 				<RecipeCard recipe={$recipe} />
-				{#if recipes.length}
-					<div class="flex flex-col sm:flex-row">
-						<div class="divider sm:divider-horizontal">
-							<button class="btn btn-square btn-sm" on:click={onRandom}
-								><Dices class="w-4 h-4" /></button
-							>
-						</div>
+				<div class="flex flex-col sm:flex-row">
+					<div class="divider sm:divider-horizontal">
+						<button class="btn btn-square btn-sm" on:click={onRandom} aria-label="Náhodný recept"
+							><Dices class="w-4 h-4" /></button
+						>
+					</div>
+					{#if recipes.length}
 						<div class="carousel w-full rounded-box sm:mt-6 space-x-4">
 							{#each recipes as recipe}
 								<div class="carousel-item w-[85%]">
@@ -93,8 +105,8 @@
 								</div>
 							{/each}
 						</div>
-					</div>
-				{/if}
+					{/if}
+				</div>
 			</div>
 		{/if}
 	</svelte:fragment>

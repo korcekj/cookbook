@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { twMerge } from 'tailwind-merge';
 	import { createEventDispatcher } from 'svelte';
 
@@ -17,9 +18,13 @@
 	const dispatch = createEventDispatcher<{
 		close: undefined;
 	}>();
+
+	onMount(() => {
+		open = false;
+	});
 </script>
 
-<input type="checkbox" bind:checked={open} {id} class="modal-toggle" />
+<input type="checkbox" bind:checked={open} {id} class="modal-toggle" autocomplete="off" />
 <div class="modal">
 	<div class={twMerge('modal-box', className)}>
 		<div class="flex flex-row-reverse">

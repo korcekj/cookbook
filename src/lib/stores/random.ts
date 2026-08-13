@@ -2,26 +2,31 @@ import { writable, get } from 'svelte/store';
 
 export const createRandomStore = <T>(defaultItems: T[] = []) => {
 	const item = writable<T | null>(null);
-	const items = writable<T[]>(defaultItems);
-	const selected = writable<Set<number>>(new Set());
+	let items = defaultItems;
+	let selected = new Set<number>();
 
 	const set = (value: T[]) => {
 		item.set(null);
-		items.set(value);
-		selected.set(new Set());
+		items = value;
+		selected = new Set();
 	};
 
-	const random = (tries = get(items).length) => {
-		let i = 0;
-		let select = 0;
-		while (i++ < tries) {
-			select = Math.floor(Math.random() * get(items).length);
-			if (!get(selected).has(select)) break;
+	const random = () => {
+		if (!items.length) return null;
+
+		const current = get(item);
+		let available = items.map((_, index) => index).filter((index) => !selected.has(index));
+
+		if (!available.length) {
+			selected.clear();
+			available = items.map((_, index) => index).filter((index) => items[index] !== current);
 		}
 
-		if (get(items)[select] === get(item)) select = ++select % get(items).length;
-		item.set(get(items)[select]);
-		selected.update((v) => new Set([...v, select]));
+		const select = available[Math.floor(Math.random() * available.length)] ?? 0;
+		item.set(items[select]);
+		selected.add(select);
+
+		return items[select];
 	};
 
 	return {
