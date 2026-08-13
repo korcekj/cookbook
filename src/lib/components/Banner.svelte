@@ -26,7 +26,7 @@
 			</p>
 		</slot>
 	</div>
-	<div class="flex-none divider md:divider-horizontal" />
+	<div class="flex-none divider md:divider-horizontal"></div>
 	<div class={twMerge('flex-1 flex', mainClass)}>
 		<slot name="main" />
 	</div>

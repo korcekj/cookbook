@@ -23,7 +23,7 @@ export const getRecipes = () => {
 			({
 				slug: path.split('/').pop()?.split('.')[0] ?? '',
 				...file.metadata
-			} satisfies Recipe)
+			}) satisfies Recipe
 	);
 };
 
@@ -129,15 +129,13 @@ export const searchRecipes = (recipes: Recipe[]) => {
 		const term = normalize(search).trim();
 		if (!term) return [];
 
-		return recipesIndex.search(term).map(
-			({ item, matches, score }): RecipeSearch => ({
-				item,
-				score: score ?? 0,
-				highlight: {
-					title: getHighlight('title', item.title, term, matches)
-				}
-			})
-		);
+		return recipesIndex.search(term).map(({ item, matches, score }): RecipeSearch => ({
+			item,
+			score: score ?? 0,
+			highlight: {
+				title: getHighlight('title', item.title, term, matches)
+			}
+		}));
 	};
 };
 

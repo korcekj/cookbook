@@ -2,7 +2,7 @@
 	import { twMerge } from 'tailwind-merge';
 	import { createEventDispatcher } from 'svelte';
 
-	import { X } from 'lucide-svelte';
+	import { X } from '@lucide/svelte';
 
 	export let id: string;
 	export let open = false;

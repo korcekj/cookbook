@@ -6,7 +6,7 @@
 	import RecipeCard from '$lib/components/recipe/Card.svelte';
 	import Dropdown from '$lib/components/Dropdown.svelte';
 	import SearchRecipe from '$lib/components/recipe/Search.svelte';
-	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
+	import { ChevronLeft, ChevronRight } from '@lucide/svelte';
 
 	export let data;
 

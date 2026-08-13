@@ -18,9 +18,9 @@ export async function load({ fetch, url: { search, searchParams }, params: { slu
 	).then<Recipe[]>((r) => r.json());
 
 	// Check if category exists
-	if (!recipes.length && Number(page) === 1) throw error(404, `Kategória ${slug} nebola nájdená`);
+	if (!recipes.length && Number(page) === 1) error(404, `Kategória ${slug} nebola nájdená`);
 	// Check if page exists
-	if (!recipes.length) throw redirect(301, '/recipes');
+	if (!recipes.length) redirect(301, '/recipes');
 
 	return {
 		recipes: recipes.slice(0, limit),

@@ -8,7 +8,7 @@
 	import { DEBOUNCE_MS } from '$lib/constants';
 	import { searchRecipes } from '$lib/utils/recipes';
 
-	import { Search } from 'lucide-svelte';
+	import { Search } from '@lucide/svelte';
 
 	export { className as class };
 
@@ -83,7 +83,7 @@
 				/>
 				{#if loading}
 					<label for="autocomplete" class="btn btn-square join-item"
-						><span class="absolute mx-3 loading loading-spinner loading-sm" /></label
+						><span class="absolute mx-3 loading loading-spinner loading-sm"></span></label
 					>
 				{/if}
 			</div>

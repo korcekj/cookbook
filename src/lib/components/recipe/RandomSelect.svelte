@@ -8,7 +8,7 @@
 	import Modal from '../Modal.svelte';
 	import RecipeCard from './Card.svelte';
 	import Dropdown from '../Dropdown.svelte';
-	import { Dices, Cookie } from 'lucide-svelte';
+	import { Dices, Cookie } from '@lucide/svelte';
 
 	let recipes: Recipe[] = [];
 	let occasion: string | null = null;

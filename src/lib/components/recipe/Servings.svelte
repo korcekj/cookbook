@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
 
-	import { Utensils, CakeSlice } from 'lucide-svelte';
+	import { Utensils, CakeSlice } from '@lucide/svelte';
 
 	export let unit: string;
 	export let count: number;

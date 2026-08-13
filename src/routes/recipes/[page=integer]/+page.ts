@@ -18,7 +18,7 @@ export async function load({ fetch, url: { search, searchParams }, params: { pag
 	>((r) => r.json());
 
 	// Check if page exists
-	if (!recipes.length) throw redirect(301, '/recipes');
+	if (!recipes.length) redirect(301, '/recipes');
 
 	return {
 		recipes: recipes.slice(0, limit),

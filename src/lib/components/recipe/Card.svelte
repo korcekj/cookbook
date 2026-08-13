@@ -7,7 +7,7 @@
 	import { afterNavigate } from '$app/navigation';
 
 	import RecipeServings from './Servings.svelte';
-	import { Clock } from 'lucide-svelte';
+	import { Clock } from '@lucide/svelte';
 
 	export let recipe: Recipe;
 	export { className as class };

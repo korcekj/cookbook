@@ -14,7 +14,7 @@
 	import FacebookShare from '$lib/components/FacebookShare.svelte';
 	import WhatsappShare from '$lib/components/WhatsappShare.svelte';
 	import NoSleep from '$lib/components/NoSleep.svelte';
-	import { Printer, ChevronLeft, Timer, ChefHat } from 'lucide-svelte';
+	import { Printer, ChevronLeft, Timer, ChefHat } from '@lucide/svelte';
 
 	export let data;
 

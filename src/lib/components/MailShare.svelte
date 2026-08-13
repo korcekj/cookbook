@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
 
-	import { Mail } from 'lucide-svelte';
+	import { Mail } from '@lucide/svelte';
 
 	export let url: string;
 	export let subject = '';

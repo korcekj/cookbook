@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
 
-	import { Hash } from 'lucide-svelte';
+	import { Hash } from '@lucide/svelte';
 
 	export let name: string;
 	export let titleClass = '';

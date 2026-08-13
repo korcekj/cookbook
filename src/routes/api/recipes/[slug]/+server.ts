@@ -8,7 +8,7 @@ export const GET = async ({ params: { slug }, setHeaders }) => {
 	});
 
 	const recipe = getRecipes().find((recipe) => recipe.slug === slug);
-	if (!recipe) throw error(404, `Recept ${slug} nebol nájdený`);
+	if (!recipe) error(404, `Recept ${slug} nebol nájdený`);
 
 	return json(recipe);
 };

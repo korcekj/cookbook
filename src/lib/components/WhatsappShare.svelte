@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
 
-	import { MessageCircle } from 'lucide-svelte';
+	import { MessageCircle } from '@lucide/svelte';
 
 	export let url: string;
 	export let text = '';

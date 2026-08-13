@@ -8,7 +8,7 @@
 	import { browser } from '$app/environment';
 	import { createEventDispatcher } from 'svelte';
 
-	import { ChevronDown, ChevronUp } from 'lucide-svelte';
+	import { ChevronDown, ChevronUp } from '@lucide/svelte';
 
 	export let items: Item[] = [];
 	export let selected: Item | null = null;
@@ -64,7 +64,7 @@
 		on:blur={onBlur}
 		on:click={() => (open = !open)}
 	>
-		{#if loading}<span class="loading loading-spinner loading-xs" />{/if}
+		{#if loading}<span class="loading loading-spinner loading-xs"></span>{/if}
 		<slot name="select" {selected}>
 			{selected ?? placeholder}
 		</slot>
