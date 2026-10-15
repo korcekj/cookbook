@@ -46,5 +46,5 @@ date: 2023-09-11
 6. Každú časť rozvaľkáme na plát a potrieme rozpusteným maslom.
 7. Posypeme škoricou, škoricovým, vanilínovým a kryštálovým cukrom.
 8. Zrolujeme a nakrájame na 1cm hrubé kolieska, ktoré ukladáme na plech vystlaný papierom na pečenie.
-9. Necháme ešte 10 minút podkysnúť a potrieme vajcom.
+9. Necháme ešte 10 minút podkysnúť a potrieme rozpusteným maslom.
 10. Pečieme v rúre vyhriatej na 200°C, 7 až 10 minút.
