@@ -7,9 +7,9 @@ categories:
 servings:
   unit: pieces
   count: 10
-preparation: 15
-cooking: 45
-date: 2023-03-30
+preparation: 20
+cooking: 60
+date: 2026-10-15
 ---
 
 # { title }
@@ -18,21 +18,24 @@ date: 2023-03-30
 
 ## Ingrediencie
 
-- **4 ks** / Vajce
-- **220 g** / Mletý cukor
-- **50 ml** / Olej
-- **150 ml** / Mlieko
-- **<sup>3</sup>&frasl;<sub>4</sub> ks** / Vanilkový cukor
-- **<sup>1</sup>&frasl;<sub>2</sub> ks** / Prášok do pečiva
-- **300 g** / Polohrubá múka
-- **1 PL** / Kakao
+- **3 ks** / Vajce
+- **1 hrnček** / Mletý cukor
+- **<sup>1</sup>&frasl;<sub>2</sub> hrnček** / Olej
+- **<sup>1</sup>&frasl;<sub>2</sub> hrnček** / Mlieko
+- **1 hrnček** / Polohrubá múka
+- **1 hrnček** / Hladká múka
+- **1 hrnček** / Strúhané jablká
+- **1 ks** / Prášok do pečiva
+- **1 ks** / Škoricový cukor
+- Polohrubá múka na vysypanie formy
+- Maslo na vymastenie formy
 
 ## Postup
 
-1. Žĺtka s cukrom si vyšľaháme do peny.
+1. Vajcia s cukrom si vyšľaháme do peny.
 2. Pomaly prilejeme olej, premiešame a prilejeme mlieko.
-3. Nakoniec pridáme múku zmiešanú s práškom do pečiva a vanilkovým cukrom.
-4. Zvlášť si vyšľaháme bielka do tuhej peny, ktoré nakoniec pridáme do zmesy.
-5. Do vymastenej formy si nalejeme polovicu cesta a do druhej primiešame kakao, do formy vylejeme zvyšok cesta.
-6. Bábovku dáme piecť do vyhriatej rúry pri 180°C na cca 45 minút.
-7. Keď mame bábovku upečenu, necháme ju vychladnúť, a nakoniec ju posypeme mletým cukrom.
+3. Ďalej pridáme polohrubú a hladkú múku, prášok do pečiva, škoricový cukor a strúhané jablká a všetko spolu vareškou premiešame.
+4. Pripravené cesto nalejeme do maslom vymastenej a múkou vysypanej formy na bábovku.
+5. Bábovku dáme piecť do vyhriatej rúry pri 170°C na cca 60 minút.
+6. V prípade, že vrch bábovky bude upečený ale stred surový, prikryjeme ju alobalom.
+7. Po vychladnutí posypeme práškovým cukrom.
