@@ -1,6 +1,6 @@
 ---
-title: Frakfurtská polievka
-description: Frakfurtská polievka je tradičná nemecká polievka, ktorá sa vyznačuje svojou bohatou chuťou a jednoduchou prípravou.
+title: Frankfurtská polievka
+description: Frankfurtská polievka je tradičná nemecká polievka, ktorá sa vyznačuje svojou bohatou chuťou a jednoduchou prípravou.
 poster: /images/frankfurtská-polievka/poster.webp
 categories:
   - polievky
